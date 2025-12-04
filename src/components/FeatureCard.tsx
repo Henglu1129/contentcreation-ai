@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import cardImage1 from "@/assets/card-image-1.png";
 import cardImage2 from "@/assets/card-image-2.png";
 import cardTurnIdea from "@/assets/card-turn-idea.png";
+import cardWriteCopy from "@/assets/card-write-copy.png";
 
 interface FeatureCardProps {
   title: string;
@@ -10,7 +11,7 @@ interface FeatureCardProps {
   link?: string;
 }
 
-const images = [cardTurnIdea, cardImage2, cardImage1];
+const images = [cardTurnIdea, cardWriteCopy, cardImage1, cardImage2];
 
 const FeatureCard = ({ title, hasButton = false, imageIndex = 0, link }: FeatureCardProps) => {
   const CardWrapper = link ? 'a' : 'div';
