@@ -6,8 +6,8 @@ const FeaturesGrid = () => {
       title: "Out of content ideas?",
       description: "How can I turn a vague thought into a full post — in seconds?",
       cards: [
-        { title: "Turn Idea to Visual", hasButton: true, link: "https://mulerun.com/@Rhino/illustrate-mind-spark-2" },
-        { title: "Write Copy", hasButton: true, link: "https://mulerun.com/@cqplaquemh41i2k/content-pilot-ai" },
+        { title: "Turn Idea to Visual", hasButton: true, link: "https://mulerun.com/@Rhino/illustrate-mind-spark-2", imageIndex: 0 },
+        { title: "Write Copy", hasButton: true, link: "https://mulerun.com/@cqplaquemh41i2k/content-pilot-ai", imageIndex: 1 },
       ],
       layout: "right",
     },
@@ -15,9 +15,9 @@ const FeaturesGrid = () => {
       title: "Creating content takes forever?",
       description: "How can I auto-generate videos, podcasts, and subtitles — without filming or editing?",
       cards: [
-        { title: "Make Shorts", hasButton: true, link: "https://mulerun.com/@GrahamRabbb0e02/auto-short-video-creator" },
-        { title: "Generate Podcast", hasButton: true, link: "https://mulerun.com/@AngryBerry/podcast-generator" },
-        { title: "Translate Subtitles", hasButton: true, link: "https://mulerun.com/@Skynetbbb0bb3/subtitle-translate-ai-pro" },
+        { title: "Make Shorts", hasButton: true, link: "https://mulerun.com/@GrahamRabbb0e02/auto-short-video-creator", imageIndex: 2 },
+        { title: "Generate Podcast", hasButton: true, link: "https://mulerun.com/@AngryBerry/podcast-generator", imageIndex: 3 },
+        { title: "Translate Subtitles", hasButton: true, link: "https://mulerun.com/@Skynetbbb0bb3/subtitle-translate-ai-pro", imageIndex: 4 },
       ],
       layout: "left",
     },
@@ -25,8 +25,8 @@ const FeaturesGrid = () => {
       title: "Great content, but no clicks?",
       description: "How can I get scroll-stopping titles and thumbnails — that actually convert?",
       cards: [
-        { title: "Generate Title", hasButton: true, link: "https://mulerun.com/@kpviqlcmhm864vu/youtube-title-generator-with-emojis" },
-        { title: "Create Thumbnail", hasButton: true, link: "https://mulerun.com/@summerail/youtube-awesome-thumbnail" },
+        { title: "Generate Title", hasButton: true, link: "https://mulerun.com/@kpviqlcmhm864vu/youtube-title-generator-with-emojis", imageIndex: 5 },
+        { title: "Create Thumbnail", hasButton: true, link: "https://mulerun.com/@summerail/youtube-awesome-thumbnail", imageIndex: 6 },
       ],
       layout: "right",
     },
@@ -34,8 +34,8 @@ const FeaturesGrid = () => {
       title: "Posting to just one platform?",
       description: "How can I repurpose one video into posts for all social platforms — instantly?",
       cards: [
-        { title: "Repurpose Content", hasButton: false, link: undefined },
-        { title: "Auto Post", hasButton: false, link: undefined },
+        { title: "Repurpose Content", hasButton: false, link: undefined, imageIndex: 7 },
+        { title: "Auto Post", hasButton: false, link: undefined, imageIndex: 8 },
       ],
       layout: "left",
     },
@@ -85,7 +85,7 @@ const FeaturesGrid = () => {
                     title={card.title} 
                     hasButton={card.hasButton}
                     link={card.link}
-                    imageIndex={sectionIndex * 2 + cardIndex}
+                    imageIndex={card.imageIndex}
                   />
                 ))}
               </div>
@@ -97,7 +97,7 @@ const FeaturesGrid = () => {
                       title={card.title}
                       hasButton={card.hasButton}
                       link={card.link}
-                      imageIndex={sectionIndex * 2 + cardIndex + 2}
+                      imageIndex={card.imageIndex}
                     />
                   ))}
                 </div>
