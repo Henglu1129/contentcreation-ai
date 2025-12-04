@@ -41,7 +41,7 @@ const FeaturesGrid = () => {
   ];
 
   return (
-    <section className="bg-background border-t border-b border-yellow-glow">
+    <section className="bg-yellow-light border-t border-b border-yellow-glow">
       {/* Top Decorative pixels */}
       <div className="relative h-[72px] flex justify-start pl-[60px] pt-4">
         <div className="flex gap-[3px]">
