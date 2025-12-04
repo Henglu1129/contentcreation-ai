@@ -13,7 +13,7 @@ const images = [cardImage1, cardImage2];
 const FeatureCard = ({ title, hasButton = false, imageIndex = 0 }: FeatureCardProps) => {
   return (
     <div 
-      className="bg-card rounded border border-yellow-glow pt-8 pr-6 pb-8 pl-6 flex items-center w-[357px] h-[130px] relative overflow-hidden card-shadow-yellow"
+      className="bg-card rounded border border-yellow-glow pt-8 pr-6 pb-8 pl-6 flex items-center w-[357px] h-[130px] relative overflow-hidden card-shadow-yellow group"
     >
       {/* Browser Frame with Image */}
       <div 
@@ -39,9 +39,9 @@ const FeatureCard = ({ title, hasButton = false, imageIndex = 0 }: FeatureCardPr
         </span>
       </div>
 
-      {/* Optional Button */}
+      {/* Optional Button - shows on hover */}
       {hasButton && (
-        <div className="absolute left-0 bottom-0 w-full h-9 bg-accent flex items-center justify-center gap-2.5 rounded-t-none border border-transparent">
+        <div className="absolute left-0 bottom-0 w-full h-9 bg-accent flex items-center justify-center gap-2.5 rounded-t-none border border-transparent opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
           <span className="font-jetbrains font-bold text-sm uppercase tracking-tight text-accent-foreground">
             Free trial
           </span>
