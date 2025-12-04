@@ -63,8 +63,8 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
                   <ChevronsRight className={`w-6 h-6 text-cyan -ml-2 ${isReversed ? '' : 'rotate-180'}`} />
                 </div>
                 
-                {/* Left: Content */}
-                <div className="flex-1">
+                {/* Content */}
+                <div className={`flex-1 ${isReversed ? 'text-right' : ''}`}>
                   <a 
                     href={tool.link}
                     target="_blank"
@@ -77,9 +77,10 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
                     <p className="font-inter text-sm text-foreground/70 mb-4">
                       {tool.description}
                     </p>
-                    <span className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded font-jetbrains font-bold text-xs uppercase tracking-wider">
+                    <span className={`inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded font-jetbrains font-bold text-xs uppercase tracking-wider ${isReversed ? 'flex-row-reverse' : ''}`}>
+                      {isReversed ? <ChevronsRight className="w-4 h-4 rotate-180" /> : null}
                       Free Trial
-                      <ChevronsRight className="w-4 h-4" />
+                      {!isReversed ? <ChevronsRight className="w-4 h-4" /> : null}
                     </span>
                   </a>
                 </div>
