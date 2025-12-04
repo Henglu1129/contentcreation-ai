@@ -44,6 +44,26 @@ const FeaturesGrid = () => {
 
   return (
     <section className="bg-yellow-light border-t border-b border-yellow-glow">
+      {/* Top Decorative pixels */}
+      <div className="relative h-[72px] flex justify-start pl-[60px] pt-4">
+        <div className="flex gap-[3px]">
+          {[...Array(5)].map((_, i) => (
+            <div key={i} className="w-[45px] h-[72px] relative">
+              {[...Array(8)].map((_, j) => (
+                <div 
+                  key={j} 
+                  className="absolute w-[9px] h-[9px] bg-yellow-soft"
+                  style={{
+                    left: `${(j % 2) * 9 + Math.floor(j / 2) * 9}px`,
+                    top: `${j * 9}px`,
+                  }}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
       {sections.map((section, sectionIndex) => (
         <div key={sectionIndex} className="pt-14 pb-14 px-[60px]">
           <div className={`flex gap-[80px] items-center justify-center ${section.layout === 'right' ? 'flex-row' : 'flex-row-reverse'}`}>
