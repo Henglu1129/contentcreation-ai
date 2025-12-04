@@ -5,6 +5,7 @@ import contentPilotCase from "@/assets/content-pilot-case.webp";
 import showcase1 from "@/assets/showcase-1.webp";
 import podcastCover from "@/assets/podcast-cover.webp";
 import subtitleTranslate from "@/assets/subtitle-translate.jpg";
+import youtubeTitleGenerator from "@/assets/youtube-title-generator.webp";
 
 interface Tool {
   title: string;
@@ -62,7 +63,16 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
     }
   ];
 
-  const tools = blockIndex === 1 ? section2Tools : defaultTools;
+  const section3Tools: Tool[] = [
+    {
+      title: "YouTube Title Generator with Emojis",
+      description: "Generate 5 viral, emoji-rich YouTube titles with SEO hooks in seconds.",
+      link: "https://mulerun.com/@kpviqlcmhm864vu/youtube-title-generator-with-emojis",
+      image: youtubeTitleGenerator
+    }
+  ];
+
+  const tools = blockIndex === 1 ? section2Tools : blockIndex === 2 ? section3Tools : defaultTools;
 
   return (
     <div className="mb-20 last:mb-0">
