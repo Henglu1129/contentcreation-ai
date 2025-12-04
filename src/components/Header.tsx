@@ -1,4 +1,4 @@
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import mulerunLogo from "@/assets/mulerun-logo.png";
 
 const Header = () => {
@@ -44,10 +44,14 @@ const Header = () => {
           >
             DOCS
           </a>
-          <button className="flex items-center gap-0 font-jetbrains font-bold text-sm uppercase tracking-tight text-foreground/80 hover:text-foreground transition-colors">
-            Resources
-            <ChevronDown className="w-6 h-6" />
-          </button>
+          <a 
+            href="https://mulerun.com/pricing" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="font-jetbrains font-bold text-sm uppercase tracking-tight text-foreground/80 hover:text-foreground transition-colors"
+          >
+            PRICING
+          </a>
         </nav>
       </div>
 
