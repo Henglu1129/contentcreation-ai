@@ -55,11 +55,26 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Sign In Button */}
-      <button className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded font-jetbrains font-bold text-sm uppercase tracking-tight hover:bg-primary/90 transition-colors">
-        Sign In
-        <ArrowRight className="w-5 h-5" />
-      </button>
+      {/* Right Buttons */}
+      <div className="flex items-center gap-4">
+        <a 
+          href="https://form.typeform.com/to/mkqp5k3B?utm_source=website" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="font-jetbrains font-bold text-sm uppercase tracking-tight text-foreground/80 hover:text-foreground transition-colors"
+        >
+          BE A CREATOR
+        </a>
+        <a 
+          href="https://mulerun.com/sign-in" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded font-jetbrains font-bold text-sm uppercase tracking-tight hover:bg-primary/90 transition-colors"
+        >
+          Sign In
+          <ArrowRight className="w-5 h-5" />
+        </a>
+      </div>
     </header>
   );
 };
