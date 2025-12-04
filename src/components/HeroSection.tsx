@@ -31,10 +31,15 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <button className="flex items-center gap-2.5 bg-primary text-primary-foreground px-4 py-2.5 rounded h-[52px] w-fit font-jetbrains font-bold text-xl hover:bg-primary/90 transition-colors">
+        <a 
+          href="https://mulerun.com/signup" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-2.5 bg-primary text-primary-foreground px-4 py-2.5 rounded h-[52px] w-fit font-jetbrains font-bold text-xl hover:bg-primary/90 transition-colors"
+        >
           SIGN UP
           <ArrowRight className="w-6 h-6" />
-        </button>
+        </a>
       </div>
 
       <div className="flex flex-col gap-5 items-center w-[505px]">
