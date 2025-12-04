@@ -1,20 +1,48 @@
 import { Linkedin, Youtube } from "lucide-react";
+import { useEffect, useState } from "react";
+
+interface Star {
+  id: number;
+  x: number;
+  y: number;
+  size: number;
+  opacity: number;
+  duration: number;
+  delay: number;
+}
 
 const Footer = () => {
+  const [stars, setStars] = useState<Star[]>([]);
+
+  useEffect(() => {
+    const generatedStars = [...Array(80)].map((_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: Math.random() > 0.7 ? 3 : 2,
+      opacity: Math.random() * 0.8 + 0.2,
+      duration: Math.random() * 3 + 2,
+      delay: Math.random() * 3,
+    }));
+    setStars(generatedStars);
+  }, []);
+
   return (
     <footer className="bg-foreground py-20 px-[120px] relative overflow-hidden">
-      {/* Stars background effect */}
+      {/* Animated stars background */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(80)].map((_, i) => (
+        {stars.map((star) => (
           <div
-            key={i}
-            className="absolute bg-card rounded-full"
+            key={star.id}
+            className="absolute bg-card rounded-full animate-pulse"
             style={{
-              width: Math.random() > 0.7 ? '3px' : '2px',
-              height: Math.random() > 0.7 ? '3px' : '2px',
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              opacity: Math.random() * 0.8 + 0.2,
+              width: `${star.size}px`,
+              height: `${star.size}px`,
+              left: `${star.x}%`,
+              top: `${star.y}%`,
+              opacity: star.opacity,
+              animationDuration: `${star.duration}s`,
+              animationDelay: `${star.delay}s`,
             }}
           />
         ))}
