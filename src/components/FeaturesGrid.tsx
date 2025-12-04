@@ -25,8 +25,8 @@ const FeaturesGrid = () => {
       title: "Great content, but no clicks?",
       description: "How can I get scroll-stopping titles and thumbnails — that actually convert?",
       cards: [
-        { title: "Generate Title", hasButton: false, link: undefined },
-        { title: "Create Thumbnail", hasButton: false, link: undefined },
+        { title: "Generate Title", hasButton: true, link: undefined },
+        { title: "Create Thumbnail", hasButton: true, link: undefined },
       ],
       layout: "right",
     },
