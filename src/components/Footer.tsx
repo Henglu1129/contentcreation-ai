@@ -1,5 +1,5 @@
 import { Linkedin, Youtube } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 interface Star {
   id: number;
@@ -7,42 +7,70 @@ interface Star {
   y: number;
   size: number;
   opacity: number;
-  duration: number;
-  delay: number;
+  speedX: number;
+  speedY: number;
 }
 
 const Footer = () => {
   const [stars, setStars] = useState<Star[]>([]);
+  const animationRef = useRef<number>();
 
   useEffect(() => {
-    const generatedStars = [...Array(80)].map((_, i) => ({
+    const generatedStars = [...Array(150)].map((_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      size: Math.random() > 0.7 ? 3 : 2,
+      size: Math.random() > 0.7 ? 3 : Math.random() > 0.5 ? 2 : 1,
       opacity: Math.random() * 0.8 + 0.2,
-      duration: Math.random() * 3 + 2,
-      delay: Math.random() * 3,
+      speedX: (Math.random() - 0.5) * 0.02,
+      speedY: (Math.random() - 0.5) * 0.02,
     }));
     setStars(generatedStars);
   }, []);
 
+  useEffect(() => {
+    const animate = () => {
+      setStars(prevStars => 
+        prevStars.map(star => {
+          let newX = star.x + star.speedX;
+          let newY = star.y + star.speedY;
+          
+          // Wrap around edges
+          if (newX > 100) newX = 0;
+          if (newX < 0) newX = 100;
+          if (newY > 100) newY = 0;
+          if (newY < 0) newY = 100;
+          
+          return { ...star, x: newX, y: newY };
+        })
+      );
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, []);
+
   return (
     <footer className="bg-foreground py-20 px-[120px] relative overflow-hidden">
-      {/* Animated stars background */}
+      {/* Animated floating stars background */}
       <div className="absolute inset-0 overflow-hidden">
         {stars.map((star) => (
           <div
             key={star.id}
-            className="absolute bg-card rounded-full animate-pulse"
+            className="absolute bg-card rounded-full"
             style={{
               width: `${star.size}px`,
               height: `${star.size}px`,
               left: `${star.x}%`,
               top: `${star.y}%`,
               opacity: star.opacity,
-              animationDuration: `${star.duration}s`,
-              animationDelay: `${star.delay}s`,
+              boxShadow: star.size > 2 ? '0 0 4px rgba(255,255,255,0.5)' : 'none',
             }}
           />
         ))}
