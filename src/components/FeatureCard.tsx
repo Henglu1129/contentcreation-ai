@@ -8,6 +8,7 @@ import cardPodcast from "@/assets/card-podcast.png";
 import cardTranslate from "@/assets/card-translate.png";
 import cardGenerateTitle from "@/assets/card-generate-title.png";
 import cardThumbnail from "@/assets/card-thumbnail.png";
+import cardRepurpose from "@/assets/card-repurpose.png";
 
 interface FeatureCardProps {
   title: string;
@@ -16,7 +17,7 @@ interface FeatureCardProps {
   link?: string;
 }
 
-const images = [cardTurnIdea, cardWriteCopy, cardMakeShorts, cardPodcast, cardTranslate, cardGenerateTitle, cardThumbnail, cardImage1, cardImage2];
+const images = [cardTurnIdea, cardWriteCopy, cardMakeShorts, cardPodcast, cardTranslate, cardGenerateTitle, cardThumbnail, cardRepurpose, cardImage1, cardImage2];
 
 const FeatureCard = ({ title, hasButton = false, imageIndex = 0, link }: FeatureCardProps) => {
   const CardWrapper = link ? 'a' : 'div';
