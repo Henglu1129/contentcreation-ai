@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronsRight } from "lucide-react";
 import illustrateCase from "@/assets/illustrate-case.webp";
 import contentPilotCase from "@/assets/content-pilot-case.webp";
+import showcase1 from "@/assets/showcase-1.webp";
 
 interface Tool {
   title: string;
@@ -38,10 +39,10 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
 
   const section2Tools: Tool[] = [
     {
-      title: "Illustrate Mind Spark 2",
-      description: "Turn ideas or quotes into illustrated social posts with text and art in one click.",
-      link: "https://mulerun.com/@Rhino/illustrate-mind-spark-2",
-      image: illustrateCase
+      title: "Auto Short Video Creator",
+      description: "Turn captions into 140-second cinematic shorts with script, voiceover, and visuals.",
+      link: "https://mulerun.com/@GrahamRabbb0e02/auto-short-video-creator",
+      image: showcase1
     },
     {
       title: "Content Pilot AI",
