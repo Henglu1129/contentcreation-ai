@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { ChevronsRight } from "lucide-react";
-// Updated image for Illustrate tab
 import illustrateCase from "@/assets/illustrate-case.webp";
+import contentPilotCase from "@/assets/content-pilot-case.webp";
 
 interface Tool {
   title: string;
   description: string;
   link: string;
+  image: string;
 }
 
 const InspirationSection = () => {
@@ -16,12 +17,14 @@ const InspirationSection = () => {
     {
       title: "Illustrate Mind Spark 2",
       description: "Turn ideas or quotes into illustrated social posts with text and art in one click.",
-      link: "https://mulerun.com/@Rhino/illustrate-mind-spark-2"
+      link: "https://mulerun.com/@Rhino/illustrate-mind-spark-2",
+      image: illustrateCase
     },
     {
       title: "Content Pilot AI",
-      description: "Generate engaging content ideas and full posts powered by AI in seconds.",
-      link: "https://mulerun.com/@cqplaquemh41i2k/content-pilot-ai"
+      description: "Create platform-optimized social posts with hooks, CTAs, and hashtags in your brand voice.",
+      link: "https://mulerun.com/@cqplaquemh41i2k/content-pilot-ai",
+      image: contentPilotCase
     }
   ];
 
@@ -47,7 +50,7 @@ const InspirationSection = () => {
                   onMouseEnter={() => setExpandedIndex(index)}
                 >
                   {/* Decorative arrows */}
-                  <div className="absolute top-4 right-[320px] flex">
+                  <div className="absolute top-4 right-[420px] flex">
                     <ChevronsRight className="w-6 h-6 text-cyan rotate-180" />
                     <ChevronsRight className="w-6 h-6 text-cyan rotate-180 -ml-2" />
                     <ChevronsRight className="w-6 h-6 text-cyan rotate-180 -ml-2" />
@@ -78,8 +81,8 @@ const InspirationSection = () => {
                   <div className="relative shrink-0">
                     <div className="w-[400px] aspect-video rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10">
                       <img 
-                        src={illustrateCase} 
-                        alt="AI Creative Tool"
+                        src={tool.image} 
+                        alt={tool.title}
                         className="w-full h-full object-cover"
                       />
                     </div>
