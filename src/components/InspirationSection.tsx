@@ -3,6 +3,7 @@ import { ChevronsRight } from "lucide-react";
 import illustrateCase from "@/assets/illustrate-case.webp";
 import contentPilotCase from "@/assets/content-pilot-case.webp";
 import showcase1 from "@/assets/showcase-1.webp";
+import podcastCover from "@/assets/podcast-cover.webp";
 
 interface Tool {
   title: string;
@@ -45,10 +46,10 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
       image: showcase1
     },
     {
-      title: "Content Pilot AI",
-      description: "Create platform-optimized social posts with hooks, CTAs, and hashtags in your brand voice.",
-      link: "https://mulerun.com/@cqplaquemh41i2k/content-pilot-ai",
-      image: contentPilotCase
+      title: "Podcast Generator",
+      description: "Convert text into multi-speaker podcast audio in 10 languages—no mic needed.",
+      link: "https://mulerun.com/@AngryBerry/podcast-generator",
+      image: podcastCover
     },
     {
       title: "Video Creator Pro",
