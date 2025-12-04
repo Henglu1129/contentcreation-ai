@@ -47,10 +47,10 @@ const FeaturesGrid = () => {
   return (
     <section className="bg-yellow-light border-t border-b border-yellow-glow">
       {sections.map((section, sectionIndex) => (
-        <div key={sectionIndex} className="pt-14 pb-14 pl-[120px] pr-[120px]">
-          <div className={`flex gap-[100px] items-center ${section.layout === 'right' ? 'flex-row' : 'flex-row-reverse'}`}>
+        <div key={sectionIndex} className="pt-14 pb-14 px-[60px]">
+          <div className={`flex gap-[80px] items-center justify-center ${section.layout === 'right' ? 'flex-row' : 'flex-row-reverse'}`}>
             {/* Text Content */}
-            <div className="flex-1 flex flex-col gap-4">
+            <div className="flex flex-col gap-4 max-w-[400px]">
               <h2 className="font-inter font-bold text-[32px] leading-[120%] text-foreground">
                 {section.title}
               </h2>
