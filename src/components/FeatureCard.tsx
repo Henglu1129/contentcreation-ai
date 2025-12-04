@@ -34,7 +34,7 @@ const FeatureCard = ({ title, hasButton = false, imageIndex = 0, link }: Feature
         <img 
           src={images[imageIndex % images.length]} 
           alt={title}
-          className="w-[185px] h-[138px] object-cover"
+          className="w-[185px] h-[138px] object-cover object-top"
         />
       </div>
 
