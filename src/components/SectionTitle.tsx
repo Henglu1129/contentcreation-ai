@@ -1,45 +1,17 @@
 import { useEffect, useRef } from "react";
+import showcaseImage1 from "@/assets/showcase-1.webp";
+import contentPilotCase from "@/assets/content-pilot-case.webp";
+import illustrateCase from "@/assets/illustrate-case.webp";
+import podcastCover from "@/assets/podcast-cover.webp";
+import youtubeThumbnail from "@/assets/youtube-thumbnail.webp";
 
-const testimonials = [
-  {
-    name: "Elena Martinez",
-    title: "Marketing Consultant",
-    quote: 'I needed a LinkedIn post about client onboarding but had writer\'s block. Content Pilot AI gave me a concise, professional draft with a question hook and clear takeaways. I posted it as-is—got 3 DMs from potential clients that week.',
-  },
-  {
-    name: "Noah Kim",
-    title: "Personal Brand Coach",
-    quote: 'I jotted down "confidence isn\'t loud" in my notes but didn\'t know how to share it. Illustrate Mind Spark 2 turned it into a minimalist illustrated post with soft typography. It became my most-shared piece on Instagram—followers called it "quietly powerful."',
-  },
-  {
-    name: "Freya Nielsen",
-    title: "Sustainability Blogger",
-    quote: "I wanted to write about capsule wardrobes but kept overcomplicating it. Content Pilot AI generated a simple, actionable list with a warm tone. I used it for my newsletter—open rates were higher than average, and several readers said they tried the tips.",
-  },
-  {
-    name: "Marcus Chen",
-    title: "Tech Entrepreneur",
-    quote: "Creating YouTube thumbnails used to take me hours. Now I generate professional ones in minutes. My click-through rate improved by 40% after switching to these AI tools.",
-  },
-  {
-    name: "Sofia Rodriguez",
-    title: "Content Creator",
-    quote: "The subtitle translation feature is a game-changer. I can now reach audiences in 10+ languages without spending thousands on translation services.",
-  },
+const images = [
+  showcaseImage1,
+  contentPilotCase,
+  illustrateCase,
+  podcastCover,
+  youtubeThumbnail,
 ];
-
-const TestimonialCard = ({ name, title, quote }: { name: string; title: string; quote: string }) => (
-  <div className="bg-background rounded-lg p-6 min-w-[320px] max-w-[320px] flex-shrink-0 shadow-sm">
-    <div className="flex items-center gap-3 mb-4">
-      <div className="w-10 h-10 rounded-full bg-muted" />
-      <div>
-        <p className="font-inter font-semibold text-sm text-foreground uppercase tracking-wide">{name}</p>
-        <p className="font-inter text-xs text-muted-foreground uppercase tracking-wide">{title}</p>
-      </div>
-    </div>
-    <p className="font-inter text-sm text-foreground leading-relaxed">{quote}</p>
-  </div>
-);
 
 const SectionTitle = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -81,19 +53,24 @@ const SectionTitle = () => {
         </p>
       </div>
 
-      {/* Testimonials with dashed lines */}
+      {/* Image carousel with dashed lines */}
       <div className="mt-12">
         {/* Top dashed line */}
         <div className="border-t-2 border-dashed border-foreground/20" />
         
-        {/* Scrolling testimonials */}
+        {/* Scrolling images */}
         <div 
           ref={scrollRef}
           className="flex gap-6 py-8 overflow-hidden"
         >
-          {/* Duplicate testimonials for infinite scroll effect */}
-          {[...testimonials, ...testimonials].map((testimonial, i) => (
-            <TestimonialCard key={i} {...testimonial} />
+          {/* Duplicate images for infinite scroll effect */}
+          {[...images, ...images].map((img, i) => (
+            <img 
+              key={i} 
+              src={img} 
+              alt={`Showcase ${i + 1}`}
+              className="h-[240px] w-auto rounded-lg flex-shrink-0 object-cover"
+            />
           ))}
         </div>
         
