@@ -102,10 +102,10 @@ const Footer = () => {
 
           {/* Links - Center */}
           <div className="flex items-center gap-4">
-            <a href="#" className="font-inter text-sm text-card/70 hover:text-card transition-colors underline">
+            <a href="https://mulerun.com/docs/legal/user-terms-of-use" target="_blank" rel="noopener noreferrer" className="font-inter text-sm text-card/70 hover:text-card transition-colors underline">
               Terms
             </a>
-            <a href="#" className="font-inter text-sm text-card/70 hover:text-card transition-colors underline">
+            <a href="https://mulerun.com/docs/legal/user-privacy-policy" target="_blank" rel="noopener noreferrer" className="font-inter text-sm text-card/70 hover:text-card transition-colors underline">
               Privacy
             </a>
           </div>
