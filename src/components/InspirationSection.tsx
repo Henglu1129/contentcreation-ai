@@ -23,7 +23,7 @@ const ToolItem = ({ title, description, link, isExpanded, onHover }: ToolItemPro
         className="block"
       >
         {/* Title */}
-        <h3 className={`font-jetbrains font-bold text-base uppercase tracking-[0.15em] text-foreground transition-all ${isExpanded ? 'mb-3' : ''}`}>
+        <h3 className={`font-anton text-xl uppercase tracking-[0.1em] text-foreground transition-all ${isExpanded ? 'mb-3' : ''}`}>
           {title}
         </h3>
         
