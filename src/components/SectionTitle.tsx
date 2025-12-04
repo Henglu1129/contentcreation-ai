@@ -1,7 +1,7 @@
 const SectionTitle = () => {
   return (
     <section className="bg-yellow-light py-16 px-[120px]">
-      <div className="text-center mb-12">
+      <div className="text-center mb-4">
         <h2 className="font-anton text-5xl leading-[120%] text-foreground">
           The Toolkit Top Creators Rely On
         </h2>
