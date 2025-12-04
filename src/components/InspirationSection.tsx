@@ -60,7 +60,7 @@ const InspirationSection = () => {
                       rel="noopener noreferrer"
                       className="block"
                     >
-                      <h3 className="font-jetbrains font-bold text-lg uppercase tracking-[0.15em] text-foreground mb-3">
+                      <h3 className="font-jetbrains font-bold text-lg uppercase tracking-wide text-foreground mb-3">
                         {tool.title}
                       </h3>
                       <p className="font-inter text-sm text-foreground/70 mb-4">
@@ -106,7 +106,7 @@ const InspirationSection = () => {
                   className="py-4 border-t border-foreground/10 cursor-pointer"
                   onMouseEnter={() => setExpandedIndex(index)}
                 >
-                  <h3 className="font-jetbrains font-bold text-lg uppercase tracking-[0.15em] text-foreground">
+                  <h3 className="font-jetbrains font-bold text-lg uppercase tracking-wide text-foreground">
                     {tool.title}
                   </h3>
                 </div>
