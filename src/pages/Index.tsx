@@ -4,7 +4,6 @@ import FeaturesGrid from "@/components/FeaturesGrid";
 import InspirationSection from "@/components/InspirationSection";
 import SectionTitle from "@/components/SectionTitle";
 import PricingSection from "@/components/PricingSection";
-import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -17,7 +16,6 @@ const Index = () => {
         <InspirationSection />
         <SectionTitle />
         <PricingSection />
-        <CTASection />
       </main>
       <Footer />
     </div>
