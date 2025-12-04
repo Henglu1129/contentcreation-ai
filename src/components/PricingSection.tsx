@@ -109,19 +109,19 @@ const PricingSection = () => {
       </div>
 
       {/* CTA Button */}
-      <div className="text-center relative inline-flex flex-col items-center mx-auto">
+      <div className="flex flex-col items-center">
         <button className="bg-foreground text-background px-6 py-3 rounded font-jetbrains font-bold text-sm uppercase flex items-center gap-2 hover:bg-foreground/90 transition-colors">
           Sign Up Now
-          <span className="text-lg">&gt;&gt;</span>
+          <span className="tracking-tighter">&gt;&gt;</span>
         </button>
         {/* Tooltip bubble */}
-        <div className="relative mt-2">
-          {/* Arrow */}
-          <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-[#FFDAB3]" />
+        <div className="relative mt-4">
+          {/* Arrow pointing up */}
+          <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-yellow-bright rotate-45" />
           {/* Bubble */}
-          <div className="bg-[#FFDAB3] text-foreground px-4 py-3 rounded border border-[#E8B88A]">
-            <p className="font-inter text-sm">Get 300 free credits now.</p>
-            <p className="font-inter text-sm">No card required.</p>
+          <div className="bg-yellow-bright text-foreground px-5 py-3 rounded-lg relative">
+            <p className="font-inter text-sm font-medium text-center">Get 300 free credits now.</p>
+            <p className="font-inter text-sm text-center">No card required.</p>
           </div>
         </div>
       </div>
