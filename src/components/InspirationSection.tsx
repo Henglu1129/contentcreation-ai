@@ -19,6 +19,7 @@ const sectionTitles = [
 
 const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
   const [expandedIndex, setExpandedIndex] = useState(0);
+  const isReversed = blockIndex === 1; // 第二个section图片在左边
 
   const tools: Tool[] = [
     {
@@ -52,14 +53,14 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
             return (
               <div 
                 key={index}
-                className="bg-lavender/50 rounded-lg p-6 relative flex gap-8 items-start"
+                className={`bg-lavender/50 rounded-lg p-6 relative flex gap-8 items-start ${isReversed ? 'flex-row-reverse' : ''}`}
                 onMouseEnter={() => setExpandedIndex(index)}
               >
                 {/* Decorative arrows */}
-                <div className="absolute top-4 right-[420px] flex">
-                  <ChevronsRight className="w-6 h-6 text-cyan rotate-180" />
-                  <ChevronsRight className="w-6 h-6 text-cyan rotate-180 -ml-2" />
-                  <ChevronsRight className="w-6 h-6 text-cyan rotate-180 -ml-2" />
+                <div className={`absolute top-4 flex ${isReversed ? 'left-[420px]' : 'right-[420px]'}`}>
+                  <ChevronsRight className={`w-6 h-6 text-cyan ${isReversed ? '' : 'rotate-180'}`} />
+                  <ChevronsRight className={`w-6 h-6 text-cyan -ml-2 ${isReversed ? '' : 'rotate-180'}`} />
+                  <ChevronsRight className={`w-6 h-6 text-cyan -ml-2 ${isReversed ? '' : 'rotate-180'}`} />
                 </div>
                 
                 {/* Left: Content */}
@@ -93,7 +94,7 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
                     />
                   </div>
                   {/* Bottom decorative pixels */}
-                  <div className="absolute -bottom-4 -right-4 flex gap-[2px]">
+                  <div className={`absolute -bottom-4 flex gap-[2px] ${isReversed ? '-left-4' : '-right-4'}`}>
                     {[...Array(4)].map((_, row) => (
                       <div key={row} className="flex flex-col gap-[2px]">
                         {[...Array(4)].map((_, col) => (
