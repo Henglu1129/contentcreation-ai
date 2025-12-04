@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-portrait.png";
+import heroImage from "@/assets/hero-image.webp";
 
 const HeroSection = () => {
   return (
@@ -50,7 +50,7 @@ const HeroSection = () => {
           <img 
             src={heroImage} 
             alt="AI Creation Platform"
-            className="w-full h-[640px] object-cover absolute left-0 -top-[90px]"
+            className="w-full h-full object-cover"
           />
         </div>
         <div className="flex gap-1">
