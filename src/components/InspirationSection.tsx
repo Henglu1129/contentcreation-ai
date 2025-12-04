@@ -78,8 +78,16 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
       image: youtubeThumbnail
     }
   ];
+  const section4Tools: Tool[] = [
+    {
+      title: "Illustrate Mind Spark 2",
+      description: "Turn ideas or quotes into illustrated social posts with text and art in one click.",
+      link: "https://mulerun.com/@Rhino/illustrate-mind-spark-2",
+      image: illustrateCase
+    }
+  ];
 
-  const tools = blockIndex === 1 ? section2Tools : blockIndex === 2 ? section3Tools : defaultTools;
+  const tools = blockIndex === 1 ? section2Tools : blockIndex === 2 ? section3Tools : blockIndex === 3 ? section4Tools : defaultTools;
 
   return (
     <div className="mb-20 last:mb-0">
