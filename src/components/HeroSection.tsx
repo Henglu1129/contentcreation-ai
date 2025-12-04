@@ -14,7 +14,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div 
-            className="bg-yellow-light p-1 -mt-3 self-stretch" 
+            className="bg-yellow-light p-1 -mt-3 w-fit" 
             style={{ transform: "rotate(-1deg)" }}
           >
             <h1 className="font-anton text-7xl leading-[120%] text-foreground">
@@ -44,13 +44,13 @@ const HeroSection = () => {
 
       <div className="flex flex-col gap-5 items-center shrink-0">
         <div 
-          className="rounded border-2 border-card w-[560px] h-[420px] overflow-hidden relative"
+          className="rounded border-2 border-card w-[640px] h-[480px] overflow-hidden relative"
           style={{ boxShadow: "0px 2px 12px 0px rgba(0, 0, 0, 0.12)" }}
         >
           <img 
             src={heroImage} 
             alt="AI Creation Platform"
-            className="w-full h-[560px] object-cover absolute left-0 -top-[80px]"
+            className="w-full h-[640px] object-cover absolute left-0 -top-[90px]"
           />
         </div>
         <div className="flex gap-1">
