@@ -1,49 +1,53 @@
 import { Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
-  // Generate stars with random positions and animation properties
-  const stars = [...Array(150)].map((_, i) => ({
+  // Generate particles with random properties
+  const particles = [...Array(200)].map((_, i) => ({
     id: i,
     x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() > 0.7 ? 3 : Math.random() > 0.5 ? 2 : 1,
-    opacity: Math.random() * 0.8 + 0.2,
-    twinkleDuration: Math.random() * 3 + 1,
-    twinkleDelay: Math.random() * 3,
-    floatDuration: Math.random() * 20 + 15,
-    floatDelay: Math.random() * 5,
+    size: Math.random() > 0.7 ? 4 : Math.random() > 0.4 ? 3 : 2,
+    duration: Math.random() * 8 + 6,
+    delay: Math.random() * 10,
+    opacity: Math.random() * 0.7 + 0.3,
   }));
 
   return (
     <footer className="bg-foreground py-20 px-[120px] relative overflow-hidden">
-      {/* CSS for star animations */}
+      {/* CSS for particle animations */}
       <style>{`
-        @keyframes twinkle {
-          0%, 100% { opacity: 0.2; transform: scale(1); }
-          50% { opacity: 1; transform: scale(1.3); }
-        }
-        @keyframes float {
-          0% { transform: translate(0, 0); }
-          25% { transform: translate(10px, -10px); }
-          50% { transform: translate(20px, 0); }
-          75% { transform: translate(10px, 10px); }
-          100% { transform: translate(0, 0); }
+        @keyframes floatUp {
+          0% {
+            transform: translateY(100%) translateX(0);
+            opacity: 0;
+          }
+          10% {
+            opacity: 1;
+          }
+          90% {
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(-500px) translateX(20px);
+            opacity: 0;
+          }
         }
       `}</style>
 
-      {/* Animated floating stars background */}
+      {/* Floating particles background */}
       <div className="absolute inset-0 overflow-hidden">
-        {stars.map((star) => (
+        {particles.map((particle) => (
           <div
-            key={star.id}
-            className="absolute bg-white rounded-full"
+            key={particle.id}
+            className="absolute rounded-full"
             style={{
-              width: `${star.size}px`,
-              height: `${star.size}px`,
-              left: `${star.x}%`,
-              top: `${star.y}%`,
-              boxShadow: star.size > 2 ? '0 0 6px rgba(255,255,255,0.8)' : '0 0 2px rgba(255,255,255,0.5)',
-              animation: `twinkle ${star.twinkleDuration}s ease-in-out ${star.twinkleDelay}s infinite, float ${star.floatDuration}s ease-in-out ${star.floatDelay}s infinite`,
+              width: `${particle.size}px`,
+              height: `${particle.size}px`,
+              left: `${particle.x}%`,
+              bottom: '-10px',
+              background: 'white',
+              boxShadow: `0 0 ${particle.size * 2}px rgba(255,255,255,0.8), 0 0 ${particle.size * 4}px rgba(255,255,255,0.4)`,
+              animation: `floatUp ${particle.duration}s ease-in-out ${particle.delay}s infinite`,
+              opacity: particle.opacity,
             }}
           />
         ))}
