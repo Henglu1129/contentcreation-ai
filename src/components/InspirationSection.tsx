@@ -4,6 +4,7 @@ import illustrateCase from "@/assets/illustrate-case.webp";
 import contentPilotCase from "@/assets/content-pilot-case.webp";
 import showcase1 from "@/assets/showcase-1.webp";
 import podcastCover from "@/assets/podcast-cover.webp";
+import subtitleTranslate from "@/assets/subtitle-translate.jpg";
 
 interface Tool {
   title: string;
@@ -52,10 +53,10 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
       image: podcastCover
     },
     {
-      title: "Video Creator Pro",
-      description: "Transform your ideas into engaging video content with AI-powered editing tools.",
-      link: "https://mulerun.com/@cqplaquemh41i2k/video-creator-pro",
-      image: illustrateCase
+      title: "Subtitle Translate AI Pro",
+      description: "Translate subtitles naturally while preserving tone, timing, and meaning across languages.",
+      link: "https://mulerun.com/@Skynetbbb0bb3/subtitle-translate-ai-pro",
+      image: subtitleTranslate
     }
   ];
 
