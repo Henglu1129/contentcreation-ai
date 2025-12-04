@@ -17,7 +17,7 @@ interface Tool {
 const sectionTitles = [
   "When inspiration strikes—<br />create instantly",
   "You're the creator—<br />and the crew",
-  "When inspiration strikes—<br />create instantly",
+  "Great content deserves<br />great attention",
   "When inspiration strikes—<br />create instantly"
 ];
 
