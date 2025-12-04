@@ -1,6 +1,6 @@
 const SectionTitle = () => {
   return (
-    <section className="bg-background py-16 px-[120px]">
+    <section className="bg-yellow-light py-16 px-[120px]">
       <div className="text-center mb-12">
         <h2 className="font-anton text-5xl leading-[120%] text-foreground">
           Hi this is a section title
