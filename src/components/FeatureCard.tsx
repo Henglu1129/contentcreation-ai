@@ -3,6 +3,9 @@ import cardImage1 from "@/assets/card-image-1.png";
 import cardImage2 from "@/assets/card-image-2.png";
 import cardTurnIdea from "@/assets/card-turn-idea.png";
 import cardWriteCopy from "@/assets/card-write-copy.png";
+import cardMakeShorts from "@/assets/card-make-shorts.png";
+import cardPodcast from "@/assets/card-podcast.png";
+import cardTranslate from "@/assets/card-translate.png";
 
 interface FeatureCardProps {
   title: string;
@@ -11,7 +14,7 @@ interface FeatureCardProps {
   link?: string;
 }
 
-const images = [cardTurnIdea, cardWriteCopy, cardImage1, cardImage2];
+const images = [cardTurnIdea, cardWriteCopy, cardMakeShorts, cardPodcast, cardTranslate, cardImage1, cardImage2];
 
 const FeatureCard = ({ title, hasButton = false, imageIndex = 0, link }: FeatureCardProps) => {
   const CardWrapper = link ? 'a' : 'div';
