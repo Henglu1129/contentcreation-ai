@@ -36,9 +36,14 @@ const Header = () => {
           >
             Ambassadors
           </a>
-          <button className="font-jetbrains font-bold text-sm uppercase tracking-tight text-foreground/80 hover:text-foreground transition-colors">
+          <a 
+            href="https://mulerun.com/docs" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="font-jetbrains font-bold text-sm uppercase tracking-tight text-foreground/80 hover:text-foreground transition-colors"
+          >
             DOCS
-          </button>
+          </a>
           <button className="flex items-center gap-0 font-jetbrains font-bold text-sm uppercase tracking-tight text-foreground/80 hover:text-foreground transition-colors">
             Resources
             <ChevronDown className="w-6 h-6" />
