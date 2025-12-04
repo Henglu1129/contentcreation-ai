@@ -40,7 +40,7 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
     <div className="mb-20 last:mb-0">
       {/* Main Title */}
       <h2 
-        className="font-anton text-[64px] leading-[110%] text-foreground mb-10"
+        className={`font-anton text-[64px] leading-[110%] text-foreground mb-10 ${isReversed ? 'text-right' : ''}`}
         dangerouslySetInnerHTML={{ __html: sectionTitles[blockIndex] }}
       />
       
