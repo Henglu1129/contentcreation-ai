@@ -37,7 +37,7 @@ const HeroSection = () => {
           rel="noopener noreferrer"
           className="flex items-center gap-2.5 bg-primary text-primary-foreground px-4 py-2.5 rounded h-[52px] w-fit font-jetbrains font-bold text-xl hover:bg-primary/90 transition-colors"
         >
-          SIGN UP
+          SIGN UP FOR FREE
           <ArrowRight className="w-6 h-6" />
         </a>
       </div>
