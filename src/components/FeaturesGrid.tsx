@@ -95,6 +95,8 @@ const FeaturesGrid = () => {
                     <FeatureCard 
                       key={cardIndex + 2} 
                       title={card.title}
+                      hasButton={card.hasButton}
+                      link={card.link}
                       imageIndex={sectionIndex * 2 + cardIndex + 2}
                     />
                   ))}
