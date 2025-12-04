@@ -4,27 +4,27 @@ import heroImage from "@/assets/hero-portrait.png";
 const HeroSection = () => {
   return (
     <section className="px-[120px] pt-20 pb-[60px] flex items-center gap-[100px]">
-      <div className="flex flex-col gap-6 flex-1 max-w-[575px]">
+      <div className="flex flex-col gap-8 flex-1 max-w-[620px]">
         <div className="flex flex-col items-start">
           <div className="pl-3 pr-3" style={{ transform: "rotate(2deg)" }}>
-            <div className="bg-yellow-bright p-1">
-              <h1 className="font-anton text-7xl leading-[120%] text-foreground">
+            <div className="bg-yellow-bright p-1.5">
+              <h1 className="font-anton text-[86px] leading-[110%] text-foreground">
                 Your All-in-One
               </h1>
             </div>
           </div>
           <div 
-            className="bg-yellow-light p-1 -mt-3 self-stretch" 
+            className="bg-yellow-light p-1.5 -mt-4 self-stretch" 
             style={{ transform: "rotate(-1deg)" }}
           >
-            <h1 className="font-anton text-7xl leading-[120%] text-foreground">
+            <h1 className="font-anton text-[86px] leading-[110%] text-foreground">
               AI Creation Platform
             </h1>
           </div>
         </div>
 
-        <div className="py-2.5">
-          <p className="font-inter font-medium text-lg leading-[140%] text-foreground">
+        <div className="py-3">
+          <p className="font-inter font-medium text-xl leading-[150%] text-foreground">
             From idea and script to video and social posts—your entire creative workflow is powered by free AI tools.
             <br />
             No complex steps, just one click to generate professional content so you can focus on what matters: your creativity.
