@@ -191,6 +191,8 @@ const InspirationSection = () => {
           <InspirationBlock key={index} blockIndex={index} />
         ))}
       </div>
+      {/* Divider line */}
+      <div className="w-full h-px bg-foreground/10 mt-20" />
     </section>
   );
 };
