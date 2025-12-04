@@ -70,7 +70,7 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <h3 className="font-jetbrains font-bold text-lg uppercase tracking-wide text-foreground mb-3">
+                    <h3 className="font-jetbrains font-black text-lg uppercase tracking-wide text-foreground mb-3">
                       {tool.title}
                     </h3>
                     <p className="font-inter text-sm text-foreground/70 mb-4">
