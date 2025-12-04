@@ -21,7 +21,7 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
   const [expandedIndex, setExpandedIndex] = useState(0);
   const isReversed = blockIndex === 1; // 第二个section图片在左边
 
-  const tools: Tool[] = [
+  const defaultTools: Tool[] = [
     {
       title: "Illustrate Mind Spark 2",
       description: "Turn ideas or quotes into illustrated social posts with text and art in one click.",
@@ -35,6 +35,29 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
       image: contentPilotCase
     }
   ];
+
+  const section2Tools: Tool[] = [
+    {
+      title: "Illustrate Mind Spark 2",
+      description: "Turn ideas or quotes into illustrated social posts with text and art in one click.",
+      link: "https://mulerun.com/@Rhino/illustrate-mind-spark-2",
+      image: illustrateCase
+    },
+    {
+      title: "Content Pilot AI",
+      description: "Create platform-optimized social posts with hooks, CTAs, and hashtags in your brand voice.",
+      link: "https://mulerun.com/@cqplaquemh41i2k/content-pilot-ai",
+      image: contentPilotCase
+    },
+    {
+      title: "Video Creator Pro",
+      description: "Transform your ideas into engaging video content with AI-powered editing tools.",
+      link: "https://mulerun.com/@cqplaquemh41i2k/video-creator-pro",
+      image: illustrateCase
+    }
+  ];
+
+  const tools = blockIndex === 1 ? section2Tools : defaultTools;
 
   return (
     <div className="mb-20 last:mb-0">
