@@ -76,7 +76,7 @@ const InspirationSection = () => {
 
                   {/* Right: Image */}
                   <div className="relative shrink-0">
-                    <div className="w-[320px] h-[260px] rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10">
+                    <div className="w-[400px] aspect-video rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10">
                       <img 
                         src={illustrateCase} 
                         alt="AI Creative Tool"
