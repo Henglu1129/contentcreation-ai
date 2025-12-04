@@ -34,8 +34,7 @@ const FeaturesGrid = () => {
       title: "Posting to just one platform?",
       description: "How can I repurpose one video into posts for all social platforms — instantly?",
       cards: [
-        { title: "Repurpose Content", hasButton: false, link: undefined, imageIndex: 7 },
-        { title: "Auto Post", hasButton: false, link: undefined, imageIndex: 8 },
+        { title: "Auto Post", hasButton: false, link: undefined, imageIndex: 7 },
       ],
       layout: "left",
     },
