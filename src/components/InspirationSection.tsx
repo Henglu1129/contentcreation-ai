@@ -52,15 +52,16 @@ const InspirationSection = () => {
 
   return (
     <section className="py-16 bg-background">
-      <div className="px-[60px]">
-        <div className="flex gap-[80px] items-start justify-center">
-          {/* Left Content */}
-          <div className="max-w-[500px]">
-            <h2 className="font-inter font-bold text-5xl leading-[120%] text-foreground mb-8">
-              When inspiration strikes—<br />create instantly
-            </h2>
-            
-            {/* Tools list with hover expand */}
+      <div className="max-w-[1100px] mx-auto px-[60px]">
+        {/* Main Title - Above everything */}
+        <h2 className="font-anton text-[64px] leading-[110%] text-foreground mb-10">
+          When inspiration strikes—<br />create instantly
+        </h2>
+        
+        {/* Content row: Tabs on left, Image on right */}
+        <div className="flex gap-[60px] items-start">
+          {/* Left: Tools list */}
+          <div className="flex-1 max-w-[500px]">
             <div className="bg-lavender/40 rounded-lg p-6 relative">
               {/* Decorative arrows */}
               <div className="absolute -top-2 right-8 flex">
@@ -80,7 +81,7 @@ const InspirationSection = () => {
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Right: Image */}
           <div className="relative shrink-0">
             <div className="w-[420px] h-[340px] rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10">
               <img 
