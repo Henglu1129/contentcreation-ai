@@ -11,6 +11,7 @@ interface Tool {
   description: string;
   link: string;
   image: string;
+  imagePosition?: string;
 }
 
 const sectionTitles = [
@@ -56,7 +57,8 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
       title: "Subtitle Translate AI Pro",
       description: "Translate subtitles naturally while preserving tone, timing, and meaning across languages.",
       link: "https://mulerun.com/@Skynetbbb0bb3/subtitle-translate-ai-pro",
-      image: subtitleTranslate
+      image: subtitleTranslate,
+      imagePosition: "object-bottom"
     }
   ];
 
@@ -117,7 +119,7 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
                     <img 
                       src={tool.image} 
                       alt={tool.title}
-                      className="w-full h-full object-cover object-center"
+                      className={`w-full h-full object-cover ${tool.imagePosition || 'object-center'}`}
                     />
                   </div>
                   {/* Bottom decorative pixels */}
