@@ -6,6 +6,7 @@ import showcase1 from "@/assets/showcase-1.webp";
 import podcastCover from "@/assets/podcast-cover.webp";
 import subtitleTranslate from "@/assets/subtitle-translate.jpg";
 import youtubeTitleGenerator from "@/assets/youtube-title-generator.webp";
+import youtubeThumbnail from "@/assets/youtube-thumbnail.webp";
 
 interface Tool {
   title: string;
@@ -69,6 +70,12 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
       description: "Generate 5 viral, emoji-rich YouTube titles with SEO hooks in seconds.",
       link: "https://mulerun.com/@kpviqlcmhm864vu/youtube-title-generator-with-emojis",
       image: youtubeTitleGenerator
+    },
+    {
+      title: "YouTube Awesome Thumbnail",
+      description: "Generate bold, face-focused YouTube thumbnails with integrated titles for high CTR.",
+      link: "https://mulerun.com/@summerail/youtube-awesome-thumbnail",
+      image: youtubeThumbnail
     }
   ];
 
