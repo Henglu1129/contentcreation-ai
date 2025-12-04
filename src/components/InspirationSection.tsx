@@ -58,7 +58,7 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
       description: "Translate subtitles naturally while preserving tone, timing, and meaning across languages.",
       link: "https://mulerun.com/@Skynetbbb0bb3/subtitle-translate-ai-pro",
       image: subtitleTranslate,
-      imagePosition: "object-bottom"
+      imagePosition: "object-top"
     }
   ];
 
