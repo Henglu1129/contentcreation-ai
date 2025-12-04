@@ -10,6 +10,13 @@ interface Tool {
   image: string;
 }
 
+const sectionTitles = [
+  "When inspiration strikes—<br />create instantly",
+  "You're the creator—and the crew",
+  "When inspiration strikes—<br />create instantly",
+  "When inspiration strikes—<br />create instantly"
+];
+
 const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
   const [expandedIndex, setExpandedIndex] = useState(0);
 
@@ -31,9 +38,10 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
   return (
     <div className="mb-20 last:mb-0">
       {/* Main Title */}
-      <h2 className="font-anton text-[64px] leading-[110%] text-foreground mb-10">
-        When inspiration strikes—<br />create instantly
-      </h2>
+      <h2 
+        className="font-anton text-[64px] leading-[110%] text-foreground mb-10"
+        dangerouslySetInnerHTML={{ __html: sectionTitles[blockIndex] }}
+      />
       
       {/* Tabs */}
       <div className="space-y-0">
