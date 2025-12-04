@@ -28,9 +28,14 @@ const Header = () => {
           >
             Agent Store
           </a>
-          <button className="font-jetbrains font-bold text-sm uppercase tracking-tight text-foreground/80 hover:text-foreground transition-colors">
+          <a 
+            href="https://mulerun.com/ambassadors" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="font-jetbrains font-bold text-sm uppercase tracking-tight text-foreground/80 hover:text-foreground transition-colors"
+          >
             Ambassadors
-          </button>
+          </a>
           <button className="font-jetbrains font-bold text-sm uppercase tracking-tight text-foreground/80 hover:text-foreground transition-colors">
             DOCS
           </button>
