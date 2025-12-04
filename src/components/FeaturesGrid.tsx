@@ -15,10 +15,9 @@ const FeaturesGrid = () => {
       title: "Creating content takes forever?",
       description: "How can I auto-generate videos, podcasts, and subtitles — without filming or editing?",
       cards: [
-        { title: "Make Shorts", hasButton: false, link: undefined },
-        { title: "Generate Podcast", hasButton: false, link: undefined },
-        { title: "Translate Subtitles", hasButton: false, link: undefined },
-        { title: "Translate Subtitles", hasButton: false, link: undefined },
+        { title: "Make Shorts", hasButton: true, link: undefined },
+        { title: "Generate Podcast", hasButton: true, link: undefined },
+        { title: "Translate Subtitles", hasButton: true, link: undefined },
       ],
       layout: "left",
     },
