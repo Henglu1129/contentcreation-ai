@@ -20,7 +20,7 @@ const sectionTitles = [
   "When inspiration strikes—<br />create instantly",
   "You're the creator—<br />and the crew",
   "Great content deserves<br />great attention",
-  "When inspiration strikes—<br />create instantly"
+  "One piece.<br />Every platform."
 ];
 
 const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
