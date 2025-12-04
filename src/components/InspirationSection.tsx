@@ -7,6 +7,7 @@ import podcastCover from "@/assets/podcast-cover.webp";
 import subtitleTranslate from "@/assets/subtitle-translate.jpg";
 import youtubeTitleGenerator from "@/assets/youtube-title-generator.webp";
 import youtubeThumbnail from "@/assets/youtube-thumbnail.webp";
+import youtubeSocialContent from "@/assets/youtube-social-content.webp";
 
 interface Tool {
   title: string;
@@ -80,10 +81,10 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
   ];
   const section4Tools: Tool[] = [
     {
-      title: "Illustrate Mind Spark 2",
-      description: "Turn ideas or quotes into illustrated social posts with text and art in one click.",
-      link: "https://mulerun.com/@Rhino/illustrate-mind-spark-2",
-      image: illustrateCase
+      title: "YouTube Video to Social Content",
+      description: "Turn YouTube videos into ready-to-post social content for X, LinkedIn, and Instagram.",
+      link: "https://mulerun.com/@YuTou_baby/youtube-video-to-social-content",
+      image: youtubeSocialContent
     }
   ];
 
