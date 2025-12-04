@@ -8,8 +8,6 @@ const FeaturesGrid = () => {
       cards: [
         { title: "Turn Idea to Visual", hasButton: true },
         { title: "Write Copy" },
-        { title: "Turn Idea to Visual" },
-        { title: "Write Copy" },
       ],
       layout: "right",
     },
