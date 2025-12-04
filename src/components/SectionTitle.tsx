@@ -1,52 +1,19 @@
 import { useEffect, useRef } from "react";
+import userstory1 from "@/assets/userstory-1.webp";
+import userstory2 from "@/assets/userstory-2.webp";
+import userstory3 from "@/assets/userstory-3.webp";
+import userstory4 from "@/assets/userstory-4.webp";
+import userstory5 from "@/assets/userstory-5.webp";
+import userstory6 from "@/assets/userstory-6.webp";
+import userstory7 from "@/assets/userstory-7.webp";
+import userstory8 from "@/assets/userstory-8.webp";
+import userstory9 from "@/assets/userstory-9.webp";
 
-const testimonials = [
-  {
-    name: "Elena Martinez",
-    title: "Marketing Consultant",
-    quote: 'I needed a LinkedIn post about client onboarding but had writer\'s block. Content Pilot AI gave me a concise, professional draft with a question hook and clear takeaways. I posted it as-is—got 3 DMs from potential clients that week.',
-  },
-  {
-    name: "Noah Kim",
-    title: "Personal Brand Coach",
-    quote: 'I jotted down "confidence isn\'t loud" in my notes but didn\'t know how to share it. Illustrate Mind Spark 2 turned it into a minimalist illustrated post with soft typography. It became my most-shared piece on Instagram—followers called it "quietly powerful."',
-  },
-  {
-    name: "Freya Nielsen",
-    title: "Sustainability Blogger",
-    quote: "I wanted to write about capsule wardrobes but kept overcomplicating it. Content Pilot AI generated a simple, actionable list with a warm tone. I used it for my newsletter—open rates were higher than average, and several readers said they tried the tips.",
-  },
-  {
-    name: "Marcus Chen",
-    title: "Tech Entrepreneur",
-    quote: "Creating YouTube thumbnails used to take me hours. Now I generate professional ones in minutes. My click-through rate improved by 40% after switching to these AI tools.",
-  },
-  {
-    name: "Sofia Rodriguez",
-    title: "Content Creator",
-    quote: "The subtitle translation feature is a game-changer. I can now reach audiences in 10+ languages without spending thousands on translation services.",
-  },
-  {
-    name: "James Wilson",
-    title: "Podcast Host",
-    quote: "Turning my podcast episodes into short clips for social media was always a pain. Now it takes seconds, and the AI picks the best moments automatically.",
-  },
-];
+const column1Images = [userstory1, userstory2, userstory3];
+const column2Images = [userstory4, userstory5, userstory6];
+const column3Images = [userstory7, userstory8, userstory9];
 
-const TestimonialCard = ({ name, title, quote }: { name: string; title: string; quote: string }) => (
-  <div className="bg-background rounded-lg p-6 shadow-sm">
-    <div className="flex items-center gap-3 mb-4">
-      <div className="w-10 h-10 rounded-full bg-muted flex-shrink-0" />
-      <div>
-        <p className="font-inter font-semibold text-sm text-foreground uppercase tracking-wide">{name}</p>
-        <p className="font-inter text-xs text-muted-foreground uppercase tracking-wide">{title}</p>
-      </div>
-    </div>
-    <p className="font-inter text-sm text-foreground leading-relaxed">{quote}</p>
-  </div>
-);
-
-const ScrollingColumn = ({ items, direction }: { items: typeof testimonials; direction: "up" | "down" }) => {
+const ScrollingColumn = ({ images, direction }: { images: string[]; direction: "up" | "down" }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -80,18 +47,19 @@ const ScrollingColumn = ({ items, direction }: { items: typeof testimonials; dir
       ref={scrollRef}
       className="flex flex-col gap-4 h-[500px] overflow-hidden"
     >
-      {[...items, ...items].map((testimonial, i) => (
-        <TestimonialCard key={i} {...testimonial} />
+      {[...images, ...images].map((img, i) => (
+        <img 
+          key={i} 
+          src={img} 
+          alt={`User story ${i + 1}`}
+          className="w-full rounded-lg flex-shrink-0"
+        />
       ))}
     </div>
   );
 };
 
 const SectionTitle = () => {
-  const column1 = [testimonials[0], testimonials[1]];
-  const column2 = [testimonials[2], testimonials[3]];
-  const column3 = [testimonials[4], testimonials[5]];
-
   return (
     <section className="bg-yellow-light py-16 px-[120px]">
       <div className="text-center mb-4">
@@ -107,16 +75,16 @@ const SectionTitle = () => {
         </p>
       </div>
 
-      {/* Testimonials with dashed lines */}
+      {/* Image carousel with dashed lines */}
       <div className="mt-12">
         {/* Top dashed line */}
         <div className="border-t-2 border-dashed border-foreground/20" />
         
         {/* 3 columns scrolling vertically */}
         <div className="grid grid-cols-3 gap-6 py-8">
-          <ScrollingColumn items={column1} direction="up" />
-          <ScrollingColumn items={column2} direction="down" />
-          <ScrollingColumn items={column3} direction="up" />
+          <ScrollingColumn images={column1Images} direction="up" />
+          <ScrollingColumn images={column2Images} direction="down" />
+          <ScrollingColumn images={column3Images} direction="up" />
         </div>
         
         {/* Bottom dashed line */}
