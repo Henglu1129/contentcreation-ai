@@ -23,7 +23,7 @@ const FeatureCard = ({ title, hasButton = false, imageIndex = 0, link }: Feature
     >
       {/* Browser Frame with Image */}
       <div 
-        className="absolute right-[-1px] top-[18px] w-[140px] h-[126px] rounded-sm border border-foreground/10 overflow-hidden"
+        className="absolute right-[-1px] top-[8px] w-[140px] h-[126px] rounded-sm border border-foreground/10 overflow-hidden"
         style={{ boxShadow: "0px 2px 4px -0.75px rgba(0, 0, 0, 0.12), 0px 2px 6px -0.75px rgba(0, 0, 0, 0.1)" }}
       >
         <div className="bg-stone-dark border-b border-card h-[11px] p-[3.55px] flex items-center gap-[3.55px]">
@@ -34,7 +34,7 @@ const FeatureCard = ({ title, hasButton = false, imageIndex = 0, link }: Feature
         <img 
           src={images[imageIndex % images.length]} 
           alt={title}
-          className="w-[185px] h-[138px] object-cover object-top"
+          className="w-[140px] h-[115px] object-cover object-center"
         />
       </div>
 
