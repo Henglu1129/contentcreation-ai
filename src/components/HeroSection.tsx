@@ -58,7 +58,7 @@ const HeroSection = () => {
 
       <div className="flex flex-col gap-5 items-center shrink-0">
         <div 
-          className="rounded border-2 border-card w-[560px] h-[315px] overflow-hidden relative"
+          className="rounded border-2 border-card w-[640px] h-[480px] overflow-hidden relative"
           style={{ boxShadow: "0px 2px 12px 0px rgba(0, 0, 0, 0.12)" }}
         >
           {carouselImages.map((img, index) => (
