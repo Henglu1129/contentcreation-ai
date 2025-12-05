@@ -138,11 +138,11 @@ const PricingSection = () => {
 
         {/* Pricing Cards */}
         <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
-          <div className="bg-white border-t-4 border-t-lavender border border-foreground/10 rounded-lg p-6 py-14 w-full md:w-[300px] text-center">
-            <span className="font-inter font-bold text-base text-foreground block mb-4">
-              Buy 4 pro platforms separately
+          <div className="bg-white border-t-4 border-t-lavender border border-foreground/10 rounded-lg px-6 pt-10 pb-16 w-full md:w-[300px]">
+            <span className="font-inter font-bold text-base text-foreground block mb-6">
+              Buy 8 pro platforms separately
             </span>
-            <div className="font-inter font-bold text-3xl text-stone-dark/50">
+            <div className="font-inter font-bold text-3xl text-stone-dark/50 line-through">
               ¥1,596/month
             </div>
           </div>
