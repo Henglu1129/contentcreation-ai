@@ -47,7 +47,7 @@ const FeatureCard = ({ title, description, hasButton = false, imageIndex = 0, li
       </div>
 
       {/* Title & Description */}
-      <div className="flex flex-col gap-1 items-start max-w-[180px]">
+      <div className="flex flex-col gap-3 items-start max-w-[180px]">
         <span className="font-inter font-semibold text-base leading-normal text-foreground">
           {title}
         </span>
