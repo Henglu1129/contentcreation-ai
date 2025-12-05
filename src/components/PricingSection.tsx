@@ -221,7 +221,7 @@ const PricingSection = () => {
             </div>
             <h4 className="font-inter font-bold text-sm text-foreground mb-1">No More Switching</h4>
             <p className="font-inter text-xs text-muted-foreground">
-              Stop switching between apps. Work in one place—3x faster workflow.
+              Stop app-switching. Work in one place—3x faster workflow.
             </p>
           </div>
 
