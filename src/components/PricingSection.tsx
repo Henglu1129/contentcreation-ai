@@ -5,7 +5,7 @@ import logoCapcut from "@/assets/logo-capcut.png";
 import logoVeed from "@/assets/logo-veed.png";
 import logoHubspot from "@/assets/logo-hubspot.jpg";
 import logoCanva from "@/assets/logo-canva.png";
-import logoRepurpose from "@/assets/logo-repurpose.png";
+import logoRepurpose from "@/assets/logo-repurpose.jpg";
 
 const PricingSection = () => {
   const logos = [
