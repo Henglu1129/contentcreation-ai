@@ -18,6 +18,7 @@ export default {
         jetbrains: ["JetBrains Mono", "monospace"],
         inter: ["Inter", "sans-serif"],
         jakarta: ["Plus Jakarta Sans", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
