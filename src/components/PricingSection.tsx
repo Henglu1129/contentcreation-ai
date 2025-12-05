@@ -152,8 +152,8 @@ const PricingSection = () => {
               Get the same with Mulerun
             </span>
             <div className="inline-block bg-yellow-bright/50 px-3 py-1 rounded">
-              <span className="font-inter font-bold text-lg text-stone-dark">¥159/month</span>
-              <span className="font-inter font-bold text-sm text-stone-dark ml-2">— Save 90%</span>
+              <span className="font-inter font-bold text-lg text-stone-dark">$19.9/month</span>
+              <span className="font-inter font-bold text-sm text-stone-dark ml-2">— Save 88%</span>
             </div>
           </div>
           
