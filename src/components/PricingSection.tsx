@@ -151,24 +151,34 @@ const PricingSection = () => {
             <span className="font-inter font-bold text-base text-foreground block mb-12">
               Get the same with Mulerun
             </span>
-            <div className="relative inline-block">
-              {/* Checkered border effect */}
+            <div className="relative inline-block -rotate-2">
+              {/* Checkered border left */}
               <div 
-                className="absolute inset-0 -inset-x-2"
+                className="absolute left-0 top-0 bottom-0 w-4"
                 style={{
                   background: `
                     repeating-conic-gradient(
-                      hsl(30 60% 70%) 0% 25%, 
-                      hsl(35 70% 85%) 0% 50%
+                      hsl(30 50% 65%) 0% 25%, 
+                      hsl(35 60% 80%) 0% 50%
                     ) 50% / 8px 8px
-                  `,
-                  clipPath: 'polygon(0% 50%, 4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%)'
+                  `
+                }}
+              />
+              {/* Checkered border right */}
+              <div 
+                className="absolute right-0 top-0 bottom-0 w-4"
+                style={{
+                  background: `
+                    repeating-conic-gradient(
+                      hsl(30 50% 65%) 0% 25%, 
+                      hsl(35 60% 80%) 0% 50%
+                    ) 50% / 8px 8px
+                  `
                 }}
               />
               {/* Main content */}
-              <div className="relative bg-[hsl(35_70%_80%)] px-6 py-2">
-                <span className="font-inter font-bold text-lg text-stone-dark">$19.9/month</span>
-                <span className="font-inter font-bold text-sm text-stone-dark ml-2">— Save 88%</span>
+              <div className="relative bg-[hsl(35_60%_78%)] px-8 py-2 whitespace-nowrap">
+                <span className="font-inter font-bold text-base text-[#5D4A37]">$19.9/month — Save 88%</span>
               </div>
             </div>
           </div>
