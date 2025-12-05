@@ -81,22 +81,22 @@ const SectionTitle = () => {
         </p>
       </div>
 
-      {/* Image carousel with dashed lines */}
-      <div className="mt-12">
-        {/* Top dashed line */}
-        <div className="border-t-2 border-dashed border-foreground/20" />
-        
-        {/* 3 columns scrolling vertically */}
+      </div>
+
+      {/* Top dashed line - full width */}
+      <div className="border-t-2 border-dashed border-foreground/20 mt-12" />
+      
+      {/* 3 columns scrolling vertically */}
+      <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid grid-cols-3 gap-6">
           <ScrollingColumn images={column1Images} direction="up" />
           <ScrollingColumn images={column2Images} direction="down" />
           <ScrollingColumn images={column3Images} direction="up" />
         </div>
-        
-        {/* Bottom dashed line */}
-        <div className="border-t-2 border-dashed border-foreground/20" />
       </div>
-      </div>
+      
+      {/* Bottom dashed line - full width */}
+      <div className="border-t-2 border-dashed border-foreground/20" />
     </section>
   );
 };
