@@ -158,15 +158,15 @@ const PricingSection = () => {
                 style={{
                   background: `
                     repeating-conic-gradient(
-                      hsl(28 85% 75%) 0% 25%, 
-                      hsl(35 90% 88%) 0% 50%
+                      #fdc17d 0% 25%, 
+                      #fde4c4 0% 50%
                     ) 50% / 8px 8px
                   `
                 }}
               />
               {/* Main content */}
-              <div className="bg-[hsl(30_90%_85%)] px-2 py-1.5 whitespace-nowrap">
-                <span className="font-inter font-bold text-lg text-[#5D4A37]">$19.9/month — Save 88%</span>
+              <div className="bg-[#fdc17d] px-2 py-1.5 whitespace-nowrap">
+                <span className="font-inter font-bold text-lg text-[#774002]">$19.9/month — Save 88%</span>
               </div>
               {/* Checkered border right */}
               <div 
@@ -174,8 +174,8 @@ const PricingSection = () => {
                 style={{
                   background: `
                     repeating-conic-gradient(
-                      hsl(28 85% 75%) 0% 25%, 
-                      hsl(35 90% 88%) 0% 50%
+                      #fdc17d 0% 25%, 
+                      #fde4c4 0% 50%
                     ) 50% / 8px 8px
                   `
                 }}
