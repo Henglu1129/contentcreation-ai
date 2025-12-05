@@ -154,7 +154,7 @@ const PricingSection = () => {
             <div className="relative inline-flex items-stretch -rotate-2">
               {/* Checkered border left */}
               <div 
-                className="w-4 flex-shrink-0"
+                className="w-3 flex-shrink-0"
                 style={{
                   background: `
                     repeating-conic-gradient(
@@ -165,12 +165,12 @@ const PricingSection = () => {
                 }}
               />
               {/* Main content */}
-              <div className="bg-[hsl(32_75%_82%)] px-6 py-2 whitespace-nowrap">
-                <span className="font-inter font-bold text-xl text-[#5D4A37]">$19.9/month — Save 88%</span>
+              <div className="bg-[hsl(32_75%_82%)] px-3 py-2 whitespace-nowrap">
+                <span className="font-inter font-bold text-lg text-[#5D4A37]">$19.9/month — Save 88%</span>
               </div>
               {/* Checkered border right */}
               <div 
-                className="w-4 flex-shrink-0"
+                className="w-3 flex-shrink-0"
                 style={{
                   background: `
                     repeating-conic-gradient(
