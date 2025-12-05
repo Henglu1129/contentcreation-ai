@@ -275,10 +275,15 @@ const PricingSection = () => {
 
         {/* CTA Button */}
         <div className="flex flex-col items-center">
-          <button className="bg-foreground text-background px-6 py-3 rounded font-jetbrains font-bold text-sm uppercase flex items-center gap-2 hover:bg-foreground/90 transition-colors">
+          <a 
+            href="https://mulerun.com/signup" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-foreground text-background px-6 py-3 rounded font-jetbrains font-bold text-sm uppercase flex items-center gap-2 hover:bg-foreground/90 transition-colors"
+          >
             Sign Up Now
             <span className="tracking-tighter">&gt;&gt;</span>
-          </button>
+          </a>
           {/* Tooltip bubble */}
           <div className="relative mt-4">
             {/* Arrow pointing up */}
