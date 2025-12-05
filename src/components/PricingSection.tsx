@@ -130,39 +130,39 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Label */}
-        <div className="text-center mb-8">
-          <span className="font-inter text-sm text-muted-foreground">
-            Multiple pro platforms = <span className="text-cyan">Mulerun has them all.</span>
-          </span>
+        <div className="text-center mb-10">
+          <h3 className="font-playfair text-2xl md:text-3xl text-foreground">
+            Multiple pro platforms — <span className="text-foreground">Mulerun handles it all.</span>
+          </h3>
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex gap-6 justify-center mb-12">
-          <div className="bg-background border border-foreground/20 rounded-lg p-6 w-[280px]">
-            <span className="font-jetbrains text-xs uppercase text-muted-foreground block mb-2">
-              Buy 3 separate accounts:
+        <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
+          <div className="bg-[#FDFBF5] border-t-4 border-t-lavender border border-foreground/10 rounded-lg p-6 w-full md:w-[300px]">
+            <span className="font-inter text-sm text-muted-foreground block mb-4">
+              Buy 4 pro platforms separately
             </span>
-            <div className="font-inter font-bold text-2xl text-foreground">
-              $65-85/month
+            <div className="font-playfair text-3xl text-stone-dark/60">
+              ¥1,596/month
             </div>
           </div>
           
-          <div className="bg-cyan rounded-lg p-6 w-[280px] relative">
-            <span className="font-jetbrains text-xs uppercase text-foreground/70 block mb-2">
-              Get everything with Mulerun:
+          <div className="bg-[#FDFBF5] border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg p-6 w-full md:w-[300px] relative">
+            <span className="font-inter text-sm text-muted-foreground block mb-4">
+              Get the same with Mulerun
             </span>
-            <div className="font-inter font-bold text-lg text-foreground">
-              starting at 
-              <span className="text-2xl ml-1">$x.xx/mo</span>
+            <div className="inline-block bg-yellow-bright/40 px-3 py-1 rounded">
+              <span className="font-playfair text-xl text-stone-dark">¥159/month</span>
+              <span className="font-inter text-sm text-stone-dark ml-2">— Save 90%</span>
             </div>
           </div>
           
-          <div className="bg-background border border-foreground/20 rounded-lg p-6 w-[280px]">
-            <span className="font-jetbrains text-xs uppercase text-muted-foreground block mb-2">
-              Annual savings:
+          <div className="bg-[#FDFBF5] border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg p-6 w-full md:w-[300px]">
+            <span className="font-inter text-sm text-muted-foreground block mb-4">
+              Annual savings
             </span>
-            <div className="font-inter font-bold text-2xl text-yellow-bright">
-              $17,264/year
+            <div className="font-playfair text-3xl text-yellow-bright">
+              ¥17,244/year
             </div>
           </div>
         </div>
