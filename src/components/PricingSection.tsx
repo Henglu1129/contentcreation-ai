@@ -138,8 +138,8 @@ const PricingSection = () => {
 
         {/* Pricing Cards */}
         <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
-          <div className="bg-white border-t-4 border-t-lavender border border-foreground/10 rounded-lg px-6 pt-6 pb-8 w-full md:w-[300px] text-center">
-            <span className="font-inter font-bold text-base text-foreground block mb-10">
+          <div className="bg-white border-t-4 border-t-lavender border border-foreground/10 rounded-lg px-6 pt-8 pb-10 w-full md:w-[300px] text-center">
+            <span className="font-inter font-bold text-base text-foreground block mb-14">
               Buy 8 pro platforms separately
             </span>
             <div className="font-inter font-bold text-3xl text-gray-500 line-through">
@@ -147,8 +147,8 @@ const PricingSection = () => {
             </div>
           </div>
           
-          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-6 pb-8 w-full md:w-[300px] text-center">
-            <span className="font-inter font-bold text-base text-foreground block mb-10">
+          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-8 pb-10 w-full md:w-[300px] text-center">
+            <span className="font-inter font-bold text-base text-foreground block mb-14">
               Get the same with Mulerun
             </span>
             <div className="inline-block bg-yellow-bright/50 px-3 py-1 rounded">
@@ -157,8 +157,8 @@ const PricingSection = () => {
             </div>
           </div>
           
-          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-6 pb-8 w-full md:w-[300px] text-center">
-            <span className="font-inter font-bold text-base text-foreground block mb-10">
+          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-8 pb-10 w-full md:w-[300px] text-center">
+            <span className="font-inter font-bold text-base text-foreground block mb-14">
               Annual savings
             </span>
             <div className="font-inter font-bold text-3xl text-yellow-bright">
