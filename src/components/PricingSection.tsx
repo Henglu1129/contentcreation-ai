@@ -280,7 +280,7 @@ const PricingSection = () => {
             href="https://mulerun.com/signup" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-foreground text-background px-6 py-3 rounded font-jetbrains font-bold text-sm uppercase flex items-center gap-2 hover:bg-foreground/90 transition-colors"
+            className="bg-foreground text-background px-10 py-4 rounded-lg font-jetbrains font-bold text-lg uppercase flex items-center gap-3 hover:bg-foreground/90 transition-colors"
           >
             Sign Up Now
             <span className="tracking-tighter">&gt;&gt;</span>
