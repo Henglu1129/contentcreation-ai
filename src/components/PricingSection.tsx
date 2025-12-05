@@ -138,7 +138,7 @@ const PricingSection = () => {
 
         {/* Pricing Cards */}
         <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
-          <div className="bg-white border-t-4 border-t-lavender border border-foreground/10 rounded-lg px-6 py-12 w-full md:w-[300px] text-center">
+          <div className="bg-white border-t-4 border-t-lavender border border-foreground/10 rounded-lg px-6 pt-10 pb-12 w-full md:w-[300px] text-center">
             <span className="font-inter font-bold text-base text-foreground block mb-[72px]">
               Buy 8 pro platforms separately
             </span>
@@ -147,7 +147,7 @@ const PricingSection = () => {
             </div>
           </div>
           
-          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 py-12 w-full md:w-[300px] text-center">
+          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-10 pb-12 w-full md:w-[300px] text-center">
             <span className="font-inter font-bold text-base text-foreground block mb-[72px]">
               Get the same with Mulerun
             </span>
@@ -157,7 +157,7 @@ const PricingSection = () => {
             </div>
           </div>
           
-          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 py-12 w-full md:w-[300px] text-center">
+          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-10 pb-12 w-full md:w-[300px] text-center">
             <span className="font-inter font-bold text-base text-foreground block mb-[72px]">
               Annual savings
             </span>
