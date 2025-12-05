@@ -151,7 +151,7 @@ const PricingSection = () => {
             <span className="font-inter font-bold text-base text-foreground block mb-12">
               Get the same with Mulerun
             </span>
-            <div className="relative inline-flex items-stretch -rotate-2">
+            <div className="inline-flex items-stretch -rotate-2 mx-auto">
               {/* Checkered border left */}
               <div 
                 className="w-3 flex-shrink-0"
@@ -165,7 +165,7 @@ const PricingSection = () => {
                 }}
               />
               {/* Main content */}
-              <div className="bg-[hsl(32_75%_82%)] px-3 py-2 whitespace-nowrap">
+              <div className="bg-[hsl(32_75%_82%)] px-2 py-1.5 whitespace-nowrap">
                 <span className="font-inter font-bold text-lg text-[#5D4A37]">$19.9/month — Save 88%</span>
               </div>
               {/* Checkered border right */}
