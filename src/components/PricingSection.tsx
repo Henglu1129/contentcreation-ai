@@ -81,15 +81,15 @@ const PricingSection = () => {
           40%, 60% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
           75%, 100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
         }
-        .logo-animate-0 { animation: converge-logo-0 6s ease-in-out infinite; }
-        .logo-animate-1 { animation: converge-logo-1 6s ease-in-out infinite; }
-        .logo-animate-2 { animation: converge-logo-2 6s ease-in-out infinite; }
-        .logo-animate-3 { animation: converge-logo-3 6s ease-in-out infinite; }
-        .logo-animate-4 { animation: converge-logo-4 6s ease-in-out infinite; }
-        .logo-animate-5 { animation: converge-logo-5 6s ease-in-out infinite; }
-        .logo-animate-6 { animation: converge-logo-6 6s ease-in-out infinite; }
-        .logo-animate-7 { animation: converge-logo-7 6s ease-in-out infinite; }
-        .mule-animate { animation: mule-appear 6s ease-in-out infinite; }
+        .logo-animate-0 { animation: converge-logo-0 8s ease-in-out infinite; animation-delay: 0s; }
+        .logo-animate-1 { animation: converge-logo-1 8s ease-in-out infinite; animation-delay: 0.1s; }
+        .logo-animate-2 { animation: converge-logo-2 8s ease-in-out infinite; animation-delay: 0.2s; }
+        .logo-animate-3 { animation: converge-logo-3 8s ease-in-out infinite; animation-delay: 0.3s; }
+        .logo-animate-4 { animation: converge-logo-4 8s ease-in-out infinite; animation-delay: 0.35s; }
+        .logo-animate-5 { animation: converge-logo-5 8s ease-in-out infinite; animation-delay: 0.25s; }
+        .logo-animate-6 { animation: converge-logo-6 8s ease-in-out infinite; animation-delay: 0.15s; }
+        .logo-animate-7 { animation: converge-logo-7 8s ease-in-out infinite; animation-delay: 0.05s; }
+        .mule-animate { animation: mule-appear 8s ease-in-out infinite; animation-delay: 0.4s; }
       `}</style>
 
       <div className="bg-[#FDFBF5] rounded-2xl p-12 max-w-[1200px] mx-auto">
