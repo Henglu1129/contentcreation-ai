@@ -14,30 +14,30 @@ const PricingSection = () => {
         </div>
 
       {/* Platform Icons */}
-      <div className="flex justify-center gap-6 md:gap-8 mb-12">
-        <div className="w-16 h-16 md:w-[72px] md:h-[72px] bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
-          <Twitter className="w-7 h-7 md:w-8 md:h-8 text-blue-500" />
+      <div className="flex justify-center gap-3 md:gap-4 mb-12">
+        <div className="w-16 h-16 md:w-20 md:h-20 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Twitter className="w-7 h-7 md:w-9 md:h-9 text-blue-500" />
         </div>
-        <div className="w-16 h-16 md:w-[72px] md:h-[72px] bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
-          <ArrowRight className="w-7 h-7 md:w-8 md:h-8 text-blue-600 rotate-[-45deg]" />
+        <div className="w-16 h-16 md:w-20 md:h-20 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <ArrowRight className="w-7 h-7 md:w-9 md:h-9 text-blue-600 rotate-[-45deg]" />
         </div>
-        <div className="w-16 h-16 md:w-[72px] md:h-[72px] bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
-          <Mail className="w-7 h-7 md:w-8 md:h-8 text-cyan" />
+        <div className="w-16 h-16 md:w-20 md:h-20 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Mail className="w-7 h-7 md:w-9 md:h-9 text-cyan" />
         </div>
-        <div className="w-16 h-16 md:w-[72px] md:h-[72px] bg-foreground rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
-          <span className="text-background font-bold text-2xl">P</span>
+        <div className="w-16 h-16 md:w-20 md:h-20 bg-foreground rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <span className="text-background font-bold text-2xl md:text-3xl">P</span>
         </div>
-        <div className="w-16 h-16 md:w-[72px] md:h-[72px] bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
-          <Send className="w-7 h-7 md:w-8 md:h-8 text-foreground/70" />
+        <div className="w-16 h-16 md:w-20 md:h-20 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Send className="w-7 h-7 md:w-9 md:h-9 text-foreground/70" />
         </div>
-        <div className="w-16 h-16 md:w-[72px] md:h-[72px] bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
-          <Facebook className="w-7 h-7 md:w-8 md:h-8 text-purple-500" />
+        <div className="w-16 h-16 md:w-20 md:h-20 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Facebook className="w-7 h-7 md:w-9 md:h-9 text-purple-500" />
         </div>
-        <div className="w-16 h-16 md:w-[72px] md:h-[72px] bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
-          <Youtube className="w-7 h-7 md:w-8 md:h-8 text-foreground" />
+        <div className="w-16 h-16 md:w-20 md:h-20 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Youtube className="w-7 h-7 md:w-9 md:h-9 text-foreground" />
         </div>
-        <div className="w-16 h-16 md:w-[72px] md:h-[72px] bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
-          <Pause className="w-7 h-7 md:w-8 md:h-8 text-foreground" />
+        <div className="w-16 h-16 md:w-20 md:h-20 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Pause className="w-7 h-7 md:w-9 md:h-9 text-foreground" />
         </div>
       </div>
 
