@@ -276,21 +276,23 @@ const PricingSection = () => {
 
         {/* CTA Button */}
         <div className="flex flex-col items-center">
-          <a 
-            href="https://mulerun.com/signup" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-foreground text-background px-6 py-3 rounded font-jetbrains font-bold text-sm uppercase flex items-center gap-2 hover:bg-foreground/90 transition-colors"
-          >
-            Sign Up Now
-            <span className="tracking-tighter">&gt;&gt;</span>
-          </a>
-          {/* Tooltip bubble */}
-          <div className="relative mt-2 -ml-24">
-            <img src={tooltipBubble} alt="" className="w-[280px] h-auto" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center pt-6">
-              <p className="font-inter text-sm font-medium text-center text-foreground">Get 300 free credits now.</p>
-              <p className="font-inter text-sm text-center text-foreground">No card required.</p>
+          <div className="relative">
+            <a 
+              href="https://mulerun.com/signup" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-foreground text-background px-6 py-3 rounded font-jetbrains font-bold text-sm uppercase flex items-center gap-2 hover:bg-foreground/90 transition-colors"
+            >
+              Sign Up Now
+              <span className="tracking-tighter">&gt;&gt;</span>
+            </a>
+            {/* Tooltip bubble */}
+            <div className="absolute top-full left-1/2 mt-1">
+              <img src={tooltipBubble} alt="" className="w-[280px] h-auto" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center pt-8">
+                <p className="font-inter text-sm font-medium text-center text-foreground">Get 1000+ free credits now.</p>
+                <p className="font-inter text-sm text-center text-foreground">No card required.</p>
+              </div>
             </div>
           </div>
         </div>
