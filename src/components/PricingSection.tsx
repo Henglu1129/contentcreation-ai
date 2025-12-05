@@ -151,9 +151,25 @@ const PricingSection = () => {
             <span className="font-inter font-bold text-base text-foreground block mb-12">
               Get the same with Mulerun
             </span>
-            <div className="inline-block bg-yellow-bright/50 px-3 py-1 rounded">
-              <span className="font-inter font-bold text-lg text-stone-dark">$19.9/month</span>
-              <span className="font-inter font-bold text-sm text-stone-dark ml-2">— Save 88%</span>
+            <div className="relative inline-block">
+              {/* Checkered border effect */}
+              <div 
+                className="absolute inset-0 -inset-x-2"
+                style={{
+                  background: `
+                    repeating-conic-gradient(
+                      hsl(30 60% 70%) 0% 25%, 
+                      hsl(35 70% 85%) 0% 50%
+                    ) 50% / 8px 8px
+                  `,
+                  clipPath: 'polygon(0% 50%, 4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%)'
+                }}
+              />
+              {/* Main content */}
+              <div className="relative bg-[hsl(35_70%_80%)] px-6 py-2">
+                <span className="font-inter font-bold text-lg text-stone-dark">$19.9/month</span>
+                <span className="font-inter font-bold text-sm text-stone-dark ml-2">— Save 88%</span>
+              </div>
             </div>
           </div>
           
