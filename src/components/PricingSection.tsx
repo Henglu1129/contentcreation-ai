@@ -203,7 +203,7 @@ const PricingSection = () => {
         {/* Feature Cards */}
         <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
           {/* Card 1 */}
-          <div className="relative bg-white border-2 border-[#fdc17d] rounded-lg p-6 w-full md:w-[280px] text-center overflow-hidden">
+          <div className="relative bg-transparent border-2 border-[#fdc17d] rounded-lg p-5 w-full md:w-[240px] text-center overflow-hidden">
             {/* Orange triangle decoration */}
             <div 
               className="absolute top-0 left-0 w-12 h-12"
@@ -226,7 +226,7 @@ const PricingSection = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="relative bg-white border-2 border-[#fdc17d] rounded-lg p-6 w-full md:w-[280px] text-center overflow-hidden">
+          <div className="relative bg-transparent border-2 border-[#fdc17d] rounded-lg p-5 w-full md:w-[240px] text-center overflow-hidden">
             {/* Orange triangle decoration */}
             <div 
               className="absolute top-0 left-0 w-12 h-12"
@@ -250,7 +250,7 @@ const PricingSection = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="relative bg-white border-2 border-[#fdc17d] rounded-lg p-6 w-full md:w-[280px] text-center overflow-hidden">
+          <div className="relative bg-transparent border-2 border-[#fdc17d] rounded-lg p-5 w-full md:w-[240px] text-center overflow-hidden">
             {/* Orange triangle decoration */}
             <div 
               className="absolute top-0 left-0 w-12 h-12"
