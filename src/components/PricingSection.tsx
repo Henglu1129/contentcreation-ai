@@ -268,7 +268,7 @@ const PricingSection = () => {
             </div>
             <h4 className="font-inter font-bold text-base text-foreground mb-2">Team Sync</h4>
             <p className="font-inter text-sm text-muted-foreground">
-              Coming soon: automatic data sync across features for true end-to-end automation.
+              Coming soon: auto data sync across features—true end-to-end automation.
             </p>
           </div>
         </div>
