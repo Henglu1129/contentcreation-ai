@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import logoDescriprt from "@/assets/logo-descript.png";
 import logoMidjourney from "@/assets/logo-midjourney.png";
 import logoImages from "@/assets/logo-images.png";
@@ -10,8 +9,6 @@ import logoRepurpose from "@/assets/logo-repurpose.jpg";
 import logoMule from "@/assets/logo-mule.png";
 
 const PricingSection = () => {
-  const [isConverged, setIsConverged] = useState(false);
-  
   const logos = [
     { src: logoDescriprt, alt: "Descript" },
     { src: logoMidjourney, alt: "Midjourney" },
@@ -22,29 +19,6 @@ const PricingSection = () => {
     { src: logoCanva, alt: "Canva" },
     { src: logoRepurpose, alt: "Repurpose" },
   ];
-
-  useEffect(() => {
-    // Animation cycle: spread (2s) -> converge (2s) -> merged display (2.5s) -> expand (2s) -> repeat
-    const cycleAnimation = () => {
-      // Start with spread state for 2 seconds
-      setIsConverged(false);
-      
-      setTimeout(() => {
-        // Converge to center
-        setIsConverged(true);
-      }, 2000);
-      
-      setTimeout(() => {
-        // Start expanding back
-        setIsConverged(false);
-      }, 5500); // 2000 (wait) + 1000 (converge anim) + 2500 (merged display)
-    };
-    
-    cycleAnimation();
-    const interval = setInterval(cycleAnimation, 7500); // Full cycle duration
-    
-    return () => clearInterval(interval);
-  }, []);
 
   // Calculate the translateX offset for each logo to reach center
   const getTranslateX = (index: number) => {
@@ -58,6 +32,64 @@ const PricingSection = () => {
 
   return (
     <section className="bg-yellow-light py-16 px-6">
+      {/* CSS Keyframe Animations */}
+      <style>{`
+        @keyframes converge-logo-0 {
+          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
+          40%, 60% { transform: translateX(${getTranslateX(0)}px) scale(0); opacity: 0; }
+          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+        }
+        @keyframes converge-logo-1 {
+          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
+          40%, 60% { transform: translateX(${getTranslateX(1)}px) scale(0); opacity: 0; }
+          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+        }
+        @keyframes converge-logo-2 {
+          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
+          40%, 60% { transform: translateX(${getTranslateX(2)}px) scale(0); opacity: 0; }
+          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+        }
+        @keyframes converge-logo-3 {
+          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
+          40%, 60% { transform: translateX(${getTranslateX(3)}px) scale(0); opacity: 0; }
+          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+        }
+        @keyframes converge-logo-4 {
+          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
+          40%, 60% { transform: translateX(${getTranslateX(4)}px) scale(0); opacity: 0; }
+          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+        }
+        @keyframes converge-logo-5 {
+          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
+          40%, 60% { transform: translateX(${getTranslateX(5)}px) scale(0); opacity: 0; }
+          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+        }
+        @keyframes converge-logo-6 {
+          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
+          40%, 60% { transform: translateX(${getTranslateX(6)}px) scale(0); opacity: 0; }
+          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+        }
+        @keyframes converge-logo-7 {
+          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
+          40%, 60% { transform: translateX(${getTranslateX(7)}px) scale(0); opacity: 0; }
+          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+        }
+        @keyframes mule-appear {
+          0%, 25% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+          40%, 60% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+          75%, 100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+        }
+        .logo-animate-0 { animation: converge-logo-0 6s ease-in-out infinite; }
+        .logo-animate-1 { animation: converge-logo-1 6s ease-in-out infinite; }
+        .logo-animate-2 { animation: converge-logo-2 6s ease-in-out infinite; }
+        .logo-animate-3 { animation: converge-logo-3 6s ease-in-out infinite; }
+        .logo-animate-4 { animation: converge-logo-4 6s ease-in-out infinite; }
+        .logo-animate-5 { animation: converge-logo-5 6s ease-in-out infinite; }
+        .logo-animate-6 { animation: converge-logo-6 6s ease-in-out infinite; }
+        .logo-animate-7 { animation: converge-logo-7 6s ease-in-out infinite; }
+        .mule-animate { animation: mule-appear 6s ease-in-out infinite; }
+      `}</style>
+
       <div className="bg-[#FDFBF5] rounded-2xl p-12 max-w-[1200px] mx-auto">
         <div className="text-center mb-12">
           <h2 className="font-anton text-5xl md:text-6xl text-foreground mb-4">
@@ -71,39 +103,21 @@ const PricingSection = () => {
         {/* Platform Icons with Animation */}
         <div className="relative flex justify-center items-center gap-3 md:gap-4 mb-12 h-[85px]">
           {/* Individual logos */}
-          {logos.map((logo, index) => {
-            const translateX = getTranslateX(index);
-            
-            return (
-              <div 
-                key={index}
-                className="w-16 h-16 md:w-[85px] md:h-[85px] rounded-full border border-foreground/10 flex items-center justify-center shadow-sm overflow-hidden flex-shrink-0 transition-all duration-1000 ease-in-out"
-                style={{
-                  transform: isConverged 
-                    ? `translateX(${-translateX}px) scale(0)` 
-                    : 'translateX(0) scale(1)',
-                  opacity: isConverged ? 0 : 1,
-                }}
-              >
-                <img 
-                  src={logo.src} 
-                  alt={logo.alt} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            );
-          })}
+          {logos.map((logo, index) => (
+            <div 
+              key={index}
+              className={`w-16 h-16 md:w-[85px] md:h-[85px] rounded-full border border-foreground/10 flex items-center justify-center shadow-sm overflow-hidden flex-shrink-0 logo-animate-${index}`}
+            >
+              <img 
+                src={logo.src} 
+                alt={logo.alt} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
           
           {/* Mule logo (appears when merged) */}
-          <div 
-            className="absolute left-1/2 top-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full border border-foreground/10 flex items-center justify-center shadow-lg overflow-hidden bg-[#FDFBF5] transition-all duration-700 ease-in-out"
-            style={{
-              transform: isConverged 
-                ? 'translate(-50%, -50%) scale(1)' 
-                : 'translate(-50%, -50%) scale(0)',
-              opacity: isConverged ? 1 : 0,
-            }}
-          >
+          <div className="absolute left-1/2 top-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full border border-foreground/10 flex items-center justify-center shadow-lg overflow-hidden bg-[#FDFBF5] mule-animate">
             <img 
               src={logoMule} 
               alt="Mulerun" 
