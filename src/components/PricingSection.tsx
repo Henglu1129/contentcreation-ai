@@ -38,43 +38,43 @@ const PricingSection = () => {
       <style>{`
         @keyframes converge-logo-0 {
           0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
-          30%, 55% { transform: translateX(${getTranslateX(0)}px) scale(0); opacity: 0; }
-          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          25%, 80% { transform: translateX(${getTranslateX(0)}px) scale(0); opacity: 0; }
+          95%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-1 {
           0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
-          30%, 55% { transform: translateX(${getTranslateX(1)}px) scale(0); opacity: 0; }
-          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          25%, 80% { transform: translateX(${getTranslateX(1)}px) scale(0); opacity: 0; }
+          95%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-2 {
           0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
-          30%, 55% { transform: translateX(${getTranslateX(2)}px) scale(0); opacity: 0; }
-          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          25%, 80% { transform: translateX(${getTranslateX(2)}px) scale(0); opacity: 0; }
+          95%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-3 {
           0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
-          30%, 55% { transform: translateX(${getTranslateX(3)}px) scale(0); opacity: 0; }
-          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          25%, 80% { transform: translateX(${getTranslateX(3)}px) scale(0); opacity: 0; }
+          95%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-4 {
           0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
-          30%, 55% { transform: translateX(${getTranslateX(4)}px) scale(0); opacity: 0; }
-          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          25%, 80% { transform: translateX(${getTranslateX(4)}px) scale(0); opacity: 0; }
+          95%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-5 {
           0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
-          30%, 55% { transform: translateX(${getTranslateX(5)}px) scale(0); opacity: 0; }
-          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          25%, 80% { transform: translateX(${getTranslateX(5)}px) scale(0); opacity: 0; }
+          95%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-6 {
           0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
-          30%, 55% { transform: translateX(${getTranslateX(6)}px) scale(0); opacity: 0; }
-          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          25%, 80% { transform: translateX(${getTranslateX(6)}px) scale(0); opacity: 0; }
+          95%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-7 {
           0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
-          30%, 55% { transform: translateX(${getTranslateX(7)}px) scale(0); opacity: 0; }
-          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          25%, 80% { transform: translateX(${getTranslateX(7)}px) scale(0); opacity: 0; }
+          95%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes mule-appear {
           0%, 18% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
