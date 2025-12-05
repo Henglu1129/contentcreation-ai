@@ -187,8 +187,8 @@ const PricingSection = () => {
             <span className="font-inter font-bold text-base text-foreground block mb-12">
               Annual savings
             </span>
-            <div className="font-inter font-bold text-3xl text-yellow-bright">
-              ¥17,244/year
+            <div className="font-inter font-bold text-3xl text-[#774002]">
+              $1,740.96/year
             </div>
           </div>
         </div>
