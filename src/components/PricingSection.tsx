@@ -21,13 +21,15 @@ const PricingSection = () => {
   ];
 
   // Calculate the translateX offset for each logo to reach center
+  // Negative index = left side (needs positive translateX to move right)
+  // Positive index = right side (needs negative translateX to move left)
   const getTranslateX = (index: number) => {
     const logoSize = 85;
     const gap = 16;
     const totalWidth = logoSize + gap;
     const centerIndex = 3.5;
     const distanceFromCenter = index - centerIndex;
-    return distanceFromCenter * totalWidth;
+    return -distanceFromCenter * totalWidth; // Negated to move toward center
   };
 
   return (
