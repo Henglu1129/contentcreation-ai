@@ -158,8 +158,8 @@ const PricingSection = () => {
                 style={{
                   background: `
                     repeating-conic-gradient(
-                      hsl(30 50% 65%) 0% 25%, 
-                      hsl(35 60% 80%) 0% 50%
+                      hsl(32 60% 75%) 0% 25%, 
+                      hsl(38 70% 88%) 0% 50%
                     ) 50% / 8px 8px
                   `
                 }}
@@ -170,8 +170,8 @@ const PricingSection = () => {
                 style={{
                   background: `
                     repeating-conic-gradient(
-                      hsl(30 50% 65%) 0% 25%, 
-                      hsl(35 60% 80%) 0% 50%
+                      hsl(32 60% 75%) 0% 25%, 
+                      hsl(38 70% 88%) 0% 50%
                     ) 50% / 8px 8px
                   `
                 }}
