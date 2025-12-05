@@ -48,7 +48,7 @@ const ScrollingColumn = ({ images, direction }: { images: string[]; direction: "
   return (
     <div 
       ref={scrollRef}
-      className="flex flex-col gap-2 h-[500px] overflow-hidden"
+      className="flex flex-col gap-2 h-[650px] overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
