@@ -57,6 +57,7 @@ export default {
         yellow: {
           bright: "hsl(var(--yellow-bright))",
           light: "hsl(var(--yellow-light))",
+          cream: "hsl(var(--yellow-cream))",
           glow: "hsl(var(--yellow-glow))",
           soft: "hsl(var(--yellow-soft))",
         },
