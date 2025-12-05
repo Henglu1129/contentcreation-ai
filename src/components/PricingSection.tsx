@@ -193,35 +193,82 @@ const PricingSection = () => {
           </div>
         </div>
 
-        {/* Features */}
-        <div className="flex justify-center gap-16 mb-12">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-foreground/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">⚡</span>
+        {/* Beyond Price Section */}
+        <div className="text-center mb-8">
+          <h3 className="font-inter text-xl text-foreground">
+            Beyond Price — <span className="font-bold">More Convenience with Mulerun</span>
+          </h3>
+        </div>
+
+        {/* Feature Cards */}
+        <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
+          {/* Card 1 */}
+          <div className="relative bg-white border-2 border-[#fdc17d] rounded-lg p-6 w-full md:w-[280px] text-center overflow-hidden">
+            {/* Orange triangle decoration */}
+            <div 
+              className="absolute top-0 left-0 w-12 h-12"
+              style={{
+                background: 'linear-gradient(135deg, #fdc17d 50%, transparent 50%)'
+              }}
+            />
+            <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+                <path d="M7 8h2m2 0h2m2 0h2"></path>
+              </svg>
             </div>
-            <h3 className="font-inter font-bold text-lg text-foreground mb-2">hit</h3>
-            <p className="font-inter text-xs text-muted-foreground max-w-[200px]">
-              Over countless AI features—video scripts, captions, thumbnails, shorts.
+            <h4 className="font-inter font-bold text-base text-foreground mb-2">No More Platform Switching</h4>
+            <p className="font-inter text-sm text-muted-foreground">
+              Say goodbye to juggling between apps. Do everything in one place—3x faster workflow.
             </p>
           </div>
-          
-          <div className="text-center">
-            <div className="w-12 h-12 bg-foreground/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">🎯</span>
+
+          {/* Card 2 */}
+          <div className="relative bg-white border-2 border-[#fdc17d] rounded-lg p-6 w-full md:w-[280px] text-center overflow-hidden">
+            {/* Orange triangle decoration */}
+            <div 
+              className="absolute top-0 left-0 w-12 h-12"
+              style={{
+                background: 'linear-gradient(135deg, #fdc17d 50%, transparent 50%)'
+              }}
+            />
+            <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <circle cx="8" cy="10" r="2"></circle>
+                <path d="M8 12v4"></path>
+                <line x1="14" y1="9" x2="18" y2="9"></line>
+                <line x1="14" y1="13" x2="18" y2="13"></line>
+              </svg>
             </div>
-            <h3 className="font-inter font-bold text-lg text-foreground mb-2">Quality</h3>
-            <p className="font-inter text-xs text-muted-foreground max-w-[200px]">
-              No more juggling multiple tools. Everything in one place, one login, one workflow.
+            <h4 className="font-inter font-bold text-base text-foreground mb-2">Unified Billing</h4>
+            <p className="font-inter text-sm text-muted-foreground">
+              One invoice, one payment. No more tracking multiple due dates or charges.
             </p>
           </div>
-          
-          <div className="text-center">
-            <div className="w-12 h-12 bg-foreground/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">💎</span>
+
+          {/* Card 3 */}
+          <div className="relative bg-white border-2 border-[#fdc17d] rounded-lg p-6 w-full md:w-[280px] text-center overflow-hidden">
+            {/* Orange triangle decoration */}
+            <div 
+              className="absolute top-0 left-0 w-12 h-12"
+              style={{
+                background: 'linear-gradient(135deg, #fdc17d 50%, transparent 50%)'
+              }}
+            />
+            <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
             </div>
-            <h3 className="font-inter font-bold text-lg text-foreground mb-2">$?</h3>
-            <p className="font-inter text-xs text-muted-foreground max-w-[200px]">
-              Predictable and scalable pricing for every stage of growth.
+            <h4 className="font-inter font-bold text-base text-foreground mb-2">Seamless Collaboration</h4>
+            <p className="font-inter text-sm text-muted-foreground">
+              Coming soon: automatic data sync across features for true end-to-end automation.
             </p>
           </div>
         </div>
