@@ -77,10 +77,10 @@ const PricingSection = () => {
           75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes mule-appear {
-          0%, 20% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
-          32% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
-          38%, 55% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-          70%, 100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+          0%, 18% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+          28% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+          34%, 72% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+          85%, 100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
         }
         .logo-animate-0 { animation: converge-logo-0 5s ease-in-out infinite; animation-delay: 0s; }
         .logo-animate-1 { animation: converge-logo-1 5s ease-in-out infinite; animation-delay: 0.05s; }
