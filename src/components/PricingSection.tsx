@@ -143,7 +143,7 @@ const PricingSection = () => {
               Buy 8 pro platforms separately
             </span>
             <div className="font-inter font-bold text-3xl text-gray-500 line-through">
-              ¥1,596/month
+              $164.98/month
             </div>
           </div>
           
