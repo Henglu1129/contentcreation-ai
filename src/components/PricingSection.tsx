@@ -147,21 +147,21 @@ const PricingSection = () => {
             </div>
           </div>
           
-          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg p-6 py-14 w-full md:w-[300px] relative">
-            <span className="font-inter font-bold text-sm text-foreground block mb-4">
+          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-10 pb-12 w-full md:w-[300px] relative">
+            <span className="font-inter font-bold text-base text-foreground block mb-[72px]">
               Get the same with Mulerun
             </span>
-            <div className="inline-block bg-yellow-bright/50 px-3 py-1 rounded">
+            <div className="inline-block bg-yellow-bright/50 px-3 py-1 rounded text-center w-full">
               <span className="font-inter font-bold text-lg text-stone-dark">¥159/month</span>
               <span className="font-inter font-bold text-sm text-stone-dark ml-2">— Save 90%</span>
             </div>
           </div>
           
-          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg p-6 py-14 w-full md:w-[300px]">
-            <span className="font-inter font-bold text-sm text-foreground block mb-4">
+          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-10 pb-12 w-full md:w-[300px]">
+            <span className="font-inter font-bold text-base text-foreground block mb-[72px]">
               Annual savings
             </span>
-            <div className="font-inter font-bold text-2xl text-yellow-bright">
+            <div className="font-inter font-bold text-3xl text-yellow-bright text-center">
               ¥17,244/year
             </div>
           </div>
