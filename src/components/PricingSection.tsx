@@ -245,7 +245,7 @@ const PricingSection = () => {
             </div>
             <h4 className="font-inter font-bold text-sm text-foreground mb-1">Unified Billing</h4>
             <p className="font-inter text-xs text-muted-foreground">
-              One invoice, one payment. No more tracking multiple due dates or charges.
+              One invoice, one payment. No tracking multiple due dates or charges.
             </p>
           </div>
 
