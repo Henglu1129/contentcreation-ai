@@ -6,8 +6,8 @@ const FeaturesGrid = () => {
       title: "Out of content ideas?",
       description: "How can I turn a vague thought into a full post — in seconds?",
       cards: [
-        { title: "Turn Idea to Visual", description: "Turn ideas into visuals—no design skills needed.", hasButton: true, link: "https://mulerun.com/@Rhino/illustrate-mind-spark-2", imageIndex: 0 },
-        { title: "Write Copy", hasButton: true, link: "https://mulerun.com/@cqplaquemh41i2k/content-pilot-ai", imageIndex: 1 },
+        { title: "Turn Idea to Visual", description: "No design skills? No problem. Stunning results in seconds.", hasButton: true, link: "https://mulerun.com/@Rhino/illustrate-mind-spark-2", imageIndex: 0 },
+        { title: "Write Copy", description: "Beat blank-page anxiety with on-brand, ready-to-use drafts.", hasButton: true, link: "https://mulerun.com/@cqplaquemh41i2k/content-pilot-ai", imageIndex: 1 },
       ],
       layout: "right",
     },
@@ -15,9 +15,9 @@ const FeaturesGrid = () => {
       title: "Creating content takes forever?",
       description: "How can I auto-generate videos, podcasts, and subtitles — without filming or editing?",
       cards: [
-        { title: "Make Shorts", hasButton: true, link: "https://mulerun.com/@GrahamRabbb0e02/auto-short-video-creator", imageIndex: 2 },
-        { title: "Generate Podcast", hasButton: true, link: "https://mulerun.com/@AngryBerry/podcast-generator", imageIndex: 3 },
-        { title: "Translate Subtitles", hasButton: true, link: "https://mulerun.com/@Skynetbbb0bb3/subtitle-translate-ai-pro", imageIndex: 4 },
+        { title: "Make Shorts", description: "Auto-cut highlights that grab attention—perfect for social.", hasButton: true, link: "https://mulerun.com/@GrahamRabbb0e02/auto-short-video-creator", imageIndex: 2 },
+        { title: "Generate Podcast", description: "Human-like voice, natural pacing—ready to publish instantly.", hasButton: true, link: "https://mulerun.com/@AngryBerry/podcast-generator", imageIndex: 3 },
+        { title: "Translate Subtitles", description: "Fast, accurate sync in 50+ languages—zero manual tweaking.", hasButton: true, link: "https://mulerun.com/@Skynetbbb0bb3/subtitle-translate-ai-pro", imageIndex: 4 },
       ],
       layout: "left",
     },
@@ -25,8 +25,8 @@ const FeaturesGrid = () => {
       title: "Great content, but no clicks?",
       description: "How can I get scroll-stopping titles and thumbnails — that actually convert?",
       cards: [
-        { title: "Generate Title", hasButton: true, link: "https://mulerun.com/@kpviqlcmhm864vu/youtube-title-generator-with-emojis", imageIndex: 5 },
-        { title: "Create Thumbnail", hasButton: true, link: "https://mulerun.com/@summerail/youtube-awesome-thumbnail", imageIndex: 6 },
+        { title: "Generate Title", description: "Scroll-stopping hooks tailored to your audience's interests.", hasButton: true, link: "https://mulerun.com/@kpviqlcmhm864vu/youtube-title-generator-with-emojis", imageIndex: 5 },
+        { title: "Create Thumbnail", description: "Boost CTR with bold, platform-optimized visuals—done in one click.", hasButton: true, link: "https://mulerun.com/@summerail/youtube-awesome-thumbnail", imageIndex: 6 },
       ],
       layout: "right",
     },
@@ -34,7 +34,7 @@ const FeaturesGrid = () => {
       title: "Posting to just one platform?",
       description: "How can I repurpose one video into posts for all social platforms — instantly?",
       cards: [
-        { title: "Repurpose Content", hasButton: true, link: "https://mulerun.com/@YuTou_baby/youtube-video-to-social-content", imageIndex: 7 },
+        { title: "Repurpose Content", description: "Stretch your best work across formats without starting from scratch.", hasButton: true, link: "https://mulerun.com/@YuTou_baby/youtube-video-to-social-content", imageIndex: 7 },
       ],
       layout: "left",
     },
