@@ -9,7 +9,7 @@ const PricingSection = () => {
             Mulerun's all-in-one edge
           </h2>
           <p className="font-inter text-sm text-muted-foreground">
-            <span className="highlight-yellow px-2 py-1">Multiple pro tools, a fraction of the price.</span>
+            <span className="highlight-yellow-light px-2 py-1">Multiple pro tools, a fraction of the price.</span>
           </p>
         </div>
 
