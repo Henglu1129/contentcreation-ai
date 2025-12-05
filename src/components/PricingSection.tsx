@@ -139,7 +139,7 @@ const PricingSection = () => {
         {/* Pricing Cards */}
         <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
           <div className="bg-white border-t-4 border-t-lavender border border-foreground/10 rounded-lg px-6 pt-6 pb-8 w-full md:w-[300px] text-center">
-            <span className="font-inter font-bold text-base text-foreground block mb-12">
+            <span className="font-inter font-bold text-base text-foreground block mt-2 mb-12">
               Buy 8 pro platforms separately
             </span>
             <div className="font-inter font-bold text-3xl text-gray-500 line-through">
