@@ -147,11 +147,11 @@ const PricingSection = () => {
             </div>
           </div>
           
-          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-6 pb-8 w-full md:w-[300px] text-center">
+          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-6 pb-8 w-full md:w-[300px] flex flex-col items-center">
             <span className="font-inter font-bold text-base text-foreground block mb-12">
               Get the same with Mulerun
             </span>
-            <div className="inline-flex items-stretch -rotate-2 mx-auto">
+            <div className="flex items-stretch -rotate-2">
               {/* Checkered border left */}
               <div 
                 className="w-3 flex-shrink-0"
