@@ -12,7 +12,7 @@ const Footer = () => {
   }));
 
   return (
-    <footer className="bg-foreground py-20 px-[120px] relative overflow-hidden">
+    <footer className="bg-foreground py-12 md:py-20 px-4 md:px-[120px] relative overflow-hidden">
       {/* CSS for particle animations */}
       <style>{`
         @keyframes floatUp {
@@ -57,13 +57,13 @@ const Footer = () => {
       <div className="relative z-10">
         {/* Big Logo */}
         <div className="text-center mb-6">
-          <h2 className="font-anton text-[140px] leading-none text-card tracking-tight">
+          <h2 className="font-anton text-6xl md:text-[140px] leading-none text-card tracking-tight">
             MuleRun
           </h2>
         </div>
 
         {/* Description */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <p className="font-inter text-sm text-card/70">
             MuleRun - AI Agent Marketplace
           </p>
@@ -79,9 +79,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Row */}
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
           {/* Social Icons - Left */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 order-2 md:order-1">
             {/* Discord */}
             <a href="https://discord.com/invite/KK3zXcMkhg" target="_blank" rel="noopener noreferrer" className="text-card/70 hover:text-card transition-colors">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -105,7 +105,7 @@ const Footer = () => {
           </div>
 
           {/* Links - Center */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 order-1 md:order-2">
             <a href="https://mulerun.com/docs/legal/user-terms-of-use" target="_blank" rel="noopener noreferrer" className="font-inter text-sm text-card/70 hover:text-card transition-colors underline">
               Terms
             </a>
@@ -115,7 +115,7 @@ const Footer = () => {
           </div>
 
           {/* Copyright - Right */}
-          <div>
+          <div className="order-3">
             <span className="font-inter text-sm text-card/70">MuleRun@2025</span>
           </div>
         </div>

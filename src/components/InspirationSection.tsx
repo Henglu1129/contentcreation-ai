@@ -26,7 +26,7 @@ const sectionTitles = [
 
 const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
   const [expandedIndex, setExpandedIndex] = useState(0);
-  const isReversed = blockIndex === 1 || blockIndex === 3; // 第二和第四个section图片在左边
+  const isReversed = blockIndex === 1 || blockIndex === 3;
 
   const defaultTools: Tool[] = [
     {
@@ -91,10 +91,10 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
   const tools = blockIndex === 1 ? section2Tools : blockIndex === 2 ? section3Tools : blockIndex === 3 ? section4Tools : defaultTools;
 
   return (
-    <div className="mb-20 last:mb-0">
+    <div className="mb-16 md:mb-20 last:mb-0">
       {/* Main Title */}
       <h2 
-        className={`font-anton text-[64px] leading-[110%] text-foreground mb-10 ${isReversed ? 'text-right' : ''}`}
+        className={`font-anton text-3xl md:text-5xl lg:text-[64px] leading-[110%] text-foreground mb-6 md:mb-10 text-center lg:text-left ${isReversed ? 'lg:text-right' : ''}`}
         dangerouslySetInnerHTML={{ __html: sectionTitles[blockIndex] }}
       />
       
@@ -107,49 +107,49 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
             return (
               <div 
                 key={index}
-                className={`bg-lavender/50 rounded-lg p-6 relative flex gap-8 items-start ${isReversed ? 'flex-row-reverse' : ''}`}
+                className={`bg-lavender/50 rounded-lg p-4 md:p-6 relative flex flex-col lg:flex-row gap-6 lg:gap-8 items-start ${isReversed ? 'lg:flex-row-reverse' : ''}`}
                 onMouseEnter={() => setExpandedIndex(index)}
               >
-                {/* Decorative arrows */}
-                <div className={`absolute top-4 flex ${isReversed ? 'left-[420px]' : 'right-[420px]'}`}>
+                {/* Decorative arrows - hidden on mobile */}
+                <div className={`absolute top-4 hidden lg:flex ${isReversed ? 'left-[420px]' : 'right-[420px]'}`}>
                   <ChevronsRight className={`w-6 h-6 text-cyan ${isReversed ? '' : 'rotate-180'}`} />
                   <ChevronsRight className={`w-6 h-6 text-cyan -ml-2 ${isReversed ? '' : 'rotate-180'}`} />
                   <ChevronsRight className={`w-6 h-6 text-cyan -ml-2 ${isReversed ? '' : 'rotate-180'}`} />
                 </div>
                 
                 {/* Content */}
-                <div className={`flex-1 ${isReversed ? 'text-right' : ''}`}>
+                <div className={`flex-1 ${isReversed ? 'lg:text-right' : ''}`}>
                   <a 
                     href={tool.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <h3 className="font-jetbrains font-black text-xl uppercase tracking-wide text-foreground mb-3">
+                    <h3 className="font-jetbrains font-black text-lg md:text-xl uppercase tracking-wide text-foreground mb-3">
                       {tool.title}
                     </h3>
                     <p className="font-inter text-sm text-foreground/70 mb-4">
                       {tool.description}
                     </p>
-                    <span className={`inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded font-jetbrains font-bold text-xs uppercase tracking-wider ${isReversed ? 'flex-row-reverse' : ''}`}>
-                      {isReversed ? <ChevronsRight className="w-4 h-4 rotate-180" /> : null}
+                    <span className={`inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded font-jetbrains font-bold text-xs uppercase tracking-wider ${isReversed ? 'lg:flex-row-reverse' : ''}`}>
+                      {isReversed ? <ChevronsRight className="w-4 h-4 rotate-180 hidden lg:block" /> : null}
                       Free Trial
-                      {!isReversed ? <ChevronsRight className="w-4 h-4" /> : null}
+                      {!isReversed ? <ChevronsRight className="w-4 h-4" /> : <ChevronsRight className="w-4 h-4 lg:hidden" />}
                     </span>
                   </a>
                 </div>
 
                 {/* Right: Image */}
-                <div className="relative shrink-0">
-                  <div className="w-[400px] aspect-video rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10">
+                <div className="relative shrink-0 w-full lg:w-auto">
+                  <div className="w-full lg:w-[400px] aspect-video rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10">
                     <img 
                       src={tool.image} 
                       alt={tool.title}
                       className={`w-full h-full object-cover ${tool.imagePosition || 'object-center'}`}
                     />
                   </div>
-                  {/* Bottom decorative pixels */}
-                  <div className={`absolute -bottom-4 flex gap-[2px] ${isReversed ? '-left-4' : '-right-4'}`}>
+                  {/* Bottom decorative pixels - hidden on mobile */}
+                  <div className={`absolute -bottom-4 hidden lg:flex gap-[2px] ${isReversed ? '-left-4' : '-right-4'}`}>
                     {[...Array(4)].map((_, row) => (
                       <div key={row} className="flex flex-col gap-[2px]">
                         {[...Array(4)].map((_, col) => (
@@ -168,10 +168,11 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
             return (
               <div 
                 key={index}
-                className={`py-4 border-t border-foreground/10 cursor-pointer ${isReversed ? 'text-right' : ''}`}
+                className={`py-4 border-t border-foreground/10 cursor-pointer text-center lg:text-left ${isReversed ? 'lg:text-right' : ''}`}
                 onMouseEnter={() => setExpandedIndex(index)}
+                onClick={() => setExpandedIndex(index)}
               >
-                <h3 className="font-jetbrains font-bold text-lg uppercase tracking-wide text-foreground">
+                <h3 className="font-jetbrains font-bold text-base md:text-lg uppercase tracking-wide text-foreground">
                   {tool.title}
                 </h3>
               </div>
@@ -185,8 +186,8 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
 
 const InspirationSection = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-[1300px] mx-auto px-[60px]">
+    <section className="py-12 md:py-20 bg-background">
+      <div className="max-w-[1300px] mx-auto px-4 md:px-[60px]">
         {[0, 1, 2, 3].map((index) => (
           <InspirationBlock key={index} blockIndex={index} />
         ))}

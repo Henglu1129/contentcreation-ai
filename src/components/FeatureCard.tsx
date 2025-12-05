@@ -26,7 +26,7 @@ const FeatureCard = ({ title, hasButton = false, imageIndex = 0, link }: Feature
   return (
     <CardWrapper 
       {...cardProps}
-      className={`bg-card rounded border border-yellow-glow pt-8 pr-6 pb-8 pl-6 flex items-center w-[357px] h-[130px] relative overflow-hidden card-shadow-yellow group ${link ? 'cursor-pointer hover:border-yellow-bright transition-colors' : ''}`}
+      className={`bg-card rounded border border-yellow-glow pt-8 pr-6 pb-8 pl-6 flex items-center w-full md:w-[357px] h-[130px] relative overflow-hidden card-shadow-yellow group ${link ? 'cursor-pointer hover:border-yellow-bright transition-colors' : ''}`}
     >
       {/* Browser Frame with Image */}
       <div 
