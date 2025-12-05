@@ -7,6 +7,7 @@ import logoHubspot from "@/assets/logo-hubspot.jpg";
 import logoCanva from "@/assets/logo-canva.png";
 import logoRepurpose from "@/assets/logo-repurpose.jpg";
 import logoMule from "@/assets/logo-mule.png";
+import tooltipBubble from "@/assets/tooltip-bubble.svg";
 
 const PricingSection = () => {
   const logos = [
@@ -285,13 +286,11 @@ const PricingSection = () => {
             <span className="tracking-tighter">&gt;&gt;</span>
           </a>
           {/* Tooltip bubble */}
-          <div className="relative mt-4">
-            {/* Arrow pointing up */}
-            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-yellow-bright rotate-45" />
-            {/* Bubble */}
-            <div className="bg-yellow-bright text-foreground px-5 py-3 rounded-lg relative">
-              <p className="font-inter text-sm font-medium text-center">Get 300 free credits now.</p>
-              <p className="font-inter text-sm text-center">No card required.</p>
+          <div className="relative mt-2 -ml-24">
+            <img src={tooltipBubble} alt="" className="w-[280px] h-auto" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center pt-6">
+              <p className="font-inter text-sm font-medium text-center text-foreground">Get 300 free credits now.</p>
+              <p className="font-inter text-sm text-center text-foreground">No card required.</p>
             </div>
           </div>
         </div>
