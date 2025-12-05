@@ -66,7 +66,8 @@ const ScrollingColumn = ({ images, direction }: { images: string[]; direction: "
 
 const SectionTitle = () => {
   return (
-    <section className="bg-yellow-light py-16 px-[120px]">
+    <section className="bg-yellow-light py-16 px-6">
+      <div className="max-w-[1200px] mx-auto">
       <div className="text-center mb-4">
         <h2 className="font-anton text-5xl leading-[120%] text-foreground">
           The Toolkit Top Creators Rely On
@@ -94,6 +95,7 @@ const SectionTitle = () => {
         
         {/* Bottom dashed line */}
         <div className="border-t-2 border-dashed border-foreground/20" />
+      </div>
       </div>
     </section>
   );
