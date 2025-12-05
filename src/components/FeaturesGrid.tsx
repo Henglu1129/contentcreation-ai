@@ -16,8 +16,8 @@ const FeaturesGrid = () => {
       description: "How can I auto-generate videos, podcasts, and subtitles — without filming or editing?",
       cards: [
         { title: "Make Shorts", description: "Auto-cut highlights that grab attention—perfect for social.", hasButton: true, link: "https://mulerun.com/@GrahamRabbb0e02/auto-short-video-creator", imageIndex: 2 },
-        { title: "Generate Podcast", description: "Human-like voice, natural pacing—ready to publish instantly.", hasButton: true, link: "https://mulerun.com/@AngryBerry/podcast-generator", imageIndex: 3 },
-        { title: "Translate Subtitles", description: "Fast, accurate sync in 50+ languages—zero manual tweaking.", hasButton: true, link: "https://mulerun.com/@Skynetbbb0bb3/subtitle-translate-ai-pro", imageIndex: 4 },
+        { title: "Generate Podcast", description: "Natural voice, ready to publish in seconds.", hasButton: true, link: "https://mulerun.com/@AngryBerry/podcast-generator", imageIndex: 3 },
+        { title: "Translate Subtitles", description: "Accurate sync in 50+ languages—no editing needed.", hasButton: true, link: "https://mulerun.com/@Skynetbbb0bb3/subtitle-translate-ai-pro", imageIndex: 4 },
       ],
       layout: "left",
     },
@@ -26,7 +26,7 @@ const FeaturesGrid = () => {
       description: "How can I get scroll-stopping titles and thumbnails — that actually convert?",
       cards: [
         { title: "Generate Title", description: "Scroll-stopping hooks tailored to your audience's interests.", hasButton: true, link: "https://mulerun.com/@kpviqlcmhm864vu/youtube-title-generator-with-emojis", imageIndex: 5 },
-        { title: "Create Thumbnail", description: "Boost CTR with bold, platform-optimized visuals—done in one click.", hasButton: true, link: "https://mulerun.com/@summerail/youtube-awesome-thumbnail", imageIndex: 6 },
+        { title: "Create Thumbnail", description: "High-CTR visuals, optimized and done in one click.", hasButton: true, link: "https://mulerun.com/@summerail/youtube-awesome-thumbnail", imageIndex: 6 },
       ],
       layout: "right",
     },
@@ -34,7 +34,7 @@ const FeaturesGrid = () => {
       title: "Posting to just one platform?",
       description: "How can I repurpose one video into posts for all social platforms — instantly?",
       cards: [
-        { title: "Repurpose Content", description: "Stretch your best work across formats without starting from scratch.", hasButton: true, link: "https://mulerun.com/@YuTou_baby/youtube-video-to-social-content", imageIndex: 7 },
+        { title: "Repurpose Content", description: "Reuse your best work everywhere—no rework required.", hasButton: true, link: "https://mulerun.com/@YuTou_baby/youtube-video-to-social-content", imageIndex: 7 },
       ],
       layout: "left",
     },
