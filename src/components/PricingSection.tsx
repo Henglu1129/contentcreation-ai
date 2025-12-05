@@ -10,9 +10,7 @@ import logoRepurpose from "@/assets/logo-repurpose.jpg";
 import logoMule from "@/assets/logo-mule.png";
 
 const PricingSection = () => {
-  const [animationProgress, setAnimationProgress] = useState(0); // 0 = spread, 100 = merged
-  const [direction, setDirection] = useState<'converging' | 'expanding'>('converging');
-  const [isPaused, setIsPaused] = useState(false);
+  const [isConverged, setIsConverged] = useState(false);
   
   const logos = [
     { src: logoDescriprt, alt: "Descript" },
@@ -26,85 +24,36 @@ const PricingSection = () => {
   ];
 
   useEffect(() => {
-    let animationFrame: number;
-    let pauseTimeout: NodeJS.Timeout;
-    
-    const animate = () => {
-      if (isPaused) return;
+    // Animation cycle: spread (2s) -> converge (2s) -> merged display (2.5s) -> expand (2s) -> repeat
+    const cycleAnimation = () => {
+      // Start with spread state for 2 seconds
+      setIsConverged(false);
       
-      setAnimationProgress(prev => {
-        if (direction === 'converging') {
-          if (prev >= 100) {
-            setIsPaused(true);
-            pauseTimeout = setTimeout(() => {
-              setDirection('expanding');
-              setIsPaused(false);
-            }, 2000); // Pause at merged state for 2 seconds
-            return 100;
-          }
-          return prev + 1.5; // Speed of convergence
-        } else {
-          if (prev <= 0) {
-            setIsPaused(true);
-            pauseTimeout = setTimeout(() => {
-              setDirection('converging');
-              setIsPaused(false);
-            }, 1500); // Pause at spread state for 1.5 seconds
-            return 0;
-          }
-          return prev - 1.5; // Speed of expansion
-        }
-      });
+      setTimeout(() => {
+        // Converge to center
+        setIsConverged(true);
+      }, 2000);
       
-      animationFrame = requestAnimationFrame(animate);
+      setTimeout(() => {
+        // Start expanding back
+        setIsConverged(false);
+      }, 5500); // 2000 (wait) + 1000 (converge anim) + 2500 (merged display)
     };
     
-    animationFrame = requestAnimationFrame(animate);
+    cycleAnimation();
+    const interval = setInterval(cycleAnimation, 7500); // Full cycle duration
     
-    return () => {
-      cancelAnimationFrame(animationFrame);
-      clearTimeout(pauseTimeout);
-    };
-  }, [direction, isPaused]);
+    return () => clearInterval(interval);
+  }, []);
 
-  // Calculate position for each logo based on animation progress
-  const getLogoStyle = (index: number) => {
+  // Calculate the translateX offset for each logo to reach center
+  const getTranslateX = (index: number) => {
     const logoSize = 85;
     const gap = 16;
     const totalWidth = logoSize + gap;
-    
-    // Calculate how much each logo needs to move to reach center
-    // Index 0,1,2,3 are on left (need to move right)
-    // Index 4,5,6,7 are on right (need to move left)
     const centerIndex = 3.5;
     const distanceFromCenter = index - centerIndex;
-    const maxOffset = distanceFromCenter * totalWidth;
-    
-    // Current offset based on animation progress (0-100)
-    const currentOffset = (maxOffset * animationProgress) / 100;
-    
-    // Scale down as they converge
-    const scale = 1 - (animationProgress / 100) * 0.6;
-    
-    // Fade out as they converge
-    const opacity = 1 - (animationProgress / 100);
-    
-    return {
-      transform: `translateX(${-currentOffset}px) scale(${scale})`,
-      opacity: opacity,
-    };
-  };
-
-  // Mule logo style
-  const getMuleLogoStyle = () => {
-    // Fade in as progress increases
-    const opacity = animationProgress / 100;
-    const scale = 0.5 + (animationProgress / 100) * 0.5;
-    
-    return {
-      opacity: opacity,
-      transform: `translate(-50%, -50%) scale(${scale})`,
-    };
+    return distanceFromCenter * totalWidth;
   };
 
   return (
@@ -122,24 +71,38 @@ const PricingSection = () => {
         {/* Platform Icons with Animation */}
         <div className="relative flex justify-center items-center gap-3 md:gap-4 mb-12 h-[85px]">
           {/* Individual logos */}
-          {logos.map((logo, index) => (
-            <div 
-              key={index}
-              style={getLogoStyle(index)}
-              className="w-16 h-16 md:w-[85px] md:h-[85px] rounded-full border border-foreground/10 flex items-center justify-center shadow-sm overflow-hidden flex-shrink-0"
-            >
-              <img 
-                src={logo.src} 
-                alt={logo.alt} 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
+          {logos.map((logo, index) => {
+            const translateX = getTranslateX(index);
+            
+            return (
+              <div 
+                key={index}
+                className="w-16 h-16 md:w-[85px] md:h-[85px] rounded-full border border-foreground/10 flex items-center justify-center shadow-sm overflow-hidden flex-shrink-0 transition-all duration-1000 ease-in-out"
+                style={{
+                  transform: isConverged 
+                    ? `translateX(${-translateX}px) scale(0)` 
+                    : 'translateX(0) scale(1)',
+                  opacity: isConverged ? 0 : 1,
+                }}
+              >
+                <img 
+                  src={logo.src} 
+                  alt={logo.alt} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            );
+          })}
           
           {/* Mule logo (appears when merged) */}
           <div 
-            style={getMuleLogoStyle()}
-            className="absolute left-1/2 top-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full border border-foreground/10 flex items-center justify-center shadow-lg overflow-hidden bg-[#FDFBF5]"
+            className="absolute left-1/2 top-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full border border-foreground/10 flex items-center justify-center shadow-lg overflow-hidden bg-[#FDFBF5] transition-all duration-700 ease-in-out"
+            style={{
+              transform: isConverged 
+                ? 'translate(-50%, -50%) scale(1)' 
+                : 'translate(-50%, -50%) scale(0)',
+              opacity: isConverged ? 1 : 0,
+            }}
           >
             <img 
               src={logoMule} 
