@@ -94,7 +94,7 @@ const PricingSection = () => {
       `}</style>
 
       <div className="bg-[#FDFBF5] rounded-2xl p-12 max-w-[1200px] mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="font-anton text-5xl md:text-6xl text-foreground mb-4">
             Mulerun's all-in-one edge
           </h2>
@@ -104,7 +104,7 @@ const PricingSection = () => {
         </div>
 
         {/* Platform Icons with Animation */}
-        <div className="relative flex justify-center items-center gap-3 md:gap-4 mb-12 h-[85px]">
+        <div className="relative flex justify-center items-center gap-3 md:gap-4 mb-16 h-[85px]">
           {/* Individual logos */}
           {logos.map((logo, index) => (
             <div 
