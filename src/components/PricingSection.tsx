@@ -131,7 +131,7 @@ const PricingSection = () => {
 
         {/* Pricing Label */}
         <div className="text-center mb-10">
-          <h3 className="font-inter font-bold text-[32px] leading-[120%] text-foreground">
+          <h3 className="font-inter font-bold text-xl md:text-2xl leading-[120%] text-foreground">
             Multiple pro platforms — Mulerun handles it all.
           </h3>
         </div>
