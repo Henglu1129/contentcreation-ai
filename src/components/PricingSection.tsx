@@ -37,59 +37,60 @@ const PricingSection = () => {
       {/* CSS Keyframe Animations */}
       <style>{`
         @keyframes converge-logo-0 {
-          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
-          40%, 60% { transform: translateX(${getTranslateX(0)}px) scale(0); opacity: 0; }
-          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
+          30%, 55% { transform: translateX(${getTranslateX(0)}px) scale(0); opacity: 0; }
+          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-1 {
-          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
-          40%, 60% { transform: translateX(${getTranslateX(1)}px) scale(0); opacity: 0; }
-          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
+          30%, 55% { transform: translateX(${getTranslateX(1)}px) scale(0); opacity: 0; }
+          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-2 {
-          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
-          40%, 60% { transform: translateX(${getTranslateX(2)}px) scale(0); opacity: 0; }
-          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
+          30%, 55% { transform: translateX(${getTranslateX(2)}px) scale(0); opacity: 0; }
+          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-3 {
-          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
-          40%, 60% { transform: translateX(${getTranslateX(3)}px) scale(0); opacity: 0; }
-          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
+          30%, 55% { transform: translateX(${getTranslateX(3)}px) scale(0); opacity: 0; }
+          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-4 {
-          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
-          40%, 60% { transform: translateX(${getTranslateX(4)}px) scale(0); opacity: 0; }
-          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
+          30%, 55% { transform: translateX(${getTranslateX(4)}px) scale(0); opacity: 0; }
+          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-5 {
-          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
-          40%, 60% { transform: translateX(${getTranslateX(5)}px) scale(0); opacity: 0; }
-          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
+          30%, 55% { transform: translateX(${getTranslateX(5)}px) scale(0); opacity: 0; }
+          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-6 {
-          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
-          40%, 60% { transform: translateX(${getTranslateX(6)}px) scale(0); opacity: 0; }
-          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
+          30%, 55% { transform: translateX(${getTranslateX(6)}px) scale(0); opacity: 0; }
+          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes converge-logo-7 {
-          0%, 20% { transform: translateX(0) scale(1); opacity: 1; }
-          40%, 60% { transform: translateX(${getTranslateX(7)}px) scale(0); opacity: 0; }
-          80%, 100% { transform: translateX(0) scale(1); opacity: 1; }
+          0%, 10% { transform: translateX(0) scale(1); opacity: 1; }
+          30%, 55% { transform: translateX(${getTranslateX(7)}px) scale(0); opacity: 0; }
+          75%, 100% { transform: translateX(0) scale(1); opacity: 1; }
         }
         @keyframes mule-appear {
-          0%, 25% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
-          40%, 60% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-          75%, 100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+          0%, 20% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+          32% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+          38%, 55% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+          70%, 100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
         }
-        .logo-animate-0 { animation: converge-logo-0 8s ease-in-out infinite; animation-delay: 0s; }
-        .logo-animate-1 { animation: converge-logo-1 8s ease-in-out infinite; animation-delay: 0.1s; }
-        .logo-animate-2 { animation: converge-logo-2 8s ease-in-out infinite; animation-delay: 0.2s; }
-        .logo-animate-3 { animation: converge-logo-3 8s ease-in-out infinite; animation-delay: 0.3s; }
-        .logo-animate-4 { animation: converge-logo-4 8s ease-in-out infinite; animation-delay: 0.35s; }
-        .logo-animate-5 { animation: converge-logo-5 8s ease-in-out infinite; animation-delay: 0.25s; }
-        .logo-animate-6 { animation: converge-logo-6 8s ease-in-out infinite; animation-delay: 0.15s; }
-        .logo-animate-7 { animation: converge-logo-7 8s ease-in-out infinite; animation-delay: 0.05s; }
-        .mule-animate { animation: mule-appear 8s ease-in-out infinite; animation-delay: 0.4s; }
+        .logo-animate-0 { animation: converge-logo-0 5s ease-in-out infinite; animation-delay: 0s; }
+        .logo-animate-1 { animation: converge-logo-1 5s ease-in-out infinite; animation-delay: 0.05s; }
+        .logo-animate-2 { animation: converge-logo-2 5s ease-in-out infinite; animation-delay: 0.1s; }
+        .logo-animate-3 { animation: converge-logo-3 5s ease-in-out infinite; animation-delay: 0.15s; }
+        .logo-animate-4 { animation: converge-logo-4 5s ease-in-out infinite; animation-delay: 0.15s; }
+        .logo-animate-5 { animation: converge-logo-5 5s ease-in-out infinite; animation-delay: 0.1s; }
+        .logo-animate-6 { animation: converge-logo-6 5s ease-in-out infinite; animation-delay: 0.05s; }
+        .logo-animate-7 { animation: converge-logo-7 5s ease-in-out infinite; animation-delay: 0s; }
+        .mule-animate { animation: mule-appear 5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite; animation-delay: 0.2s; }
       `}</style>
 
       <div className="bg-[#FDFBF5] rounded-2xl p-12 max-w-[1200px] mx-auto">
