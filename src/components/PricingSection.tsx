@@ -195,7 +195,7 @@ const PricingSection = () => {
 
         {/* Beyond Price Section */}
         <div className="text-center mb-8">
-          <h3 className="font-inter font-bold text-xl md:text-2xl leading-[120%] text-foreground">
+          <h3 className="font-inter text-xl md:text-2xl leading-[120%] text-foreground">
             Beyond Price — <span className="font-bold">More Convenience with Mulerun</span>
           </h3>
         </div>
