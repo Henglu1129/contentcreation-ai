@@ -148,7 +148,7 @@ const PricingSection = () => {
           </div>
           
           <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-6 pb-8 w-full md:w-[300px] flex flex-col items-center">
-            <span className="font-inter font-bold text-base text-foreground block mb-12">
+            <span className="font-inter font-bold text-base text-foreground block mt-4 mb-12">
               Get the same with Mulerun
             </span>
             <div className="flex items-stretch -rotate-2">
@@ -184,7 +184,7 @@ const PricingSection = () => {
           </div>
           
           <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-6 pb-8 w-full md:w-[300px] text-center">
-            <span className="font-inter font-bold text-base text-foreground block mb-12">
+            <span className="font-inter font-bold text-base text-foreground block mt-4 mb-12">
               Annual savings
             </span>
             <div className="font-inter font-bold text-3xl text-[#774002]">
