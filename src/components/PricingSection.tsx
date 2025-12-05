@@ -10,7 +10,9 @@ import logoRepurpose from "@/assets/logo-repurpose.jpg";
 import logoMule from "@/assets/logo-mule.png";
 
 const PricingSection = () => {
-  const [phase, setPhase] = useState<'spread' | 'converging' | 'merged' | 'expanding'>('spread');
+  const [animationProgress, setAnimationProgress] = useState(0); // 0 = spread, 100 = merged
+  const [direction, setDirection] = useState<'converging' | 'expanding'>('converging');
+  const [isPaused, setIsPaused] = useState(false);
   
   const logos = [
     { src: logoDescriprt, alt: "Descript" },
@@ -24,47 +26,86 @@ const PricingSection = () => {
   ];
 
   useEffect(() => {
-    const timings = {
-      spread: 1500,
-      converging: 1200,
-      merged: 2500,
-      expanding: 1200,
-    };
-
-    const timer = setTimeout(() => {
-      setPhase(current => {
-        switch (current) {
-          case 'spread': return 'converging';
-          case 'converging': return 'merged';
-          case 'merged': return 'expanding';
-          case 'expanding': return 'spread';
-          default: return 'spread';
+    let animationFrame: number;
+    let pauseTimeout: NodeJS.Timeout;
+    
+    const animate = () => {
+      if (isPaused) return;
+      
+      setAnimationProgress(prev => {
+        if (direction === 'converging') {
+          if (prev >= 100) {
+            setIsPaused(true);
+            pauseTimeout = setTimeout(() => {
+              setDirection('expanding');
+              setIsPaused(false);
+            }, 2000); // Pause at merged state for 2 seconds
+            return 100;
+          }
+          return prev + 1.5; // Speed of convergence
+        } else {
+          if (prev <= 0) {
+            setIsPaused(true);
+            pauseTimeout = setTimeout(() => {
+              setDirection('converging');
+              setIsPaused(false);
+            }, 1500); // Pause at spread state for 1.5 seconds
+            return 0;
+          }
+          return prev - 1.5; // Speed of expansion
         }
       });
-    }, timings[phase]);
+      
+      animationFrame = requestAnimationFrame(animate);
+    };
+    
+    animationFrame = requestAnimationFrame(animate);
+    
+    return () => {
+      cancelAnimationFrame(animationFrame);
+      clearTimeout(pauseTimeout);
+    };
+  }, [direction, isPaused]);
 
-    return () => clearTimeout(timer);
-  }, [phase]);
-
-  // Calculate horizontal offset to move logos to center
-  const getLogoOffset = (index: number) => {
-    // Position 0-3 are on left side, 4-7 are on right side
-    // Each logo needs to move towards the center
-    // Gap is 16px (gap-4), logo size is 85px
+  // Calculate position for each logo based on animation progress
+  const getLogoStyle = (index: number) => {
     const logoSize = 85;
     const gap = 16;
     const totalWidth = logoSize + gap;
     
-    // Distance from center for each logo
-    // Index 0,1,2,3 -> left side (negative offset to go right)
-    // Index 4,5,6,7 -> right side (positive offset to go left)
-    const centerPosition = 3.5; // between index 3 and 4
-    const offsetFromCenter = (index - centerPosition) * totalWidth;
+    // Calculate how much each logo needs to move to reach center
+    // Index 0,1,2,3 are on left (need to move right)
+    // Index 4,5,6,7 are on right (need to move left)
+    const centerIndex = 3.5;
+    const distanceFromCenter = index - centerIndex;
+    const maxOffset = distanceFromCenter * totalWidth;
     
-    return -offsetFromCenter; // Negative because we want to move towards center
+    // Current offset based on animation progress (0-100)
+    const currentOffset = (maxOffset * animationProgress) / 100;
+    
+    // Scale down as they converge
+    const scale = 1 - (animationProgress / 100) * 0.6;
+    
+    // Fade out as they converge
+    const opacity = 1 - (animationProgress / 100);
+    
+    return {
+      transform: `translateX(${-currentOffset}px) scale(${scale})`,
+      opacity: opacity,
+    };
   };
 
-  const isConvergedOrMerged = phase === 'converging' || phase === 'merged';
+  // Mule logo style
+  const getMuleLogoStyle = () => {
+    // Fade in as progress increases
+    const opacity = animationProgress / 100;
+    const scale = 0.5 + (animationProgress / 100) * 0.5;
+    
+    return {
+      opacity: opacity,
+      transform: `translate(-50%, -50%) scale(${scale})`,
+    };
+  };
 
   return (
     <section className="bg-yellow-light py-16 px-6">
@@ -81,36 +122,23 @@ const PricingSection = () => {
         {/* Platform Icons with Animation */}
         <div className="relative flex justify-center items-center gap-3 md:gap-4 mb-12 h-[85px]">
           {/* Individual logos */}
-          {logos.map((logo, index) => {
-            const offset = getLogoOffset(index);
-            const shouldHide = phase === 'merged' || phase === 'converging';
-            
-            return (
-              <div 
-                key={index}
-                style={{
-                  transform: shouldHide ? `translateX(${offset}px) scale(0)` : 'translateX(0) scale(1)',
-                  opacity: shouldHide ? 0 : 1,
-                  transition: 'all 1s ease-in-out',
-                }}
-                className="w-16 h-16 md:w-[85px] md:h-[85px] rounded-full border border-foreground/10 flex items-center justify-center shadow-sm overflow-hidden flex-shrink-0"
-              >
-                <img 
-                  src={logo.src} 
-                  alt={logo.alt} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            );
-          })}
+          {logos.map((logo, index) => (
+            <div 
+              key={index}
+              style={getLogoStyle(index)}
+              className="w-16 h-16 md:w-[85px] md:h-[85px] rounded-full border border-foreground/10 flex items-center justify-center shadow-sm overflow-hidden flex-shrink-0"
+            >
+              <img 
+                src={logo.src} 
+                alt={logo.alt} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
           
           {/* Mule logo (appears when merged) */}
           <div 
-            style={{
-              opacity: phase === 'merged' ? 1 : phase === 'converging' ? 0 : 0,
-              transform: phase === 'merged' ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, -50%) scale(0.5)',
-              transition: phase === 'converging' ? 'all 0.8s ease-out 0.5s' : phase === 'expanding' ? 'all 0.3s ease-in' : 'all 0.5s ease-out',
-            }}
+            style={getMuleLogoStyle()}
             className="absolute left-1/2 top-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full border border-foreground/10 flex items-center justify-center shadow-lg overflow-hidden bg-[#FDFBF5]"
           >
             <img 
