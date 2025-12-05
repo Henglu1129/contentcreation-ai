@@ -15,26 +15,29 @@ const PricingSection = () => {
 
       {/* Platform Icons */}
       <div className="flex justify-center gap-4 mb-12">
-        <div className="w-10 h-10 bg-foreground/10 rounded flex items-center justify-center">
-          <Twitter className="w-5 h-5 text-foreground" />
+        <div className="w-14 h-14 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Twitter className="w-6 h-6 text-blue-500" />
         </div>
-        <div className="w-10 h-10 bg-foreground/10 rounded flex items-center justify-center">
-          <Facebook className="w-5 h-5 text-foreground" />
+        <div className="w-14 h-14 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <ArrowRight className="w-6 h-6 text-blue-600 rotate-[-45deg]" />
         </div>
-        <div className="w-10 h-10 bg-foreground/10 rounded flex items-center justify-center">
-          <Youtube className="w-5 h-5 text-foreground" />
+        <div className="w-14 h-14 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Mail className="w-6 h-6 text-cyan" />
         </div>
-        <div className="w-10 h-10 bg-foreground/10 rounded flex items-center justify-center">
-          <Instagram className="w-5 h-5 text-foreground" />
+        <div className="w-14 h-14 bg-foreground rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <span className="text-background font-bold text-xl">P</span>
         </div>
-        <div className="w-10 h-10 bg-foreground/10 rounded flex items-center justify-center">
-          <Send className="w-5 h-5 text-foreground" />
+        <div className="w-14 h-14 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Send className="w-6 h-6 text-foreground/70" />
         </div>
-        <div className="w-10 h-10 bg-foreground/10 rounded flex items-center justify-center">
-          <Mail className="w-5 h-5 text-foreground" />
+        <div className="w-14 h-14 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Facebook className="w-6 h-6 text-purple-500" />
         </div>
-        <div className="w-10 h-10 bg-foreground/10 rounded flex items-center justify-center">
-          <Pause className="w-5 h-5 text-foreground" />
+        <div className="w-14 h-14 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Youtube className="w-6 h-6 text-foreground" />
+        </div>
+        <div className="w-14 h-14 bg-yellow-cream rounded-full border border-foreground/10 flex items-center justify-center shadow-sm">
+          <Pause className="w-6 h-6 text-foreground" />
         </div>
       </div>
 
