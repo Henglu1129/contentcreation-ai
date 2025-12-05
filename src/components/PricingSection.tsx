@@ -286,7 +286,7 @@ const PricingSection = () => {
             <span className="tracking-tighter">&gt;&gt;</span>
           </a>
           {/* Tooltip bubble */}
-          <div className="relative mt-2 -ml-24">
+          <div className="relative mt-2 ml-12">
             <img src={tooltipBubble} alt="" className="w-[280px] h-auto" />
             <div className="absolute inset-0 flex flex-col items-center justify-center pt-6">
               <p className="font-inter text-sm font-medium text-center text-foreground">Get 300 free credits now.</p>
