@@ -151,35 +151,35 @@ const PricingSection = () => {
             <span className="font-inter font-bold text-base text-foreground block mb-12">
               Get the same with Mulerun
             </span>
-            <div className="relative inline-block -rotate-2">
+            <div className="relative inline-flex items-stretch -rotate-2">
               {/* Checkered border left */}
               <div 
-                className="absolute left-0 top-0 bottom-0 w-4"
+                className="w-4 flex-shrink-0"
                 style={{
                   background: `
                     repeating-conic-gradient(
-                      hsl(32 60% 75%) 0% 25%, 
-                      hsl(38 70% 88%) 0% 50%
-                    ) 50% / 8px 8px
-                  `
-                }}
-              />
-              {/* Checkered border right */}
-              <div 
-                className="absolute right-0 top-0 bottom-0 w-4"
-                style={{
-                  background: `
-                    repeating-conic-gradient(
-                      hsl(32 60% 75%) 0% 25%, 
-                      hsl(38 70% 88%) 0% 50%
+                      hsl(28 70% 72%) 0% 25%, 
+                      hsl(32 80% 85%) 0% 50%
                     ) 50% / 8px 8px
                   `
                 }}
               />
               {/* Main content */}
-              <div className="relative bg-[hsl(35_60%_78%)] px-8 py-2 whitespace-nowrap">
-                <span className="font-inter font-bold text-base text-[#5D4A37]">$19.9/month — Save 88%</span>
+              <div className="bg-[hsl(32_75%_82%)] px-6 py-2 whitespace-nowrap">
+                <span className="font-inter font-bold text-xl text-[#5D4A37]">$19.9/month — Save 88%</span>
               </div>
+              {/* Checkered border right */}
+              <div 
+                className="w-4 flex-shrink-0"
+                style={{
+                  background: `
+                    repeating-conic-gradient(
+                      hsl(28 70% 72%) 0% 25%, 
+                      hsl(32 80% 85%) 0% 50%
+                    ) 50% / 8px 8px
+                  `
+                }}
+              />
             </div>
           </div>
           
