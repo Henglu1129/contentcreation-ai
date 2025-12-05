@@ -1,4 +1,4 @@
-import logoDescriprt from "@/assets/logo-descript.png";
+import logoDescriprt from "@/assets/logo-descript.webp";
 import logoMidjourney from "@/assets/logo-midjourney.png";
 import logoImages from "@/assets/logo-images.png";
 import logoCapcut from "@/assets/logo-capcut.png";
@@ -9,14 +9,14 @@ import logoRepurpose from "@/assets/logo-repurpose.png";
 
 const PricingSection = () => {
   const logos = [
-    { src: logoDescriprt, alt: "Descript" },
-    { src: logoMidjourney, alt: "Midjourney" },
-    { src: logoImages, alt: "Images" },
-    { src: logoCapcut, alt: "CapCut" },
-    { src: logoVeed, alt: "Veed" },
-    { src: logoHubspot, alt: "HubSpot" },
-    { src: logoCanva, alt: "Canva" },
-    { src: logoRepurpose, alt: "Repurpose" },
+    { src: logoDescriprt, alt: "Descript", fit: "contain", bg: "bg-white" },
+    { src: logoMidjourney, alt: "Midjourney", fit: "cover" },
+    { src: logoImages, alt: "Images", fit: "cover" },
+    { src: logoCapcut, alt: "CapCut", fit: "cover" },
+    { src: logoVeed, alt: "Veed", fit: "cover" },
+    { src: logoHubspot, alt: "HubSpot", fit: "cover" },
+    { src: logoCanva, alt: "Canva", fit: "cover" },
+    { src: logoRepurpose, alt: "Repurpose", fit: "cover" },
   ];
 
   return (
@@ -36,12 +36,12 @@ const PricingSection = () => {
           {logos.map((logo, index) => (
             <div 
               key={index}
-              className="w-16 h-16 md:w-[85px] md:h-[85px] rounded-full border border-foreground/10 flex items-center justify-center shadow-sm overflow-hidden"
+              className={`w-16 h-16 md:w-[85px] md:h-[85px] rounded-full border border-foreground/10 flex items-center justify-center shadow-sm overflow-hidden ${logo.bg || ''}`}
             >
               <img 
                 src={logo.src} 
                 alt={logo.alt} 
-                className="w-full h-full object-cover"
+                className={`w-full h-full ${logo.fit === 'contain' ? 'object-contain p-3' : 'object-cover'}`}
               />
             </div>
           ))}
