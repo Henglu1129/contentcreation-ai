@@ -95,7 +95,7 @@ const PricingSection = () => {
       <div className="bg-[#FDFBF5] rounded-2xl p-6 md:p-12 max-w-[1200px] mx-auto">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="font-anton text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
-            Mulerun's all-in-one edge
+            One account. One subscription. All the AI you need.
           </h2>
           <p className="font-inter text-sm text-muted-foreground">
             <span className="highlight-yellow px-2 py-1">Multiple pro tools, a fraction of the price.</span>
