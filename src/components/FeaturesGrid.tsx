@@ -43,7 +43,7 @@ const FeaturesGrid = () => {
   return (
     <section className="bg-yellow-light border-t border-b border-yellow-glow">
       {/* Top Decorative pixels */}
-      <div className="relative h-[72px] flex justify-start pl-[60px] pt-4">
+      <div className="relative h-[72px] hidden md:flex justify-start pl-[60px] pt-4">
         <div className="flex gap-[3px]">
           {[...Array(5)].map((_, i) => (
             <div key={i} className="w-[45px] h-[72px] relative">
@@ -63,11 +63,11 @@ const FeaturesGrid = () => {
       </div>
 
       {sections.map((section, sectionIndex) => (
-        <div key={sectionIndex} className="pt-14 pb-14 px-[60px]">
-          <div className={`flex gap-[80px] items-center justify-center ${section.layout === 'right' ? 'flex-row' : 'flex-row-reverse'}`}>
+        <div key={sectionIndex} className="pt-10 md:pt-14 pb-10 md:pb-14 px-4 md:px-[60px]">
+          <div className={`flex flex-col lg:flex-row gap-8 lg:gap-[80px] items-center justify-center ${section.layout === 'right' ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
             {/* Text Content */}
-            <div className="flex flex-col gap-4 max-w-[400px]">
-              <h2 className="font-inter font-bold text-[32px] leading-[120%] text-foreground">
+            <div className={`flex flex-col gap-4 max-w-[400px] text-center lg:text-left ${section.layout === 'left' ? 'lg:text-right' : ''}`}>
+              <h2 className="font-inter font-bold text-2xl md:text-[32px] leading-[120%] text-foreground">
                 {section.title}
               </h2>
               <p className="font-inter font-medium text-base leading-normal text-muted-foreground">
@@ -77,7 +77,7 @@ const FeaturesGrid = () => {
 
             {/* Cards Grid */}
             <div className="flex flex-col gap-4">
-              <div className="flex gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 {section.cards.slice(0, 2).map((card, cardIndex) => (
                   <FeatureCard 
                     key={cardIndex} 
@@ -89,7 +89,7 @@ const FeaturesGrid = () => {
                 ))}
               </div>
               {section.cards.length > 2 && (
-                <div className="flex gap-4">
+                <div className="flex flex-col md:flex-row gap-4">
                   {section.cards.slice(2, 4).map((card, cardIndex) => (
                     <FeatureCard 
                       key={cardIndex + 2} 
@@ -113,7 +113,7 @@ const FeaturesGrid = () => {
 };
 
 const DecorativePixels = () => (
-  <div className="relative h-[72px] flex justify-start pl-[120px]">
+  <div className="relative h-[72px] hidden md:flex justify-start pl-[120px]">
     <div className="flex gap-[3px] rotate-180">
       {[...Array(5)].map((_, i) => (
         <div key={i} className="w-[45px] h-[72px] relative">

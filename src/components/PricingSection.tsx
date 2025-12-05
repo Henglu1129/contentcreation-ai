@@ -22,19 +22,17 @@ const PricingSection = () => {
   ];
 
   // Calculate the translateX offset for each logo to reach center
-  // Negative index = left side (needs positive translateX to move right)
-  // Positive index = right side (needs negative translateX to move left)
   const getTranslateX = (index: number) => {
     const logoSize = 85;
     const gap = 16;
     const totalWidth = logoSize + gap;
     const centerIndex = 3.5;
     const distanceFromCenter = index - centerIndex;
-    return -distanceFromCenter * totalWidth; // Negated to move toward center
+    return -distanceFromCenter * totalWidth;
   };
 
   return (
-    <section className="bg-yellow-light py-16 px-6">
+    <section className="bg-yellow-light py-10 md:py-16 px-4 md:px-6">
       {/* CSS Keyframe Animations */}
       <style>{`
         @keyframes converge-logo-0 {
@@ -94,9 +92,9 @@ const PricingSection = () => {
         .mule-animate { animation: mule-appear 5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite; animation-delay: 0.2s; }
       `}</style>
 
-      <div className="bg-[#FDFBF5] rounded-2xl p-12 max-w-[1200px] mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-anton text-5xl md:text-6xl text-foreground mb-4">
+      <div className="bg-[#FDFBF5] rounded-2xl p-6 md:p-12 max-w-[1200px] mx-auto">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="font-anton text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
             Mulerun's all-in-one edge
           </h2>
           <p className="font-inter text-sm text-muted-foreground">
@@ -105,12 +103,12 @@ const PricingSection = () => {
         </div>
 
         {/* Platform Icons with Animation */}
-        <div className="relative flex justify-center items-center gap-3 md:gap-4 mb-16 h-[85px]">
+        <div className="relative flex justify-center items-center gap-2 md:gap-4 mb-10 md:mb-16 h-[60px] md:h-[85px] flex-wrap md:flex-nowrap">
           {/* Individual logos */}
           {logos.map((logo, index) => (
             <div 
               key={index}
-              className={`w-16 h-16 md:w-[85px] md:h-[85px] rounded-full border border-foreground/10 flex items-center justify-center shadow-sm overflow-hidden flex-shrink-0 logo-animate-${index}`}
+              className={`w-10 h-10 md:w-[85px] md:h-[85px] rounded-full border border-foreground/10 flex items-center justify-center shadow-sm overflow-hidden flex-shrink-0 logo-animate-${index}`}
             >
               <img 
                 src={logo.src} 
@@ -121,7 +119,7 @@ const PricingSection = () => {
           ))}
           
           {/* Mule logo (appears when merged) */}
-          <div className="absolute left-1/2 top-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full border border-foreground/10 flex items-center justify-center shadow-lg overflow-hidden bg-[#FDFBF5] mule-animate">
+          <div className="absolute left-1/2 top-1/2 w-14 h-14 md:w-24 md:h-24 rounded-full border border-foreground/10 flex items-center justify-center shadow-lg overflow-hidden bg-[#FDFBF5] mule-animate">
             <img 
               src={logoMule} 
               alt="Mulerun" 
@@ -131,25 +129,25 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Label */}
-        <div className="text-center mb-10">
-          <h3 className="font-inter font-bold text-xl md:text-2xl leading-[120%] text-foreground">
+        <div className="text-center mb-8 md:mb-10">
+          <h3 className="font-inter font-bold text-lg md:text-2xl leading-[120%] text-foreground">
             Multiple pro platforms — Mulerun handles it all.
           </h3>
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
-          <div className="bg-white border-t-4 border-t-lavender border border-foreground/10 rounded-lg px-6 pt-6 pb-8 w-full md:w-[300px] text-center">
-            <span className="font-inter font-bold text-base text-foreground block mt-4 mb-12">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center mb-10 md:mb-12">
+          <div className="bg-white border-t-4 border-t-lavender border border-foreground/10 rounded-lg px-4 md:px-6 pt-4 md:pt-6 pb-6 md:pb-8 w-full md:w-[300px] text-center">
+            <span className="font-inter font-bold text-sm md:text-base text-foreground block mt-2 md:mt-4 mb-8 md:mb-12">
               Buy 8 pro platforms separately
             </span>
-            <div className="font-inter font-bold text-3xl text-gray-500 line-through">
+            <div className="font-inter font-bold text-2xl md:text-3xl text-gray-500 line-through">
               $164.98/month
             </div>
           </div>
           
-          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-6 pb-8 w-full md:w-[300px] flex flex-col items-center">
-            <span className="font-inter font-bold text-base text-foreground block mt-4 mb-12">
+          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-4 md:px-6 pt-4 md:pt-6 pb-6 md:pb-8 w-full md:w-[300px] flex flex-col items-center">
+            <span className="font-inter font-bold text-sm md:text-base text-foreground block mt-2 md:mt-4 mb-8 md:mb-12">
               Get the same with Mulerun
             </span>
             <div className="flex items-stretch -rotate-2">
@@ -167,7 +165,7 @@ const PricingSection = () => {
               />
               {/* Main content */}
               <div className="bg-[#fdc17d] px-2 py-1.5 whitespace-nowrap">
-                <span className="font-inter font-bold text-lg text-[#774002]">$19.9/month — Save 88%</span>
+                <span className="font-inter font-bold text-base md:text-lg text-[#774002]">$19.9/month — Save 88%</span>
               </div>
               {/* Checkered border right */}
               <div 
@@ -184,25 +182,25 @@ const PricingSection = () => {
             </div>
           </div>
           
-          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-6 pt-6 pb-8 w-full md:w-[300px] text-center">
-            <span className="font-inter font-bold text-base text-foreground block mt-4 mb-12">
+          <div className="bg-yellow-light border-t-4 border-t-yellow-bright border border-foreground/10 rounded-lg px-4 md:px-6 pt-4 md:pt-6 pb-6 md:pb-8 w-full md:w-[300px] text-center">
+            <span className="font-inter font-bold text-sm md:text-base text-foreground block mt-2 md:mt-4 mb-8 md:mb-12">
               Annual savings
             </span>
-            <div className="font-inter font-bold text-3xl text-[#774002]">
+            <div className="font-inter font-bold text-2xl md:text-3xl text-[#774002]">
               $1,740.96/year
             </div>
           </div>
         </div>
 
         {/* Beyond Price Section */}
-        <div className="text-center mb-8">
-          <h3 className="font-inter text-xl md:text-2xl leading-[120%] text-foreground">
+        <div className="text-center mb-6 md:mb-8">
+          <h3 className="font-inter text-lg md:text-2xl leading-[120%] text-foreground">
             Beyond Price — <span className="font-bold">More Convenience with Mulerun</span>
           </h3>
         </div>
 
         {/* Feature Cards */}
-        <div className="flex flex-col md:flex-row gap-3 justify-center mb-12">
+        <div className="flex flex-col md:flex-row gap-3 justify-center mb-10 md:mb-12">
           {/* Card 1 */}
           <div className="relative bg-transparent border-2 border-[#fdc17d] rounded-lg p-3 w-full md:w-[220px] text-center overflow-hidden">
             {/* Orange triangle decoration */}
@@ -280,19 +278,23 @@ const PricingSection = () => {
             href="https://mulerun.com/signup" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-foreground text-background px-10 py-4 rounded-lg font-jetbrains font-bold text-lg uppercase flex items-center gap-3 hover:bg-foreground/90 transition-colors"
+            className="bg-foreground text-background px-6 md:px-10 py-3 md:py-4 rounded-lg font-jetbrains font-bold text-base md:text-lg uppercase flex items-center gap-3 hover:bg-foreground/90 transition-colors"
           >
             Sign Up Now
             <span className="tracking-tighter">&gt;&gt;</span>
           </a>
-          {/* Tooltip bubble */}
-          <div className="relative -mt-4 ml-80">
+          {/* Tooltip bubble - hidden on mobile, positioned on desktop */}
+          <div className="relative -mt-4 ml-0 md:ml-80 hidden md:block">
             <img src={tooltipBubble} alt="" className="w-[280px] h-auto" />
             <div className="absolute inset-0 flex flex-col items-center justify-center mt-8 px-4">
               <p className="font-jetbrains text-base font-bold text-center text-foreground">Get 300 free credits now.</p>
               <p className="font-jetbrains text-base font-bold text-center text-foreground">No card required.</p>
             </div>
           </div>
+          {/* Mobile tooltip text */}
+          <p className="md:hidden font-inter text-sm text-foreground/70 mt-3 text-center">
+            Get 300 free credits now. No card required.
+          </p>
         </div>
       </div>
     </section>
