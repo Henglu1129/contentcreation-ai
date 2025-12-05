@@ -219,9 +219,9 @@ const PricingSection = () => {
                 <path d="M7 8h2m2 0h2m2 0h2"></path>
               </svg>
             </div>
-            <h4 className="font-inter font-bold text-base text-foreground mb-2">No More Platform Switching</h4>
+            <h4 className="font-inter font-bold text-base text-foreground mb-2">No More Switching</h4>
             <p className="font-inter text-sm text-muted-foreground">
-              Say goodbye to juggling between apps. Do everything in one place—3x faster workflow.
+              One place, one flow. No more switching between apps.
             </p>
           </div>
 
