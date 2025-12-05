@@ -289,7 +289,7 @@ const PricingSection = () => {
           <div className="relative -mt-4 ml-80">
             <img src={tooltipBubble} alt="" className="w-[280px] h-auto" />
             <div className="absolute inset-0 flex flex-col items-center justify-center pt-4 px-4">
-              <p className="font-jetbrains text-base font-bold text-center text-foreground">Get 1000+ free credits now.</p>
+              <p className="font-jetbrains text-base font-bold text-center text-foreground">Get 300 free credits now.</p>
               <p className="font-jetbrains text-base font-bold text-center text-foreground">No card required.</p>
             </div>
           </div>
