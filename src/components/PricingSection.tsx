@@ -203,39 +203,39 @@ const PricingSection = () => {
         {/* Feature Cards */}
         <div className="flex flex-col md:flex-row gap-3 justify-center mb-12">
           {/* Card 1 */}
-          <div className="relative bg-transparent border-2 border-[#fdc17d] rounded-lg p-4 w-full md:w-[220px] text-center overflow-hidden">
+          <div className="relative bg-transparent border-2 border-[#fdc17d] rounded-lg p-3 w-full md:w-[220px] text-center overflow-hidden">
             {/* Orange triangle decoration */}
             <div 
-              className="absolute top-0 left-0 w-12 h-12"
+              className="absolute top-0 left-0 w-10 h-10"
               style={{
                 background: 'linear-gradient(135deg, #fdc17d 50%, transparent 50%)'
               }}
             />
-            <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="w-8 h-8 mx-auto mb-2 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
                 <line x1="12" y1="17" x2="12" y2="21"></line>
                 <path d="M7 8h2m2 0h2m2 0h2"></path>
               </svg>
             </div>
-            <h4 className="font-inter font-bold text-base text-foreground mb-2">No More Switching</h4>
-            <p className="font-inter text-sm text-muted-foreground">
+            <h4 className="font-inter font-bold text-sm text-foreground mb-1">No More Switching</h4>
+            <p className="font-inter text-xs text-muted-foreground">
               Stop switching between apps. Work in one place—3x faster workflow.
             </p>
           </div>
 
           {/* Card 2 */}
-          <div className="relative bg-transparent border-2 border-[#fdc17d] rounded-lg p-4 w-full md:w-[220px] text-center overflow-hidden">
+          <div className="relative bg-transparent border-2 border-[#fdc17d] rounded-lg p-3 w-full md:w-[220px] text-center overflow-hidden">
             {/* Orange triangle decoration */}
             <div 
-              className="absolute top-0 left-0 w-12 h-12"
+              className="absolute top-0 left-0 w-10 h-10"
               style={{
                 background: 'linear-gradient(135deg, #fdc17d 50%, transparent 50%)'
               }}
             />
-            <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="w-8 h-8 mx-auto mb-2 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                 <circle cx="8" cy="10" r="2"></circle>
                 <path d="M8 12v4"></path>
@@ -243,31 +243,31 @@ const PricingSection = () => {
                 <line x1="14" y1="13" x2="18" y2="13"></line>
               </svg>
             </div>
-            <h4 className="font-inter font-bold text-base text-foreground mb-2">Unified Billing</h4>
-            <p className="font-inter text-sm text-muted-foreground">
+            <h4 className="font-inter font-bold text-sm text-foreground mb-1">Unified Billing</h4>
+            <p className="font-inter text-xs text-muted-foreground">
               One invoice, one payment. No more tracking multiple due dates or charges.
             </p>
           </div>
 
           {/* Card 3 */}
-          <div className="relative bg-transparent border-2 border-[#fdc17d] rounded-lg p-4 w-full md:w-[220px] text-center overflow-hidden">
+          <div className="relative bg-transparent border-2 border-[#fdc17d] rounded-lg p-3 w-full md:w-[220px] text-center overflow-hidden">
             {/* Orange triangle decoration */}
             <div 
-              className="absolute top-0 left-0 w-12 h-12"
+              className="absolute top-0 left-0 w-10 h-10"
               style={{
                 background: 'linear-gradient(135deg, #fdc17d 50%, transparent 50%)'
               }}
             />
-            <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="w-8 h-8 mx-auto mb-2 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                 <circle cx="9" cy="7" r="4"></circle>
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
               </svg>
             </div>
-            <h4 className="font-inter font-bold text-base text-foreground mb-2">Team Sync</h4>
-            <p className="font-inter text-sm text-muted-foreground">
+            <h4 className="font-inter font-bold text-sm text-foreground mb-1">Team Sync</h4>
+            <p className="font-inter text-xs text-muted-foreground">
               Coming soon: auto data sync across features—true end-to-end automation.
             </p>
           </div>
