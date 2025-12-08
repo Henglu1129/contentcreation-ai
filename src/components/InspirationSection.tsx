@@ -141,7 +141,7 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
 
                 {/* Right: Image */}
                 <div className="relative shrink-0 w-full lg:w-auto">
-                  <div className="w-full lg:w-[400px] aspect-video rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10">
+                  <div className="w-full lg:w-[400px] aspect-[16/9] rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10">
                     <img 
                       src={tool.image} 
                       alt={tool.title}
