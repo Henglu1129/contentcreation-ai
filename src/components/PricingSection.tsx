@@ -287,13 +287,13 @@ const PricingSection = () => {
           <div className="relative -mt-4 ml-0 md:ml-80 hidden md:block">
             <img src={tooltipBubble} alt="" className="w-[280px] h-auto" />
             <div className="absolute inset-0 flex flex-col items-center justify-center mt-8 px-4">
-              <p className="font-jetbrains text-base font-bold text-center text-foreground">Get 300 free credits now.</p>
+              <p className="font-jetbrains text-base font-bold text-center text-foreground">Get 300+ free credits now.</p>
               <p className="font-jetbrains text-base font-bold text-center text-foreground">No card required.</p>
             </div>
           </div>
           {/* Mobile tooltip text */}
           <p className="md:hidden font-inter text-sm text-foreground/70 mt-3 text-center">
-            Get 300 free credits now. No card required.
+            Get 300+ free credits now. No card required.
           </p>
         </div>
       </div>
