@@ -1,10 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import heroImage1 from "@/assets/hero-image.webp";
 import heroCarousel1 from "@/assets/hero-carousel-1.jpg";
+import heroCarousel2 from "@/assets/hero-carousel-2.jpg";
 import heroImage3 from "@/assets/hero-carousel-3.webp";
 
-const carouselImages = [heroCarousel1, heroImage1, heroImage3];
+const carouselImages = [heroCarousel1, heroCarousel2, heroImage3];
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
