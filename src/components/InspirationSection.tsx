@@ -141,14 +141,15 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
 
                 {/* Right: Image or Video */}
                 <div className="relative shrink-0 w-full lg:w-auto">
-                  <div className="w-full lg:w-[400px] aspect-video rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10">
+                  <div className={`w-full rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10 ${tool.videoUrl ? 'lg:w-[500px] aspect-[4/3]' : 'lg:w-[400px] aspect-video'}`}>
                     {tool.videoUrl ? (
                       <iframe
                         src={tool.videoUrl}
                         title={tool.title}
-                        className="w-full h-full"
+                        className="w-full h-full border-0"
                         allow="autoplay"
                         allowFullScreen
+                        style={{ minHeight: '100%' }}
                       />
                     ) : (
                       <img 
