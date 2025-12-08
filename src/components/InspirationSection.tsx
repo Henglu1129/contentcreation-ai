@@ -13,9 +13,8 @@ interface Tool {
   title: string;
   description: string;
   link: string;
-  image?: string;
+  image: string;
   imagePosition?: string;
-  videoUrl?: string;
 }
 
 const sectionTitles = [
@@ -61,7 +60,8 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
       title: "Subtitle Translate AI Pro",
       description: "Translate subtitles naturally while preserving tone, timing, and meaning across languages.",
       link: "https://mulerun.com/@Skynetbbb0bb3/subtitle-translate-ai-pro",
-      videoUrl: "https://mulerun.com/agents/b051b2ff-4f2e-423c-8175-bb74d23ce607/shared-sessions/1c092f42-eded-4ff1-9022-3890d0c413cb"
+      image: subtitleTranslate,
+      imagePosition: "object-top"
     }
   ];
 
@@ -139,26 +139,14 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
                   </a>
                 </div>
 
-                {/* Right: Image or Video */}
+                {/* Right: Image */}
                 <div className="relative shrink-0 w-full lg:w-auto">
-                  <div className={`w-full lg:w-[400px] aspect-video rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10`}>
-                    {tool.videoUrl ? (
-                      <div className="w-[200%] h-[200%] origin-top-left scale-50">
-                        <iframe
-                          src={tool.videoUrl}
-                          title={tool.title}
-                          className="w-full h-full border-0"
-                          allow="autoplay"
-                          allowFullScreen
-                        />
-                      </div>
-                    ) : (
-                      <img 
-                        src={tool.image} 
-                        alt={tool.title}
-                        className={`w-full h-full object-cover ${tool.imagePosition || 'object-center'}`}
-                      />
-                    )}
+                  <div className="w-full lg:w-[400px] aspect-video rounded-lg border-2 border-cyan/30 overflow-hidden bg-cyan/10">
+                    <img 
+                      src={tool.image} 
+                      alt={tool.title}
+                      className={`w-full h-full object-cover ${tool.imagePosition || 'object-center'}`}
+                    />
                   </div>
                   {/* Bottom decorative pixels - hidden on mobile */}
                   <div className={`absolute -bottom-4 hidden lg:flex gap-[2px] ${isReversed ? '-left-4' : '-right-4'}`}>
