@@ -11,7 +11,7 @@ const HeroSection = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
