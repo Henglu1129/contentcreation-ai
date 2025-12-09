@@ -42,6 +42,8 @@ const FeatureCard = ({ title, description, hasButton = false, imageIndex = 0, li
         <img 
           src={images[imageIndex % images.length]} 
           alt={title}
+          loading="lazy"
+          decoding="async"
           className="w-[140px] h-[115px] object-cover object-center"
         />
       </div>

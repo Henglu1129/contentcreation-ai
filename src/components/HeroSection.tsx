@@ -66,6 +66,8 @@ const HeroSection = () => {
               key={index}
               src={img} 
               alt={`AI Creation Platform ${index + 1}`}
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
                 index === currentIndex ? "opacity-100" : "opacity-0"
               }`}

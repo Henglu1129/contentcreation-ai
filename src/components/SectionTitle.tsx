@@ -57,6 +57,8 @@ const ScrollingColumn = ({ images, direction }: { images: string[]; direction: "
           key={i} 
           src={img} 
           alt={`User story ${i + 1}`}
+          loading="lazy"
+          decoding="async"
           className="w-full rounded-lg flex-shrink-0 shadow-sm transition-all duration-300 hover:brightness-110 hover:shadow-md hover:scale-[1.02]"
         />
       ))}
