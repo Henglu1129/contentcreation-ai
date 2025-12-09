@@ -1,6 +1,6 @@
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
-import mulerunLogo from "@/assets/mulerun-logo.png";
+import mulerunLogo from "@/assets/logo-icon.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
