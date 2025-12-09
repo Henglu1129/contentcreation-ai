@@ -15,8 +15,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navigate to="/abc/contentcreation-ai" replace />} />
-          <Route path="/abc/contentcreation-ai" element={<Index />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/themes/contentcreation-ai" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
