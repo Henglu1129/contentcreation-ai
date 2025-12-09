@@ -2,9 +2,9 @@ import { Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground py-6 md:py-4 px-4 md:px-[120px]">
-      {/* Mobile Layout */}
-      <div className="flex flex-col items-center gap-6 md:hidden">
+    <footer className="bg-foreground py-6 lg:py-4 px-4 lg:px-[120px]">
+      {/* Mobile & Tablet Layout */}
+      <div className="flex flex-col items-center gap-6 lg:hidden">
         {/* Copyright - Top */}
         <span className="font-inter text-sm text-card/70">MULE.RUN@2025</span>
         
@@ -44,7 +44,7 @@ const Footer = () => {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden md:flex justify-between items-center">
+      <div className="hidden lg:flex justify-between items-center">
         {/* Social Icons - Left */}
         <div className="flex items-center gap-4">
           {/* Discord */}
