@@ -19,23 +19,23 @@ const HeroSection = () => {
   return (
     <section className="px-4 md:px-[60px] pt-10 md:pt-20 pb-10 md:pb-[60px] flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-[80px]">
       <div className="flex flex-col gap-6 max-w-[580px]">
-        <div className="flex flex-col items-start">
+        <h1 className="flex flex-col items-start">
           <div className="pl-3 pr-3" style={{ transform: "rotate(2deg)" }}>
             <div className="bg-yellow-bright p-1">
-              <h1 className="font-anton text-4xl md:text-5xl lg:text-7xl leading-[120%] text-foreground">
+              <span className="font-anton text-4xl md:text-5xl lg:text-7xl leading-[120%] text-foreground block">
                 Your All-in-One
-              </h1>
+              </span>
             </div>
           </div>
           <div 
             className="bg-yellow-light p-1 -mt-2 md:-mt-3 w-fit" 
             style={{ transform: "rotate(-1deg)" }}
           >
-            <h1 className="font-anton text-4xl md:text-5xl lg:text-7xl leading-[120%] text-foreground">
+            <span className="font-anton text-4xl md:text-5xl lg:text-7xl leading-[120%] text-foreground block">
               AI Creation Platform
-            </h1>
+            </span>
           </div>
-        </div>
+        </h1>
 
         <div className="py-2.5">
           <p className="font-inter font-medium text-base md:text-lg leading-[140%] text-foreground max-w-[520px]">
