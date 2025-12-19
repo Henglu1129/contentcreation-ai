@@ -19,7 +19,7 @@ interface CreatorCard {
 const mockCards: CreatorCard[] = [
   {
     thumbnail: "https://img.youtube.com/vi/m8brjPr23j4/hqdefault.jpg",
-    duration: "12:34",
+    duration: "11:02",
     title: "Is It Possible to Produce 10 YouTube Motivational Videos a Day with AI?",
     creatorName: "Umut Aktu",
     creatorAvatar: creatorUmutAktu,
@@ -112,31 +112,50 @@ const RatingStars = ({ count }: { count: number }) => {
 };
 
 const CreatorCard = ({ card }: { card: CreatorCard }) => {
-  const CardWrapper = card.videoUrl ? 'a' : 'div';
-  const wrapperProps = card.videoUrl ? { href: card.videoUrl, target: "_blank", rel: "noopener noreferrer" } : {};
-  
   return (
-    <CardWrapper {...wrapperProps} className="bg-background rounded-lg overflow-hidden shadow-sm border border-border/50 block hover:shadow-md transition-shadow cursor-pointer">
-      {/* Thumbnail */}
-      <div className="relative aspect-video">
-        <img
-          src={card.thumbnail}
-          alt={card.title}
-          className="w-full h-full object-cover"
-        />
-        {/* Play button */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-12 h-12 bg-black/50 rounded-full flex items-center justify-center">
-            <Play className="w-5 h-5 text-white fill-white ml-1" />
+    <div className="bg-background rounded-lg overflow-hidden shadow-sm border border-border/50">
+      {/* Thumbnail - Clickable */}
+      {card.videoUrl ? (
+        <a href={card.videoUrl} target="_blank" rel="noopener noreferrer" className="block relative aspect-video group">
+          <img
+            src={card.thumbnail}
+            alt={card.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          {/* Play button */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-12 h-12 bg-black/50 rounded-full flex items-center justify-center group-hover:bg-black/70 transition-colors">
+              <Play className="w-5 h-5 text-white fill-white ml-1" />
+            </div>
           </div>
+          {/* Duration */}
+          {card.duration && (
+            <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded">
+              {card.duration}
+            </div>
+          )}
+        </a>
+      ) : (
+        <div className="relative aspect-video">
+          <img
+            src={card.thumbnail}
+            alt={card.title}
+            className="w-full h-full object-cover"
+          />
+          {/* Play button */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-12 h-12 bg-black/50 rounded-full flex items-center justify-center">
+              <Play className="w-5 h-5 text-white fill-white ml-1" />
+            </div>
+          </div>
+          {/* Duration */}
+          {card.duration && (
+            <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded">
+              {card.duration}
+            </div>
+          )}
         </div>
-        {/* Duration */}
-        {card.duration && (
-          <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded">
-            {card.duration}
-          </div>
-        )}
-      </div>
+      )}
 
       {/* Content */}
       <div className="p-4">
@@ -183,7 +202,7 @@ const CreatorCard = ({ card }: { card: CreatorCard }) => {
           <span>{card.stats}</span>
         </div>
       </div>
-    </CardWrapper>
+    </div>
   );
 };
 
