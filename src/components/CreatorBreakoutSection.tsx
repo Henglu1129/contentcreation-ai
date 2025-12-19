@@ -1,4 +1,5 @@
 import { Play, Star, Users } from "lucide-react";
+import creatorUmutAktu from "@/assets/creator-umut-aktu.jpg";
 
 interface CreatorCard {
   thumbnail: string;
@@ -20,7 +21,7 @@ const mockCards: CreatorCard[] = [
     duration: "12:34",
     title: "Is It Possible to Produce 10 YouTube Motivational Videos a Day with AI?",
     creatorName: "Umut Aktu",
-    creatorAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop",
+    creatorAvatar: creatorUmutAktu,
     fans: "150K",
     rating: 9.5,
     stars: 5,
