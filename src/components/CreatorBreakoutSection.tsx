@@ -226,7 +226,7 @@ const CreatorBreakoutSection = () => {
             Become the Next Breakout Creator
           </h2>
           <p className="font-inter text-sm md:text-base text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            See how creators are using these agents to make hit videos
+            See how creators are using these agents to make hit videos.
           </p>
         </div>
 
