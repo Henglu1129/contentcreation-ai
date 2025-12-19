@@ -1,4 +1,6 @@
-import { Play, Star, Users } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Play, Star, Users, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 import creatorUmutAktu from "@/assets/creator-umut-aktu.jpg";
 import creatorPlanckMind from "@/assets/creator-planckmind.jpg";
 import creatorAIMoneyManiac from "@/assets/creator-card3.jpg";
@@ -21,92 +23,68 @@ interface CreatorCard {
   videoUrl?: string;
 }
 
-const mockCards: CreatorCard[] = [
-  {
-    thumbnail: "https://img.youtube.com/vi/m8brjPr23j4/hqdefault.jpg",
-    duration: "11:02",
-    title: "AI Otomasyonu ile Günde 10 YouTube Motivasyon Videosu Üretmek Mümkün mü?",
-    creatorName: "Umut Aktu",
-    creatorAvatar: creatorUmutAktu,
-    fans: "150K",
+interface YouTubeVideoInfo {
+  videoId: string;
+  title: string;
+  thumbnail: string;
+  duration: string;
+  viewCount: string;
+  publishedAt: string;
+  channelId: string;
+  channelTitle: string;
+  channelThumbnail: string;
+  subscriberCount: string;
+}
+
+// Video IDs to fetch
+const VIDEO_IDS = [
+  "m8brjPr23j4",
+  "ygJsgrrUUH0", 
+  "RxXvya5v5Lw",
+  "HrKjPC_Racg",
+  "2FugAplwawk",
+  "FcCGfLFlfiM"
+];
+
+// Static data for ratings and descriptions (not available from YouTube API)
+const staticData: Record<string, { rating: number; stars: number; description: string; fallbackAvatar: string }> = {
+  "m8brjPr23j4": {
     rating: 9.7,
     stars: 4.75,
     description: "Discover how AI automation transforms YouTube content creation - from script to publish in minutes. A must-watch for creators!",
-    source: "From YouTube",
-    stats: "18K views · 3 days ago",
-    videoUrl: "https://www.youtube.com/watch?v=m8brjPr23j4"
+    fallbackAvatar: creatorUmutAktu
   },
-  {
-    thumbnail: "https://img.youtube.com/vi/ygJsgrrUUH0/hqdefault.jpg",
-    duration: "7:34",
-    title: "MuleRun AI Agents Marketplace | Buy & Sell AI Agents Explained",
-    creatorName: "PlanckMind",
-    creatorAvatar: creatorPlanckMind,
-    fans: "13.5K",
+  "ygJsgrrUUH0": {
     rating: 9.1,
     stars: 4.25,
     description: "Explore the future of AI automation with MuleRun's marketplace - discover how to buy, sell, and deploy AI agents for your business!",
-    source: "From YouTube",
-    stats: "420 views · 2 days ago",
-    videoUrl: "https://www.youtube.com/watch?v=ygJsgrrUUH0"
+    fallbackAvatar: creatorPlanckMind
   },
-  {
-    thumbnail: "https://img.youtube.com/vi/RxXvya5v5Lw/hqdefault.jpg",
-    duration: "11:20",
-    title: "Make Money Selling AI Agents (MuleRun - World's Largest AI Agent Store)",
-    creatorName: "AI Money Maniac",
-    creatorAvatar: creatorAIMoneyManiac,
-    fans: "16.3K",
+  "RxXvya5v5Lw": {
     rating: 9.2,
     stars: 4.25,
     description: "Learn how to monetize AI agents on MuleRun - the world's largest marketplace for buying and selling AI automation tools!",
-    source: "From YouTube",
-    stats: "723 views · 1 day ago",
-    videoUrl: "https://www.youtube.com/watch?v=RxXvya5v5Lw"
+    fallbackAvatar: creatorAIMoneyManiac
   },
-  {
-    thumbnail: "https://img.youtube.com/vi/HrKjPC_Racg/hqdefault.jpg",
-    duration: "4:09",
-    title: "I Let MuleRun's AI Agents Run My Creator Workflow — INSANE Results",
-    creatorName: "Martin Cash",
-    creatorAvatar: creatorMartinCash,
-    fans: "36.7K",
+  "HrKjPC_Racg": {
     rating: 9.2,
     stars: 4.25,
     description: "Real creator tests MuleRun's AI agents on his workflow - see the jaw-dropping automation results that save hours of work!",
-    source: "From YouTube",
-    stats: "1K views · 1 day ago",
-    videoUrl: "https://www.youtube.com/watch?v=HrKjPC_Racg"
+    fallbackAvatar: creatorMartinCash
   },
-  {
-    thumbnail: "https://img.youtube.com/vi/2FugAplwawk/hqdefault.jpg",
-    duration: "10:23",
-    title: "Stop Wasting Time—Let MuleRun Handle Your Daily Creative Work!",
-    creatorName: "Inside Your Hustle",
-    creatorAvatar: creatorCard5,
-    fans: "420K",
+  "2FugAplwawk": {
     rating: 9.5,
     stars: 4.5,
     description: "Discover how MuleRun AI agents can automate your daily creative tasks and save you hours of work every day!",
-    source: "From YouTube",
-    stats: "9.6K views · 1 day ago",
-    videoUrl: "https://www.youtube.com/watch?v=2FugAplwawk"
+    fallbackAvatar: creatorCard5
   },
-  {
-    thumbnail: "https://img.youtube.com/vi/FcCGfLFlfiM/hqdefault.jpg",
-    duration: "5:49",
-    title: "MuleRun 2.0 This AI Replaces Your Entire Ecom Team",
-    creatorName: "INFINITE DIGITAL",
-    creatorAvatar: creatorCard6,
-    fans: "2.62M",
+  "FcCGfLFlfiM": {
     rating: 9.7,
     stars: 4.75,
     description: "See how MuleRun 2.0 can automate your entire ecommerce team's workflow with powerful AI agents!",
-    source: "From YouTube",
-    stats: "79.8K views · 3 weeks ago",
-    videoUrl: "https://www.youtube.com/watch?v=FcCGfLFlfiM"
-  },
-];
+    fallbackAvatar: creatorCard6
+  }
+};
 
 const RatingStars = ({ count }: { count: number }) => {
   return (
@@ -235,6 +213,69 @@ const CreatorCard = ({ card }: { card: CreatorCard }) => {
 };
 
 const CreatorBreakoutSection = () => {
+  const [cards, setCards] = useState<CreatorCard[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchYouTubeData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        const { data, error: fnError } = await supabase.functions.invoke('youtube-videos', {
+          body: { videoIds: VIDEO_IDS }
+        });
+
+        if (fnError) {
+          console.error('Edge function error:', fnError);
+          throw new Error(fnError.message);
+        }
+
+        if (data.error) {
+          console.error('API error:', data.error);
+          throw new Error(data.error);
+        }
+
+        const videos: YouTubeVideoInfo[] = data.videos;
+        
+        // Map YouTube data to card format
+        const mappedCards: CreatorCard[] = videos.map((video) => {
+          const static_ = staticData[video.videoId] || {
+            rating: 9.0,
+            stars: 4.5,
+            description: "Amazing content from this creator!",
+            fallbackAvatar: "/placeholder.svg"
+          };
+
+          return {
+            thumbnail: video.thumbnail,
+            duration: video.duration,
+            title: video.title,
+            creatorName: video.channelTitle,
+            creatorAvatar: video.channelThumbnail || static_.fallbackAvatar,
+            fans: video.subscriberCount,
+            rating: static_.rating,
+            stars: static_.stars,
+            description: static_.description,
+            source: "From YouTube",
+            stats: `${video.viewCount} views · ${video.publishedAt}`,
+            videoUrl: `https://www.youtube.com/watch?v=${video.videoId}`
+          };
+        });
+
+        setCards(mappedCards);
+      } catch (err) {
+        console.error('Failed to fetch YouTube data:', err);
+        setError(err instanceof Error ? err.message : 'Failed to fetch data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchYouTubeData();
+  }, []);
+
   return (
     <section className="bg-yellow-light py-24 px-6">
       <div className="max-w-7xl mx-auto">
@@ -248,12 +289,30 @@ const CreatorBreakoutSection = () => {
           </p>
         </div>
 
+        {/* Loading State */}
+        {loading && (
+          <div className="flex items-center justify-center py-16">
+            <Loader2 className="w-8 h-8 animate-spin text-primary" />
+            <span className="ml-2 text-muted-foreground">Loading videos...</span>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && !loading && (
+          <div className="text-center py-16">
+            <p className="text-destructive mb-2">Failed to load videos</p>
+            <p className="text-sm text-muted-foreground">{error}</p>
+          </div>
+        )}
+
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mockCards.map((card, index) => (
-            <CreatorCard key={index} card={card} />
-          ))}
-        </div>
+        {!loading && !error && cards.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {cards.map((card, index) => (
+              <CreatorCard key={index} card={card} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
