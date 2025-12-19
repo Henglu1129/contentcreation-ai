@@ -33,7 +33,7 @@ const mockCards: CreatorCard[] = [
     stars: 5,
     description: "Discover how AI automation transforms YouTube content creation - from script to publish in minutes. A must-watch for creators!",
     source: "From YouTube",
-    stats: "18K views · 2 months ago",
+    stats: "18K views · 3 days ago",
     videoUrl: "https://www.youtube.com/watch?v=m8brjPr23j4"
   },
   {
