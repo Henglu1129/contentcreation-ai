@@ -236,20 +236,20 @@ const CreatorCard = ({ card }: { card: CreatorCard }) => {
 
 const CreatorBreakoutSection = () => {
   return (
-    <section className="bg-yellow-light py-12 md:py-24 px-4 md:px-6">
+    <section className="bg-yellow-light py-24 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-anton text-3xl md:text-4xl lg:text-5xl leading-[120%] text-foreground mb-3 md:mb-4">
+        <div className="text-center mb-12">
+          <h2 className="font-anton text-5xl leading-[120%] text-foreground mb-4">
             Become the Next Breakout Creator
           </h2>
-          <p className="font-inter text-sm md:text-base text-foreground/70 max-w-2xl mx-auto leading-relaxed px-2">
+          <p className="font-inter text-sm md:text-base text-foreground/70 max-w-2xl mx-auto leading-relaxed">
             See how creators are using these agents to make hit videos.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {mockCards.map((card, index) => (
             <CreatorCard key={index} card={card} />
           ))}

@@ -17,31 +17,30 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="px-4 md:px-[60px] pt-8 md:pt-20 pb-8 md:pb-[60px] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-[80px]">
-      <div className="flex flex-col gap-4 md:gap-6 max-w-[580px] text-center lg:text-left">
-        <h1 className="flex flex-col items-center lg:items-start">
-          <div className="pl-2 pr-2 md:pl-3 md:pr-3" style={{ transform: "rotate(2deg)" }}>
+    <section className="px-4 md:px-[60px] pt-10 md:pt-20 pb-10 md:pb-[60px] flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-[80px]">
+      <div className="flex flex-col gap-6 max-w-[580px]">
+        <h1 className="flex flex-col items-start">
+          <div className="pl-3 pr-3" style={{ transform: "rotate(2deg)" }}>
             <div className="bg-yellow-bright p-1">
-              <span className="font-anton text-3xl md:text-5xl lg:text-7xl leading-[120%] text-foreground block">
+              <span className="font-anton text-4xl md:text-5xl lg:text-7xl leading-[120%] text-foreground block">
                 Your All-in-One
               </span>
             </div>
           </div>
           <div 
-            className="bg-yellow-light p-1 -mt-1 md:-mt-3 w-fit" 
+            className="bg-yellow-light p-1 -mt-2 md:-mt-3 w-fit" 
             style={{ transform: "rotate(-1deg)" }}
           >
-            <span className="font-anton text-3xl md:text-5xl lg:text-7xl leading-[120%] text-foreground block">
+            <span className="font-anton text-4xl md:text-5xl lg:text-7xl leading-[120%] text-foreground block">
               AI Creation Platform
             </span>
           </div>
         </h1>
 
-        <div className="py-2">
-          <p className="font-inter font-medium text-sm md:text-lg leading-[140%] text-foreground max-w-[520px] mx-auto lg:mx-0">
+        <div className="py-2.5">
+          <p className="font-inter font-medium text-base md:text-lg leading-[140%] text-foreground max-w-[520px]">
             From idea and script to video and social posts—your entire creative workflow is powered by free AI tools.
-            <br className="hidden md:block" />
-            <span className="md:hidden"> </span>
+            <br />
             No complex steps, just one click to generate professional content so you can focus on what matters: your creativity.
           </p>
         </div>
@@ -50,10 +49,10 @@ const HeroSection = () => {
           href="https://mulerun.com/signup" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2.5 bg-primary text-primary-foreground px-4 py-2.5 rounded h-[48px] md:h-[52px] w-full md:w-fit font-jetbrains font-bold text-base md:text-xl hover:bg-primary/90 transition-colors mx-auto lg:mx-0"
+          className="flex items-center gap-2.5 bg-primary text-primary-foreground px-4 py-2.5 rounded h-[52px] w-fit font-jetbrains font-bold text-lg md:text-xl hover:bg-primary/90 transition-colors"
         >
           SIGN UP FOR FREE
-          <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
+          <ArrowRight className="w-6 h-6" />
         </a>
       </div>
 
