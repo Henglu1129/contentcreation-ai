@@ -1,5 +1,6 @@
 import { Play, Star, Users } from "lucide-react";
 import creatorUmutAktu from "@/assets/creator-umut-aktu.jpg";
+import creatorPlanckMind from "@/assets/creator-planckmind.jpg";
 
 interface CreatorCard {
   thumbnail: string;
@@ -36,8 +37,8 @@ const mockCards: CreatorCard[] = [
     duration: "7:34",
     title: "MuleRun AI Agents Marketplace | Buy & Sell AI Agents Explained",
     creatorName: "PlanckMind",
-    creatorAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop",
-    fans: "1.2K",
+    creatorAvatar: creatorPlanckMind,
+    fans: "13.5K",
     rating: 9.0,
     stars: 5,
     description: "Explore the future of AI automation with MuleRun's marketplace - discover how to buy, sell, and deploy AI agents for your business!",
