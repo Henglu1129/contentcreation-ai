@@ -191,11 +191,14 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
             href="https://mulerun.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 bg-foreground text-background px-10 py-5 rounded-lg font-jetbrains font-bold text-xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            className="group relative inline-flex items-center gap-3 bg-foreground text-background px-10 py-5 rounded-lg font-jetbrains font-bold text-xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden"
           >
-            <span>Need More?</span>
-            <span className="flex items-center animate-[pulse_1.5s_ease-in-out_infinite]">
-              <ChevronsRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
+            {/* Shine effect */}
+            <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shine_2.5s_ease-in-out_infinite]" />
+            
+            <span className="relative z-10">Need More?</span>
+            <span className="relative z-10 flex items-center">
+              <ChevronsRight className="w-6 h-6 animate-[bounce-x_1s_ease-in-out_infinite]" />
             </span>
           </a>
         </div>
