@@ -13,6 +13,7 @@ interface CreatorCard {
   description: string;
   source: string;
   stats: string;
+  videoUrl?: string;
 }
 
 const mockCards: CreatorCard[] = [
@@ -27,7 +28,8 @@ const mockCards: CreatorCard[] = [
     stars: 5,
     description: "Discover how AI automation transforms YouTube content creation - from script to publish in minutes. A must-watch for creators!",
     source: "From YouTube",
-    stats: "18K views · 2 months ago"
+    stats: "18K views · 2 months ago",
+    videoUrl: "https://www.youtube.com/watch?v=m8brjPr23j4"
   },
   {
     thumbnail: "https://images.unsplash.com/photo-1557683316-973673baf926?w=400&h=250&fit=crop",
@@ -110,8 +112,11 @@ const RatingStars = ({ count }: { count: number }) => {
 };
 
 const CreatorCard = ({ card }: { card: CreatorCard }) => {
+  const CardWrapper = card.videoUrl ? 'a' : 'div';
+  const wrapperProps = card.videoUrl ? { href: card.videoUrl, target: "_blank", rel: "noopener noreferrer" } : {};
+  
   return (
-    <div className="bg-background rounded-lg overflow-hidden shadow-sm border border-border/50">
+    <CardWrapper {...wrapperProps} className="bg-background rounded-lg overflow-hidden shadow-sm border border-border/50 block hover:shadow-md transition-shadow cursor-pointer">
       {/* Thumbnail */}
       <div className="relative aspect-video">
         <img
@@ -178,7 +183,7 @@ const CreatorCard = ({ card }: { card: CreatorCard }) => {
           <span>{card.stats}</span>
         </div>
       </div>
-    </div>
+    </CardWrapper>
   );
 };
 
