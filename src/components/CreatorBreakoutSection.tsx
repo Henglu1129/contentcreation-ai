@@ -178,7 +178,7 @@ const CreatorCard = ({ card }: { card: CreatorCard }) => {
 
 const CreatorBreakoutSection = () => {
   return (
-    <section className="bg-yellow-lite py-24 px-6">
+    <section className="bg-yellow-light py-24 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
