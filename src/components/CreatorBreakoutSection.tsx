@@ -249,7 +249,8 @@ const CreatorBreakoutSection = () => {
           };
 
           return {
-            thumbnail: video.thumbnail,
+            // Use static YouTube thumbnail URL for faster loading
+            thumbnail: `https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`,
             duration: video.duration,
             title: video.title,
             creatorName: video.channelTitle,
