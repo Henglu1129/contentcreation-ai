@@ -32,7 +32,7 @@ const CTASection = () => {
           </div>
         </div>
 
-        <h2 className="font-anton text-4xl md:text-6xl leading-[110%] text-foreground mb-6">
+        <h2 className="font-anton text-3xl md:text-5xl lg:text-6xl leading-[110%] text-foreground mb-6">
           <span className="bg-yellow-bright px-2">Get a Mule Run</span>
           <br />
           <span className="bg-yellow-light px-2">Your Messes</span>

@@ -48,7 +48,7 @@ const ScrollingColumn = ({ images, direction }: { images: string[]; direction: "
   return (
     <div 
       ref={scrollRef}
-      className="flex flex-col gap-2 h-[850px] overflow-hidden"
+      className="flex flex-col gap-2 h-[400px] md:h-[600px] lg:h-[850px] overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -68,32 +68,33 @@ const ScrollingColumn = ({ images, direction }: { images: string[]; direction: "
 
 const SectionTitle = () => {
   return (
-    <section className="bg-yellow-light py-16 px-6">
+    <section className="bg-yellow-light py-10 md:py-16 px-4 md:px-6">
       <div className="max-w-[1200px] mx-auto">
-      <div className="text-center mb-4">
-        <h2 className="font-anton text-5xl leading-[120%] text-foreground">
-          The Toolkit Top Creators Rely On
-        </h2>
-      </div>
-      
-      <div className="max-w-4xl mx-auto">
-        <p className="font-inter text-base text-muted-foreground text-center leading-relaxed">
-          Tens of thousands of creators worldwide use these tools for thumbnails, short-form editing, 
-          cross-platform adaptation, and subtitle translation—simple to use, professional results.
-        </p>
-      </div>
-
+        <div className="text-center mb-4">
+          <h2 className="font-anton text-3xl md:text-4xl lg:text-5xl leading-[120%] text-foreground">
+            The Toolkit Top Creators Rely On
+          </h2>
+        </div>
+        
+        <div className="max-w-4xl mx-auto px-2">
+          <p className="font-inter text-sm md:text-base text-muted-foreground text-center leading-relaxed">
+            Tens of thousands of creators worldwide use these tools for thumbnails, short-form editing, 
+            cross-platform adaptation, and subtitle translation—simple to use, professional results.
+          </p>
+        </div>
       </div>
 
       {/* Top dashed line - full width */}
-      <div className="border-t-2 border-dashed border-foreground/20 mt-12" />
+      <div className="border-t-2 border-dashed border-foreground/20 mt-8 md:mt-12" />
       
-      {/* 3 columns scrolling vertically */}
-      <div className="max-w-[1200px] mx-auto px-6">
-        <div className="grid grid-cols-3 gap-6">
+      {/* 3 columns scrolling vertically - 2 cols on mobile, 3 on desktop */}
+      <div className="max-w-[1200px] mx-auto px-2 md:px-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
           <ScrollingColumn images={column1Images} direction="up" />
           <ScrollingColumn images={column2Images} direction="down" />
-          <ScrollingColumn images={column3Images} direction="up" />
+          <div className="hidden md:block">
+            <ScrollingColumn images={column3Images} direction="up" />
+          </div>
         </div>
       </div>
       

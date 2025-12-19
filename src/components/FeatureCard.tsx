@@ -27,34 +27,34 @@ const FeatureCard = ({ title, description, hasButton = false, imageIndex = 0, li
   return (
     <CardWrapper 
       {...cardProps}
-      className={`bg-card rounded border border-yellow-glow pt-8 pr-6 pb-8 pl-6 flex items-center w-full md:w-[357px] h-[130px] relative overflow-hidden card-shadow-yellow group ${link ? 'cursor-pointer hover:border-yellow-bright transition-colors' : ''}`}
+      className={`bg-card rounded border border-yellow-glow pt-6 pr-4 pb-6 pl-4 md:pt-8 md:pr-6 md:pb-8 md:pl-6 flex items-center w-full md:w-[357px] h-[120px] md:h-[130px] relative overflow-hidden card-shadow-yellow group ${link ? 'cursor-pointer hover:border-yellow-bright transition-colors' : ''}`}
     >
       {/* Browser Frame with Image */}
       <div 
-        className="absolute right-[-1px] top-[8px] w-[140px] h-[126px] rounded-sm border border-foreground/10 overflow-hidden"
+        className="absolute right-[-1px] top-[6px] md:top-[8px] w-[110px] md:w-[140px] h-[108px] md:h-[126px] rounded-sm border border-foreground/10 overflow-hidden"
         style={{ boxShadow: "0px 2px 4px -0.75px rgba(0, 0, 0, 0.12), 0px 2px 6px -0.75px rgba(0, 0, 0, 0.1)" }}
       >
-        <div className="bg-stone-dark border-b border-card h-[11px] p-[3.55px] flex items-center gap-[3.55px]">
-          <div className="w-[3.55px] h-[3.55px] rounded-full bg-card" />
-          <div className="w-[3.55px] h-[3.55px] rounded-full bg-card" />
-          <div className="w-[3.55px] h-[3.55px] rounded-full bg-card" />
+        <div className="bg-stone-dark border-b border-card h-[10px] md:h-[11px] p-[3px] md:p-[3.55px] flex items-center gap-[3px] md:gap-[3.55px]">
+          <div className="w-[3px] md:w-[3.55px] h-[3px] md:h-[3.55px] rounded-full bg-card" />
+          <div className="w-[3px] md:w-[3.55px] h-[3px] md:h-[3.55px] rounded-full bg-card" />
+          <div className="w-[3px] md:w-[3.55px] h-[3px] md:h-[3.55px] rounded-full bg-card" />
         </div>
         <img 
           src={images[imageIndex % images.length]} 
           alt={title}
           loading="lazy"
           decoding="async"
-          className="w-[140px] h-[115px] object-cover object-center"
+          className="w-[110px] md:w-[140px] h-[98px] md:h-[115px] object-cover object-center"
         />
       </div>
 
       {/* Title & Description */}
-      <div className="flex flex-col gap-3 items-start max-w-[180px]">
-        <span className="font-inter font-semibold text-base leading-normal text-foreground">
+      <div className="flex flex-col gap-2 md:gap-3 items-start max-w-[140px] md:max-w-[180px]">
+        <span className="font-inter font-semibold text-sm md:text-base leading-normal text-foreground">
           {title}
         </span>
         {description && (
-          <span className="font-inter text-xs leading-tight text-muted-foreground">
+          <span className="font-inter text-[11px] md:text-xs leading-tight text-muted-foreground line-clamp-2 md:line-clamp-none">
             {description}
           </span>
         )}

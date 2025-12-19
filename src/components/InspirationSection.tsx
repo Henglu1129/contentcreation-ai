@@ -91,10 +91,10 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
   const tools = blockIndex === 1 ? section2Tools : blockIndex === 2 ? section3Tools : blockIndex === 3 ? section4Tools : defaultTools;
 
   return (
-    <div className="mb-16 md:mb-20 last:mb-0">
+    <div className="mb-12 md:mb-20 last:mb-0">
       {/* Main Title */}
       <h2 
-        className={`font-anton text-3xl md:text-5xl lg:text-[64px] leading-[110%] text-foreground mb-6 md:mb-10 text-center lg:text-left ${isReversed ? 'lg:text-right' : ''}`}
+        className={`font-anton text-2xl md:text-4xl lg:text-[64px] leading-[110%] text-foreground mb-4 md:mb-10 text-center lg:text-left ${isReversed ? 'lg:text-right' : ''}`}
         dangerouslySetInnerHTML={{ __html: sectionTitles[blockIndex] }}
       />
       
@@ -186,19 +186,19 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
       
       {/* Need More Button - only show for last block */}
       {blockIndex === 3 && (
-        <div className="flex justify-center mt-20">
+        <div className="flex justify-center mt-10 md:mt-20">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSepPJzLzbaR9o3CAVr2klu8RSsXOh6omxBz_M1Zu6hZsz77aA/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-3 bg-foreground text-background px-10 py-5 rounded-lg font-jetbrains font-bold text-xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden"
+            className="group relative inline-flex items-center gap-2 md:gap-3 bg-foreground text-background px-6 md:px-10 py-4 md:py-5 rounded-lg font-jetbrains font-bold text-base md:text-xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden"
           >
             {/* Shine effect */}
             <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shine_2.5s_ease-in-out_infinite]" />
             
             <span className="relative z-10">Need More?</span>
             <span className="relative z-10 flex items-center">
-              <ChevronsRight className="w-6 h-6 animate-[bounce-x_1s_ease-in-out_infinite]" />
+              <ChevronsRight className="w-5 h-5 md:w-6 md:h-6 animate-[bounce-x_1s_ease-in-out_infinite]" />
             </span>
           </a>
         </div>
