@@ -57,11 +57,11 @@ const mockCards: CreatorCard[] = [
     creatorName: "AI Money Maniac",
     creatorAvatar: creatorAIMoneyManiac,
     fans: "16.3K",
-    rating: 9.0,
-    stars: 5,
+    rating: 9.2,
+    stars: 4.25,
     description: "Learn how to monetize AI agents on MuleRun - the world's largest marketplace for buying and selling AI automation tools!",
     source: "From YouTube",
-    stats: "706 views · 1 day ago",
+    stats: "723 views · 1 day ago",
     videoUrl: "https://www.youtube.com/watch?v=RxXvya5v5Lw"
   },
   {
