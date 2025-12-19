@@ -221,11 +221,11 @@ const CreatorBreakoutSection = () => {
     <section className="bg-yellow-light py-24 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="font-anton text-4xl md:text-6xl uppercase tracking-tight text-foreground mb-6">
+        <div className="text-center mb-12">
+          <h2 className="font-anton text-2xl md:text-4xl uppercase tracking-tight text-foreground mb-4">
             Become the Next Breakout Creator
           </h2>
-          <p className="font-inter text-base md:text-lg text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-inter text-sm md:text-base text-foreground/70 max-w-2xl mx-auto leading-relaxed">
             See how creators are using these agents to make hit videos
           </p>
         </div>
