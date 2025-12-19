@@ -44,7 +44,7 @@ const mockCards: CreatorCard[] = [
     creatorAvatar: creatorPlanckMind,
     fans: "13.5K",
     rating: 9.1,
-    stars: 4.5,
+    stars: 4,
     description: "Explore the future of AI automation with MuleRun's marketplace - discover how to buy, sell, and deploy AI agents for your business!",
     source: "From YouTube",
     stats: "420 views · 2 days ago",
