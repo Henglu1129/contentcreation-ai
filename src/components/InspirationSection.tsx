@@ -183,6 +183,23 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
           }
         })}
       </div>
+      
+      {/* Need More Button - only show for last block */}
+      {blockIndex === 3 && (
+        <div className="flex justify-center mt-12">
+          <a
+            href="https://mulerun.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 bg-foreground text-background px-10 py-5 rounded-lg font-jetbrains font-bold text-xl uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            <span>Need More?</span>
+            <span className="flex items-center animate-[pulse_1.5s_ease-in-out_infinite]">
+              <ChevronsRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
+            </span>
+          </a>
+        </div>
+      )}
     </div>
   );
 };
