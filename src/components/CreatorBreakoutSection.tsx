@@ -2,6 +2,7 @@ import { Play, Star, Users } from "lucide-react";
 import creatorUmutAktu from "@/assets/creator-umut-aktu.jpg";
 import creatorPlanckMind from "@/assets/creator-planckmind.jpg";
 import creatorAIMoneyManiac from "@/assets/creator-card3.jpg";
+import creatorMartinCash from "@/assets/creator-martin-cash.jpg";
 
 interface CreatorCard {
   thumbnail: string;
@@ -66,8 +67,8 @@ const mockCards: CreatorCard[] = [
     duration: "4:09",
     title: "I Let MuleRun's AI Agents Run My Creator Workflow — INSANE Results",
     creatorName: "Martin Cash",
-    creatorAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop",
-    fans: "TBD",
+    creatorAvatar: creatorMartinCash,
+    fans: "36.7K",
     rating: 9.0,
     stars: 5,
     description: "Real creator tests MuleRun's AI agents on his workflow - see the jaw-dropping automation results that save hours of work!",
