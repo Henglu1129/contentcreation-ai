@@ -62,17 +62,18 @@ const mockCards: CreatorCard[] = [
     videoUrl: "https://www.youtube.com/watch?v=RxXvya5v5Lw"
   },
   {
-    thumbnail: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&h=250&fit=crop",
-    duration: "",
-    title: "Here Is The Title.",
-    creatorName: "LunaBloom",
+    thumbnail: "https://img.youtube.com/vi/HrKjPC_Racg/hqdefault.jpg",
+    duration: "4:09",
+    title: "I Let MuleRun's AI Agents Run My Creator Workflow — INSANE Results",
+    creatorName: "Martin Cash",
     creatorAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop",
-    fans: "12.8w",
-    rating: 9.2,
-    stars: 4,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ...",
+    fans: "TBD",
+    rating: 9.0,
+    stars: 5,
+    description: "Real creator tests MuleRun's AI agents on his workflow - see the jaw-dropping automation results that save hours of work!",
     source: "From YouTube",
-    stats: "One week ago · 1.2k Likes"
+    stats: "1K views · 1 day ago",
+    videoUrl: "https://www.youtube.com/watch?v=HrKjPC_Racg"
   },
   {
     thumbnail: "https://images.unsplash.com/photo-1618609378039-b572f64c5b42?w=400&h=250&fit=crop",
