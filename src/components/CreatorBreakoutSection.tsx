@@ -1,6 +1,7 @@
 import { Play, Star, Users } from "lucide-react";
 import creatorUmutAktu from "@/assets/creator-umut-aktu.jpg";
 import creatorPlanckMind from "@/assets/creator-planckmind.jpg";
+import creatorAIMoneyManiac from "@/assets/creator-card3.jpg";
 
 interface CreatorCard {
   thumbnail: string;
@@ -47,17 +48,18 @@ const mockCards: CreatorCard[] = [
     videoUrl: "https://www.youtube.com/watch?v=ygJsgrrUUH0"
   },
   {
-    thumbnail: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=400&h=250&fit=crop",
-    duration: "8:42",
-    title: "Here Is The Title.",
-    creatorName: "LunaBloom",
-    creatorAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop",
-    fans: "12.8w",
-    rating: 9.2,
+    thumbnail: "https://img.youtube.com/vi/RxXvya5v5Lw/hqdefault.jpg",
+    duration: "11:20",
+    title: "Make Money Selling AI Agents (MuleRun - World's Largest AI Agent Store)",
+    creatorName: "AI Money Maniac",
+    creatorAvatar: creatorAIMoneyManiac,
+    fans: "1.5K",
+    rating: 9.0,
     stars: 5,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ...",
-    source: "From X",
-    stats: "32,000 page views"
+    description: "Learn how to monetize AI agents on MuleRun - the world's largest marketplace for buying and selling AI automation tools!",
+    source: "From YouTube",
+    stats: "706 views · 1 day ago",
+    videoUrl: "https://www.youtube.com/watch?v=RxXvya5v5Lw"
   },
   {
     thumbnail: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&h=250&fit=crop",
