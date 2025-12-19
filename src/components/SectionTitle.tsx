@@ -71,7 +71,7 @@ const SectionTitle = () => {
     <section className="bg-yellow-light py-16 px-6">
       <div className="max-w-[1200px] mx-auto">
       <div className="text-center mb-4">
-        <h2 className="font-anton text-5xl leading-[120%] text-foreground">
+        <h2 className="font-anton text-5xl lg:text-6xl leading-[120%] text-foreground">
           The Toolkit Top Creators Rely On
         </h2>
       </div>
