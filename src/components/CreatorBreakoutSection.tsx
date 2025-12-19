@@ -79,16 +79,16 @@ const mockCards: CreatorCard[] = [
   },
   {
     thumbnail: "https://img.youtube.com/vi/2FugAplwawk/hqdefault.jpg",
-    duration: "15:23",
-    title: "MuleRun Review: AI Agent Marketplace for Creators & Developers",
-    creatorName: "Prompt Muse",
+    duration: "9:57",
+    title: "Stop Wasting Time—Let MuleRun Handle Your Daily Creative Work!",
+    creatorName: "Inside Your Hustle",
     creatorAvatar: creatorCard5,
     fans: "420K",
     rating: 9.5,
     stars: 5,
-    description: "In-depth review of MuleRun's AI agent marketplace - perfect for creators and developers looking to automate workflows!",
+    description: "Discover how MuleRun AI agents can automate your daily creative tasks and save you hours of work every day!",
     source: "From YouTube",
-    stats: "12K views · 3 days ago",
+    stats: "9.6K views · 1 day ago",
     videoUrl: "https://www.youtube.com/watch?v=2FugAplwawk"
   },
   {
