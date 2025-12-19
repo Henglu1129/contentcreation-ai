@@ -25,7 +25,7 @@ const mockCards: CreatorCard[] = [
   {
     thumbnail: "https://img.youtube.com/vi/m8brjPr23j4/hqdefault.jpg",
     duration: "11:02",
-    title: "Is It Possible to Produce 10 YouTube Motivational Videos a Day with AI?",
+    title: "AI Otomasyonu ile Günde 10 YouTube Motivasyon Videosu Üretmek Mümkün mü?",
     creatorName: "Umut Aktu",
     creatorAvatar: creatorUmutAktu,
     fans: "150K",
