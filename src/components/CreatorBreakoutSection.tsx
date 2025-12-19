@@ -83,7 +83,7 @@ const mockCards: CreatorCard[] = [
     title: "MuleRun Review: AI Agent Marketplace for Creators & Developers",
     creatorName: "Prompt Muse",
     creatorAvatar: creatorCard5,
-    fans: "7.96M",
+    fans: "420K",
     rating: 9.5,
     stars: 5,
     description: "In-depth review of MuleRun's AI agent marketplace - perfect for creators and developers looking to automate workflows!",
