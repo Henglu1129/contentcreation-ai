@@ -186,7 +186,7 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
       
       {/* Need More Button - only show for last block */}
       {blockIndex === 3 && (
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-20">
           <a
             href="https://mulerun.com"
             target="_blank"
