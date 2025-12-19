@@ -142,6 +142,11 @@ const CreatorCard = ({ card }: { card: CreatorCard }) => {
           <img
             src={card.creatorAvatar}
             alt={card.creatorName}
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            onError={(e) => {
+              e.currentTarget.src = "/placeholder.svg";
+            }}
             className="w-8 h-8 rounded-full object-cover"
           />
           <div>
