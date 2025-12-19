@@ -44,7 +44,7 @@ const mockCards: CreatorCard[] = [
     creatorAvatar: creatorPlanckMind,
     fans: "13.5K",
     rating: 9.1,
-    stars: 4,
+    stars: 4.25,
     description: "Explore the future of AI automation with MuleRun's marketplace - discover how to buy, sell, and deploy AI agents for your business!",
     source: "From YouTube",
     stats: "420 views · 2 days ago",
@@ -113,20 +113,22 @@ const RatingStars = ({ count }: { count: number }) => {
     <div className="flex gap-0.5">
       {[...Array(5)].map((_, i) => {
         const starValue = i + 1;
-        const isFull = count >= starValue;
-        const isHalf = !isFull && count >= starValue - 0.5;
+        const diff = count - (starValue - 1);
+        let fillPercent = 0;
+        
+        if (diff >= 1) {
+          fillPercent = 100;
+        } else if (diff > 0) {
+          fillPercent = diff * 100;
+        }
         
         return (
           <div key={i} className="relative w-3.5 h-3.5">
             {/* Background star (empty) */}
             <Star className="absolute inset-0 w-3.5 h-3.5 fill-gray-300 text-gray-300" />
-            {/* Filled star */}
-            {isFull && (
-              <Star className="absolute inset-0 w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
-            )}
-            {/* Half star */}
-            {isHalf && (
-              <div className="absolute inset-0 overflow-hidden w-[50%]">
+            {/* Filled star with dynamic width */}
+            {fillPercent > 0 && (
+              <div className="absolute inset-0 overflow-hidden" style={{ width: `${fillPercent}%` }}>
                 <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
               </div>
             )}
