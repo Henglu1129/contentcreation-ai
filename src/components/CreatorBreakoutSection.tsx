@@ -32,17 +32,18 @@ const mockCards: CreatorCard[] = [
     videoUrl: "https://www.youtube.com/watch?v=m8brjPr23j4"
   },
   {
-    thumbnail: "https://images.unsplash.com/photo-1557683316-973673baf926?w=400&h=250&fit=crop",
-    duration: "",
-    title: "Here Is The Title.",
-    creatorName: "LunaBloom",
-    creatorAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop",
-    fans: "12.8w",
-    rating: 9.2,
-    stars: 4,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ...",
+    thumbnail: "https://img.youtube.com/vi/ygJsgrrUUH0/hqdefault.jpg",
+    duration: "7:34",
+    title: "MuleRun AI Agents Marketplace | Buy & Sell AI Agents Explained",
+    creatorName: "PlanckMind",
+    creatorAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop",
+    fans: "1.2K",
+    rating: 9.0,
+    stars: 5,
+    description: "Explore the future of AI automation with MuleRun's marketplace - discover how to buy, sell, and deploy AI agents for your business!",
     source: "From YouTube",
-    stats: "One week ago · 1.2k Likes"
+    stats: "407 views · 2 days ago",
+    videoUrl: "https://www.youtube.com/watch?v=ygJsgrrUUH0"
   },
   {
     thumbnail: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=400&h=250&fit=crop",
