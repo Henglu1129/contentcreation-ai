@@ -69,7 +69,7 @@ const InspirationBlock = ({ blockIndex }: { blockIndex: number }) => {
     {
       title: "YouTube Title Generator with Emojis",
       description: "Generate 5 viral, emoji-rich YouTube titles with SEO hooks in seconds.",
-      link: "https://mulerun.com/@kpviqlcmhm864vu/youtube-title-generator-with-emojis",
+      link: "https://mulerun.com/@yuzhou/youtube-title-generator-with-emojis",
       image: youtubeTitleGenerator
     },
     {
