@@ -25,7 +25,7 @@ const FeaturesGrid = () => {
       title: "Great content, but no clicks?",
       description: "How can I get scroll-stopping titles and thumbnails — that actually convert?",
       cards: [
-        { title: "Generate Title", description: "Scroll-stopping hooks tailored to your audience's interests.", hasButton: true, link: "https://mulerun.com/@kpviqlcmhm864vu/youtube-title-generator-with-emojis", imageIndex: 5 },
+        { title: "Generate Title", description: "Scroll-stopping hooks tailored to your audience's interests.", hasButton: true, link: "https://mulerun.com/@yuzhou/youtube-title-generator-with-emojis", imageIndex: 5 },
         { title: "Create Thumbnail", description: "High-CTR visuals, optimized and done in one click.", hasButton: true, link: "https://mulerun.com/@summerail/youtube-awesome-thumbnail", imageIndex: 6 },
       ],
       layout: "right",
